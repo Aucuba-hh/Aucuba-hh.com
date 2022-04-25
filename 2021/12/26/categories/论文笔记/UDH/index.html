@@ -1,0 +1,1011 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="论文笔记—Universal Deep Hiding for Steganography,Watermarking, and Light Field Messaging, Aucuba">
+    <meta name="description" content="早睡晚起小能手，不知名话痨艺术家">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>论文笔记—Universal Deep Hiding for Steganography,Watermarking, and Light Field Messaging | Aucuba</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Aucuba</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Aucuba</div>
+        <div class="logo-desc">
+            
+            早睡晚起小能手，不知名话痨艺术家
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">论文笔记—Universal Deep Hiding for Steganography,Watermarking, and Light Field Messaging</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
+                                论文笔记
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2021-12-26
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="UDH-Universal-Deep-Hiding-for-Steganography-Watermarking-and-Light-Field-Messaging"><a href="#UDH-Universal-Deep-Hiding-for-Steganography-Watermarking-and-Light-Field-Messaging" class="headerlink" title="UDH: Universal Deep Hiding for Steganography,Watermarking, and Light Field Messaging"></a>UDH: Universal Deep Hiding for Steganography,Watermarking, and Light Field Messaging</h1><h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>​        传统的隐写技术通常需要对秘密信息进行完美地编码，才能保证不被隐写分析所发现。相反地，另一种隐写技术（被称为深度隐写术）放宽了对完美编码的限制，在专注于大隐藏容量的同时，还能保证视觉质量。</p>
+<p>该论文的工作是解释深度隐写术的工作原理，并研究其在水印和LFM中的应用。</p>
+<img src="C:/Users/不息/AppData/Roaming/Typora/typora-user-images/image-20211210101105302.png" alt="image-20211210101105302" style="zoom:80%;" />
+
+<p>​        现有的深度隐藏：依赖覆盖的深度隐藏（DDH)。C和（S processed，被处理过的S）作为网络H的输入，生成C’，再利用恢复网络R恢复秘密信息得到S‘。</p>
+<p><img src="C:/Users/不息/AppData/Roaming/Typora/typora-user-images/image-20211212115522165.png" alt="image-20211212115522165"></p>
+<p>​        通用深度隐藏UDH：以不可知的方式隐藏图像，没有依赖性。</p>
+<h3 id="最初的猜测"><a href="#最初的猜测" class="headerlink" title="最初的猜测"></a>最初的猜测</h3><p>​        一种自然地猜测是LSB，隐藏在最低有效位中，但是另一篇论文【Shumeet Baluja. Hiding images in plain sight: Deep steganography. InAdvances in Neural Information<br>Processing Systems (NeurIPS), 2017】中的分析否定了这种猜测。</p>
+<h3 id="发现"><a href="#发现" class="headerlink" title="发现"></a>发现</h3><p>​        发现UDH的成功可以直接归因于Se（||C’-C||)和C之间的频率差异。通过DDH和UDH的H和R交叉测试，我们也成功地证明了DDH的工作原理。</p>
+<p>​        与通过隐藏二进制信息来进行水印的HiDDeN相比，我们第一个通过隐藏图像来演示(基于dnn的)水印。用于隐藏图像的UDH无需再训练就可以很容易地扩展到隐藏简单的二进制信息，实现优越的性能。UDH对C’上的像素强度偏移具有较强的鲁棒性，这使得它更适合于LFM任务，UDH是第一个成功隐藏和传输对光线效果不敏感的图像的技术，增加了它在现实世界的适用性。还值得一提的是，UDH不需要收集大型screen-pair数据集(1.9TB)。对于传输简单的二进制信息，UDH也实现了更好的性能。</p>
+<h2 id="2-Related-work"><a href="#2-Related-work" class="headerlink" title="2  Related work"></a>2  Related work</h2><p>​        工作重点是理解和利用深度学习来隐藏图像中的信息。</p>
+<h4 id="图片中隐藏二进制信息"><a href="#图片中隐藏二进制信息" class="headerlink" title="图片中隐藏二进制信息"></a>图片中隐藏二进制信息</h4><p>​        DNN在广泛的应用领域取得了成功，如隐写术和水印。其中,HiDDeN采用对抗性训练（adversarial training），以end-to-end的方式隐藏二进制信息，最大限度地减少人为对C’的影响。这些方法的性能通常会存在冲突，如高容量-保密性低等。</p>
+<h4 id="图片中隐藏图片"><a href="#图片中隐藏图片" class="headerlink" title="图片中隐藏图片"></a>图片中隐藏图片</h4><p>​        DNN隐藏二进制信息的容量很低（&lt;0.5bpp）。在上文提到的论文中，深度隐写可以以24bpp容量隐藏完整图像。它采用额外的P网络将图像处理一种新形势。在现有工作的基础上，我们基于提出的UDN的元架构，解释深度隐写术的成功，并研究通用水印和LFM。</p>
+<h2 id="3-Universal-deep-hiding-meta-architecture"><a href="#3-Universal-deep-hiding-meta-architecture" class="headerlink" title="3 Universal deep hiding meta-architecture"></a>3 Universal deep hiding meta-architecture</h2><img src="C:/Users/不息/AppData/Roaming/Typora/typora-user-images/image-20211210102950228.png" alt="image-20211210102950228" style="zoom:80%;" />
+
+<p>​        取随机C，S被送到H编码处理后生成Se添加到C得到C’，解密后S’与C影响不大。证明了通用性。</p>
+<p>​        和universal attacks中，向随机图像添加UAP相似，但不同的是,H和R联合训练后产生的Se可以恢复R。loss函数定义为<img src="C:/Users/不息/AppData/Roaming/Typora/typora-user-images/image-20211212121635053.png" alt="image-20211212121635053"></p>
+<h3 id="3-1-Basic-setup-and-results"><a href="#3-1-Basic-setup-and-results" class="headerlink" title="3.1  Basic setup and results"></a>3.1  Basic setup and results</h3><p>​        将H与R，同ADAM优化一起在ImageNet训练数据集，ADP（average pixel discrepancy）、PSNR（峰值信噪比）、SSIM（结构相似度）、LPIPS（感知相似度）表现如表：</p>
+<p><img src="C:/Users/不息/AppData/Roaming/Typora/typora-user-images/image-20211212122705025.png" alt="image-20211212122705025"></p>
+<p>​        H采用简化的Cycle-GAN中的U-Net，R堆叠了几个卷积层。在H与R相同设置下进行实验，UDN与DDH实现了相当的性能，甚至更稳定。最终发现，H与R的架构选择对性能没有显著影响。通过设计，UDN不需要P，同时对于DDH，采用P甚至会破坏稳定性。我们的UDH定性结果如图（为更好地可视化，C与C’、S与S’的差异被放大）：</p>
+<p><img src="C:/Users/不息/AppData/Roaming/Typora/typora-user-images/image-20211212123746129.png" alt="image-20211212123746129"></p>
+<h4 id="Remark-on-steganalysis"><a href="#Remark-on-steganalysis" class="headerlink" title="Remark on steganalysis"></a>Remark on steganalysis</h4><p>​        对UDH进行隐写分析，检测LSB的StegExpose被证明失败，但被训练作为DDN秘密信息检测的binary classifier成功检测了UDH隐藏信息的存在。论文的工作将提供直观的解释和从傅里叶的角度理解。</p>
+<h2 id="4-Universal-Deep-Hiding-analysis"><a href="#4-Universal-Deep-Hiding-analysis" class="headerlink" title="4 Universal Deep Hiding analysis"></a>4 Universal Deep Hiding analysis</h2><h3 id="Where-is-the-secret-image-encoded"><a href="#Where-is-the-secret-image-encoded" class="headerlink" title="Where is the secret image encoded?"></a>Where is the secret image encoded?</h3><p>​        UDH管道执行两个映射H和R，来进行编码和解码。当S和S’的APD很小时，尤其是Se作为R的输入，解码过程可以看做编码的逆。接下来分析UDH在信道和空间维度的编码特性。</p>
+<p>​        将Se和S’的信道宽分别设置为0来测量S和Se的通道效应。改变S中任何一个RGB信道，但Se所有三个信道中APD值仍相似，Se对S’的影响也镜像地相同。这表明编码和解码的映射不是基于信道的。</p>
+<p>​        类似地我们研究空间维度，只将单个像素的像素强度设置为0，由于卷积操作的局部性质，推测只影响它周围的像素。观察到对于编码和解码，影响区域都很小。</p>
+<h3 id="Se-visualization-and-Fourier-analysis"><a href="#Se-visualization-and-Fourier-analysis" class="headerlink" title="Se visualization and Fourier analysis"></a>Se visualization and Fourier analysis</h3><p>​        通过上述分析，秘密图像在信道中跨所有信道进行编码，在空间维中局部编码。然而，这仍然不足以理解深藏的成功。在图4中，我们放大Se并将其S中对应的内容可视化。</p>
+<p><img src="C:/Users/不息/AppData/Roaming/Typora/typora-user-images/image-20211212131349380.png" alt="image-20211212131349380"></p>
+<p>​        在原始图像S中，平滑区域的像素强度值是相同或非常相似的，但是在Se中对应的值与相邻的像素有很大的不同，参见上图的patch1或patch3。特别是Se清楚地显示了一种重复的高频(HF)特性，不同于以低频(LF)内容为主的自然图像。在提出的UDH中，覆盖图像C可以被认为是用来扰动Se的。有趣的是，解码可以在如此大的干扰下工作(注意覆盖图像C是随机选择的)。可视化结果直观解释了：R被隐式训练为只对HF内容敏感，在Se中为C添加LF几乎不破坏se的HF内容，因此C的干扰影响很有限。</p>
+<p>​        进一步对自然图像和Se进行傅里叶分析，下图结果显示了C和Se之间明显的频率差异。每个网络在傅里叶空间中使用不同的高频区域，进一步说明频率差异是深度隐写成功的关键。</p>
+<p><img src="C:/Users/不息/AppData/Roaming/Typora/typora-user-images/image-20211212132145814.png" alt="image-20211212132145814"></p>
+<h3 id="Utilizing-UDH-to-help-visualizeSein-DDH"><a href="#Utilizing-UDH-to-help-visualizeSein-DDH" class="headerlink" title="Utilizing UDH to help visualizeSein DDH"></a>Utilizing UDH to help visualizeSein DDH</h3><p>​        Se拥有的高频内容使其对低频的C的干扰具有鲁棒性。对UDH和DDH和H和R进行交叉测试，一个元架构的H的输出被作为另一个元架构的R的输入，结果如图。</p>
+<p><img src="C:/Users/不息/AppData/Roaming/Typora/typora-user-images/image-20211212132530162.png" alt="image-20211212132530162"></p>
+<p>​        发现，在一些图像中仍然可以清晰地观察到S’，这表明DDH也用相同的方式进行编码。</p>
+<p>​        为了进一步验证DDH的R也同样对高频内容进行解码来恢复秘密图像，过滤掉C’的高频内容，结果如图，秘密检索完全失败。</p>
+<p><img src="C:/Users/不息/AppData/Roaming/Typora/typora-user-images/image-20211212142112978.png" alt="image-20211212142112978"></p>
+<p>​        并发现Hu+Rd的组合中，放大观察到类似于上文的现象。说明编码解码方式类似。</p>
+<p><img src="C:/Users/不息/AppData/Roaming/Typora/typora-user-images/image-20211212142341874.png" alt="image-20211212142341874"></p>
+<h3 id="Comparison-of-DDH-and-UDH"><a href="#Comparison-of-DDH-and-UDH" class="headerlink" title="Comparison of DDH and UDH"></a>Comparison of DDH and UDH</h3><p>​        对自然图像，二者类似；当像素强度变化时就会出现差异。</p>
+<p>​        DDH的优点是可以根据封面图像自适应编码秘密图像，对于普通图像，此属性不会导致显著的性能差异。然而对于HF含量高的内容，由于DDH框架的自适应特性，可以观察到DDH和UDH之间的性能差异。如左表所示，在向C添加严重均匀随机噪声的情况下，DDH仍然能够以低秘密APD恢复图像，但UDH会失败。</p>
+<p><img src="C:/Users/不息/AppData/Roaming/Typora/typora-user-images/image-20211212142726049.png" alt="image-20211212142726049"></p>
+<p>然而，DDH对噪声(HF)的鲁棒性是以对容器图像C’上像素强度偏移敏感为代价的。从右表的结果可以看出，当C’所有像素强度都平移50时，DDH几乎不能恢复秘密图像(APD:32.4)，而对UDH的影响是不可见的。这种差异可能由于设计的UDH框架对LF覆盖图像的干扰具有鲁棒性，也因此UDH这种对C’上像素强度偏移的鲁棒性使其适合于LFM的应用（因为一般来说，光的变化是平滑的）。</p>
+<h2 id="5-Universal-Deep-Hiding-applications"><a href="#5-Universal-Deep-Hiding-applications" class="headerlink" title="5  Universal Deep Hiding applications"></a>5  Universal Deep Hiding applications</h2><p>​        以隐藏完整图像为重点，将UDH应用于隐写、水印和LFM。其中，隐写侧重高隐藏容量，水印侧重对于扭曲的鲁棒性，LFM侧重对光效应的鲁棒性。</p>
+<h3 id="5-1-Universal-deep-steganography-beyond-hiding-one-image"><a href="#5-1-Universal-deep-steganography-beyond-hiding-one-image" class="headerlink" title="5.1 Universal deep steganography beyond hiding one image"></a>5.1 Universal deep steganography beyond hiding one image</h3><h4 id="Flexible-number-of-images-forSandC"><a href="#Flexible-number-of-images-forSandC" class="headerlink" title="Flexible number of images forSandC"></a>Flexible number of images forSandC</h4><p>​        S和C不需要拥有同数量的信道。可以让M个秘密信息隐藏到N个图片C中。虽然在复杂度增加时性能下降，但仍提高了灵活性。<img src="C:/Users/不息/AppData/Roaming/Typora/typora-user-images/image-20211212143634034.png" alt="image-20211212143634034"></p>
+<h4 id="Different-recipients-get-different-secret-messages"><a href="#Different-recipients-get-different-secret-messages" class="headerlink" title="Different recipients get different secret messages"></a>Different recipients get different secret messages</h4><p>​        多个接受者从相同的C’中接收不同的S图片，我们训练三队H和R来对相应的秘密图像进行编码和解码，但将秘密图像隐藏在同一个C中，即C‘=C+Se1+Se2+Se3。同时也能保持相当的检索性能。</p>
+<p><img src="C:/Users/不息/AppData/Roaming/Typora/typora-user-images/image-20211212143925952.png" alt="image-20211212143925952"></p>
+<h3 id="5-2-Universal-deep-watermarking"><a href="#5-2-Universal-deep-watermarking" class="headerlink" title="5.2 Universal deep watermarking"></a>5.2 Universal deep watermarking</h3><p>​        HiDDeN已经探索了二进制信息的水印，我们分析了UDH对各种类型的图像畸变的鲁棒性，通过设计对Crop和Cropout具有鲁棒性，但是由于空间局部性质，我们只能显示隐藏在容器图像相应裁剪区域中的秘密图像。</p>
+<h4 id="Watermarking-by-hiding-images"><a href="#Watermarking-by-hiding-images" class="headerlink" title="Watermarking by hiding images"></a>Watermarking by hiding images</h4><p>​        我们采用HiDDeN中相同的参数设置图像失真，评估如表。</p>
+<p><img src="C:/Users/不息/AppData/Roaming/Typora/typora-user-images/image-20211212144237397.png" alt="image-20211212144237397"></p>
+<h4 id="Watermarking-by-hiding-barcode"><a href="#Watermarking-by-hiding-barcode" class="headerlink" title="Watermarking by hiding barcode"></a>Watermarking by hiding barcode</h4><p>​        将高于128bit的像素强度设置为1，低于128bit设置为0，对空间维度的更好利用提高隐藏容量。</p>
+<h3 id="5-3-Universal-photographic-steganography"><a href="#5-3-Universal-photographic-steganography" class="headerlink" title="5.3 Universal photographic steganography"></a>5.3 Universal photographic steganography</h3><p>​        摄影隐写术：图像显示在屏幕上，用相机捕捉。DDH因为对于像素强度的偏移不具有鲁棒性，所以需要额外训练一个相机-显示器转换函数来处理光场转换的失真，但UDH可以不需要训练。</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Aucuba</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://aucuba-hh.github.io/2021/12/26/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/UDH/">http://aucuba-hh.github.io/2021/12/26/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/UDH/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Aucuba</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2022/01/23/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/abstrac%20of%20machine-learning/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Deep learning学习笔记">
+                        
+                        <span class="card-title">Deep learning学习笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            什么是深度学习？
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-23
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    深度学习
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/12/25/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/ABDHwGAN/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="论文笔记—Attention Based Data Hiding with Generative Adversarial Networks">
+                        
+                        <span class="card-title">论文笔记—Attention Based Data Hiding with Generative Adversarial Networks</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            基于生成对抗网络GAN的ABDH框架，引导ABDH找到隐藏图像中不明显的区域，以端到端的方式稳健地隐藏数据
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    论文笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2022</span>
+            <a href="/about" target="_blank">Aucuba</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2022";
+                    var startMonth = "4";
+                    var startDate = "25";
+                    var startHour = "21";
+                    var startMinute = "15";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+    <a href="https://github.com/aucuba-hh" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:aucuba_1221@hnu.edu.cn" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2843312816" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2843312816" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="https://weibo.com/u/7324273602" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/u/7324273602" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+    <a href="https://www.zhihu.com/people/bu-xi-97-89" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/bu-xi-97-89" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

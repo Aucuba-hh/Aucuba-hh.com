@@ -1,0 +1,1009 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="论文笔记—Attention Based Data Hiding with Generative Adversarial Networks, Aucuba">
+    <meta name="description" content="早睡晚起小能手，不知名话痨艺术家">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>论文笔记—Attention Based Data Hiding with Generative Adversarial Networks | Aucuba</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Aucuba</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Aucuba</div>
+        <div class="logo-desc">
+            
+            早睡晚起小能手，不知名话痨艺术家
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">论文笔记—Attention Based Data Hiding with Generative Adversarial Networks</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
+                                论文笔记
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2021-12-25
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Attention-Based-Data-Hiding-with-Generative-Adversarial-Networks"><a href="#Attention-Based-Data-Hiding-with-Generative-Adversarial-Networks" class="headerlink" title="Attention Based Data Hiding with Generative Adversarial Networks"></a>Attention Based Data Hiding with Generative Adversarial Networks</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>论文提出了基于生成对抗网络GAN的ABDH框架，引导ABDH找到隐藏图像中不明显的区域，以端到端的方式稳健地隐藏数据。</p>
+<h2 id="Related-work"><a href="#Related-work" class="headerlink" title="Related work"></a>Related work</h2><h3 id="隐写术"><a href="#隐写术" class="headerlink" title="隐写术"></a>隐写术</h3><p>1、最低有效位隐写：LSB。</p>
+<p>2、内容自适应隐写：手工制作变形函数来选择嵌入图像的定位。</p>
+<p>3、基于深度学习的隐写：如基于深度卷积GAN、HiDDeN等。</p>
+<h3 id="水印"><a href="#水印" class="headerlink" title="水印"></a>水印</h3><p>1、空间域水印：在像素域进行水印，复杂度低、成本低、延迟低。可以利用LSB水印方法。</p>
+<p>2、光谱域水印：在空间域不易察觉。通过各种变换域技术实现，通常使用离散余弦变换DCT；也可使用小波变换将图像和水印分解为低频和高频，将水印嵌入到低频子带中，具有更好的隐蔽性和鲁棒性。</p>
+<p>3、基于神经网络的水印。如基于神经网络的盲水印、基于长短期记忆结构的动态水印深度学习。</p>
+<h2 id="Attention-Based-Data-Hiding"><a href="#Attention-Based-Data-Hiding" class="headerlink" title="Attention Based Data Hiding"></a>Attention Based Data Hiding</h2><h3 id="Principle"><a href="#Principle" class="headerlink" title="Principle"></a>Principle</h3><p><strong>GAN</strong>由生成模型和判别模型组成。生成模型是为了生成与真实样本非常相似的新样本，视图混淆判别器。判别模型会估计特定样本来自生成模型而不是真实样本的概率。当GAN模型达到纳什均衡时，判别模型对每对真实和生成的样本都返回0.5的分类概率，认为该模型训练良好。</p>
+<p><strong>ABDH</strong>将数据隐藏的目标与<strong>GAN</strong>相结合。它由目标生成模型和隐藏数据判别模型组成。目标模型是为了生成与cover非常相似的目标图像，视图混淆判别模型；判别模型是为了将目标图像与覆盖图像区分开来。我们要训练一个数据隐藏的算法，让生成模型达到纳什均衡时（即生成模型可以使秘密信息在目标图像中保持不被察觉），同时隐藏数据判别模型对每对目标和掩蔽图像都不能检测到秘密信息的存在，这个模型收敛。</p>
+<h3 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h3><p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20211225160747649.png" alt="image-20211225160747649"></p>
+<p>1、原始的图像集cover经过Attention Model Ga（使用的是ResNet50特征提取骨干），产生Attention Mask（我们引入Attention Mask来帮助ABDH来明确学习cover的特征）。CI=cover Image。AM的每个值代表cover每个像素的“注意敏感度”，取值范围为0 ~ 1。如果该值更接近1，表示对应像素的变化会导致明显的差异，容易引起视觉检测的注意：</p>
+<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20211225161355634.png" alt="image-20211225161355634"></p>
+<p>2、生成AM后，原始cover图像、AM和原始秘密图像(SI)经过目标图像生成模型GTI，生成目标图像 (TI):</p>
+<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20211225161802290.png" alt="image-20211225161802290"></p>
+<p>3、TI通过秘密图像生成模型GSI提取出秘密图像ESI：</p>
+<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20211225161925635.png" alt="image-20211225161925635"></p>
+<p>4、cover image 判别模型DCI确保CI和TI的不可区分。</p>
+<p>5、为了细化提取过程，保证原秘密图像与提取出的秘密图像不可区分，引入秘密图像循环判别模型DSI：<img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20211225162500910.png" alt="image-20211225162500910"></p>
+<p>即<img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20211225162518531.png" alt="image-20211225162518531"></p>
+<p>6、为保证秘密图像只能从目标图像中提取，而不能从原始cover中提取，引入额外的不一致loss：!<img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20211225162712548.png" alt="image-20211225162712548"></p>
+<h3 id="Loss-Function"><a href="#Loss-Function" class="headerlink" title="Loss Function"></a>Loss Function</h3><p>ABDH总体的loss由三部分组成：对抗性损失<strong>LGAN(GTI,DCI)<strong>、循环对抗损失</strong>LGAN(GSI,DSI)<strong>、不一致的损失</strong>LIC</strong>。λ为调整对抗性损失与不一致损失百分比的参数，总的损失函数：</p>
+<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20211225163001090.png" alt="image-20211225163001090"></p>
+<p>且不一致的损耗需要更改为最小化格式：</p>
+<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20211225163110664.png" alt="image-20211225163110664"></p>
+<p>我们采用PSNR（评估灰度保真度）和SSIM（评估结构保真度）作为评判指标：</p>
+<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20211225163225423-16404211464021.png" alt="image-20211225163225423-16404211464021"></p>
+<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20211225163240195.png" alt="image-20211225163240195"></p>
+<h3 id="Network-Structure"><a href="#Network-Structure" class="headerlink" title="Network Structure"></a>Network Structure</h3><p><strong>目标图像生成模型GTI</strong>：一个卷积层（kernel size=7,s=0,p=0)，两个卷积层（k=3, s= 2, p = 1), 九个residual blocks残缺块 ,两个deconvolution layers反褶积层 (k= 3, s= 2, p=1, outside pad = 1), and 一个卷积层 (k=7, s=0, p=0)。每个卷积层和反褶积层后都跟着一个规范化实例层和一个ReLu层。</p>
+<p><strong>秘密图像生成模型GSI</strong>的结构与GTI完全相同。</p>
+<p><strong>覆盖图像判别模型DCI</strong>的网络结构与PatchGAN模型相似。每次它都会操作一个70×70的图像补丁，对该补丁的真伪进行分类。该模型将在整个图像中运行，并对70×70重叠补丁中的所有结果进行平均化，提供整体输出。DCI包含一个卷积层(k = 4,s = 2, p = 1)，跟随一个leaky ReLU层,三个卷积层(k = 4，s = 2, p = 1)，跟随一个规范化实例层和一个leaky ReLU层,一个卷积层(k = 4， s = 1, p = 1)，跟随一个规范化实例层和leaky ReLU层,一个卷积(k = 4,s = 1, p = 1),跟随一个sigmoid层。</p>
+<p><strong>秘密图像周期判别模型DSI</strong>的结构与DCI一致。</p>
+<p>为了提高收敛性能，使用Adam，而不是随机梯度下降SGD进行优化。Adam的参数为β1=0.5,β2=0.999。基本学习率 0.0002。</p>
+<h2 id="Experimental-Results"><a href="#Experimental-Results" class="headerlink" title="Experimental Results"></a>Experimental Results</h2><p>训练中，实验应用了COCO数据集。以8:2的比例随机分割COCO，生成单独的训练和验证数据集。在训练数据集中，随机选择50%作为掩蔽图像，50%作为秘密图像。为了提高对攻击的鲁棒性，还生成了与原始训练数据集数目相同的被攻击训练数据集。从原始的训练数据集中，随机选取样本，分别加入各种噪声、滤波器、随机裁剪、随机移位和JPEG压缩。实验以PyTorch为框架，用150个epoch训练ABDH。损耗调节参数λ设为0.6。</p>
+<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20211225165343664.png" alt="image-20211225165343664"></p>
+<p>第一行是cover。第二行是AM，红色代表敏感度高的区域。第三行是生成的目标图像，第四行是cover与TI的残差，第五行是提取的秘密图像，第六行是原始秘密图像与提取秘密图像的残差。</p>
+<p>TI的评价指标如下表，说明隐藏的质量很高：</p>
+<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20211225170756910.png" alt="image-20211225170756910"></p>
+<p>让我进一步分析，放大看残差会发现残差主要出现在物体的边缘和纹理部分。比如莉娜的帽子，F16飞机的边缘，狒狒的皮肤和胡须，水果和辣椒的轮廓等。这意味着在原始的封面图像中，<strong>ABDH</strong>倾向于将秘密信息隐藏在物体的边缘部分。在信息论中，纹理和边缘代表图像的高频部分，平滑区域代表图像的低频部分。如果我们改变低频部分就很容易被检测到。因此，目前许多最先进的算法都是将覆盖图像从空间域变换到频域，改变高频部分中的微小部分，并将其转换回空间域。从学习过程来看，<strong>ABDH</strong>检测器的生成网络对低频部分非常敏感，对高频部分不那么敏感。因此，ABDH生成的目标图像主要将其秘密信息隐藏在边缘和纹理部分，以保证最佳的隐蔽性。</p>
+<p>ESI的评价指标说明恢复质量也很高：</p>
+<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20211225171313871.png" alt="image-20211225171313871"></p>
+<h3 id="Quantitative-Comparative-Experiments"><a href="#Quantitative-Comparative-Experiments" class="headerlink" title="Quantitative Comparative Experiments"></a>Quantitative Comparative Experiments</h3><p>与LSB、内容自适应隐写、空间域水印、深度学习水印对比。</p>
+<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20211225174118424.png" alt="image-20211225174118424"></p>
+<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20211225174147619.png" alt="image-20211225174147619"></p>
+<p>根据这些指标，ABDH的表现和鲁棒性由于其他所有的算法。进一步分析，发现基于深度学习的方法的性能并没有预期那么好。对于SSGAN，它的重点是生成新的cover图像。但在我们的实验中，cover图像是固定的。对于HiDDeN，每像素可隐藏的位非常低，不适合整个图像的嵌入。对于ISGAN算法，其固有的局限性是当目标图像受到噪声攻击时，秘密图像会有损耗。因此，深度学习隐写方法的性能仅与LSB隐写方法处于同一水平，不如内容自适应隐写方法。</p>
+<h3 id="Ablation-Experiments"><a href="#Ablation-Experiments" class="headerlink" title="Ablation Experiments"></a>Ablation Experiments</h3><p>通过消融实验，找出了实验模型的三个关键特征：</p>
+<p>1、循环判别模型的引入。2、额外不一致损失的引入。3、注意模型attention model的引入。</p>
+<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20211225174725134.png" alt="image-20211225174725134"></p>
+<h3 id="Influence-of-Secret-Embedding-Amount"><a href="#Influence-of-Secret-Embedding-Amount" class="headerlink" title="Influence of Secret Embedding Amount"></a>Influence of Secret Embedding Amount</h3><p>随着隐藏信息容量的增加，鲁棒性减弱。</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Aucuba</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://aucuba-hh.github.io/2021/12/25/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/ABDHwGAN/">http://aucuba-hh.github.io/2021/12/25/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/ABDHwGAN/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Aucuba</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2021/12/26/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/UDH/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="论文笔记—Universal Deep Hiding for Steganography,Watermarking, and Light Field Messaging">
+                        
+                        <span class="card-title">论文笔记—Universal Deep Hiding for Steganography,Watermarking, and Light Field Messaging</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            解释深度隐写术的工作原理，并研究其在水印和LFM中的应用
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-26
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    论文笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/12/25/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/HiDDeN%20Hiding%20Data%20With%20Deep%20Networks/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="论文笔记—HiDDeN,Hiding Data With Deep Networks">
+                        
+                        <span class="card-title">论文笔记—HiDDeN,Hiding Data With Deep Networks</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            使用神经网络端到端训练开发一个在图像中隐藏数据的框架
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    论文笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2022</span>
+            <a href="/about" target="_blank">Aucuba</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2022";
+                    var startMonth = "4";
+                    var startDate = "25";
+                    var startHour = "21";
+                    var startMinute = "15";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+    <a href="https://github.com/aucuba-hh" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:aucuba_1221@hnu.edu.cn" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2843312816" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2843312816" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="https://weibo.com/u/7324273602" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/u/7324273602" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
+
+
+
+    <a href="https://www.zhihu.com/people/bu-xi-97-89" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/bu-xi-97-89" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
