@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="计算机网络课程实验三,NET, Aucuba">
+    <meta name="keywords" content="计算机网络课程实验四,Ethernet and ARP, Aucuba">
     <meta name="referrer" content="no-referrer" />
     <meta name="description" content="早睡晚起小能手，不知名话痨艺术家">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>计算机网络课程实验三,NET | Aucuba</title>
+    <title>计算机网络课程实验四,Ethernet and ARP | Aucuba</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -185,7 +185,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">计算机网络课程实验三,NET</h1>
+                    <h1 class="description center-align post-title">计算机网络课程实验四,Ethernet and ARP</h1>
                 </div>
             </div>
         </div>
@@ -323,7 +323,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-05-04
+                    2022-05-11
                 </div>
                 
 
@@ -339,57 +339,101 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="计算机网络课程实验三：NET"><a href="#计算机网络课程实验三：NET" class="headerlink" title="计算机网络课程实验三：NET"></a><strong>计算机网络课程实验三：NET</strong></h1><p>下载实验数据包：<a target="_blank" rel="noopener" href="http://gaia.cs.umass.edu/wireshark-labs/wireshark-traces.zip">http://gaia.cs.umass.edu/wireshark-labs/wireshark-traces.zip</a></p>
-<p>下载实验题目综述：<a target="_blank" rel="noopener" href="https://www-net.cs.umass.edu/wireshark-labs/Wireshark_NAT_v7.0.pdf">https://www-net.cs.umass.edu/wireshark-labs/Wireshark_NAT_v7.0.pdf</a></p>
-<h4 id="1-客户端的IP地址是什么"><a href="#1-客户端的IP地址是什么" class="headerlink" title="1.   客户端的IP地址是什么?"></a><strong>1.</strong>   <strong>客户端的IP地址是什么?</strong></h4><p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220504140045000.png" alt="image-20220504140045000"></p>
-<p>从TCP连接的第一次握手的源IP地址就可以看出是192.168.1.100，从第二次握手的目的IP也可以看出。这里给出第二次握手的IP协议截图中高亮行Dst：192.168.1.100也说明了IP地址。</p>
-<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220504140057333.png" alt="image-20220504140057333"></p>
-<h4 id="2-客户端实际上与几个不同的-Google-服务器进行通信，以便实现”安全浏览”。为了只显示那些包含与谷歌主服务器IP地址为64-233-169-104有关的HTTP消息的帧，在Wireshark的Filter输入”http-amp-amp-ip-addr-64-233-169-104”。"><a href="#2-客户端实际上与几个不同的-Google-服务器进行通信，以便实现”安全浏览”。为了只显示那些包含与谷歌主服务器IP地址为64-233-169-104有关的HTTP消息的帧，在Wireshark的Filter输入”http-amp-amp-ip-addr-64-233-169-104”。" class="headerlink" title="2.   **客户端实际上与几个不同的 Google 服务器进行通信，以便实现”安全浏览”。为了只显示那些包含与谷歌主服务器IP地址为64.233.169.104有关的HTTP消息的帧，在Wireshark的Filter输入”http &amp;&amp; ip.addr == 64.233.169.104”。"></a><strong>2.</strong>   **客户端实际上与几个不同的 Google 服务器进行通信，以便实现”安全浏览”。为了只显示那些包含与谷歌主服务器IP地址为64.233.169.104有关的HTTP消息的帧，在Wireshark的Filter输入”http &amp;&amp; ip.addr == 64.233.169.104”。</h4><p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220504140112179.png" alt="image-20220504140112179"></p>
-<h4 id="3-从客户机发送到上述谷歌主服务器的HTTP-GET，时间为7-109267，携带HTTP-GET的IP数据报的源IP地址和目的IP地址以及TCP源端口和目的端口是什么"><a href="#3-从客户机发送到上述谷歌主服务器的HTTP-GET，时间为7-109267，携带HTTP-GET的IP数据报的源IP地址和目的IP地址以及TCP源端口和目的端口是什么" class="headerlink" title="3.   从客户机发送到上述谷歌主服务器的HTTP GET，时间为7.109267，携带HTTP GET的IP数据报的源IP地址和目的IP地址以及TCP源端口和目的端口是什么?"></a><strong>3.</strong>   <strong>从客户机发送到上述谷歌主服务器的HTTP GET，时间为7.109267，携带HTTP GET的IP数据报的源IP地址和目的IP地址以及TCP源端口和目的端口是什么?</strong></h4><p>注意时间显示格式改为“自捕获开始经过的秒数”。</p>
-<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220504140127408.png" alt="image-20220504140127408"></p>
-<p>查看网络层和运输层分组信息：</p>
-<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220504140154158.png" alt="image-20220504140154158"></p>
-<p>得到源IP是192.168.1.100，目的IP是64.233.169.104；TCP源端口号4335，目的端口号80。</p>
-<h4 id="4．在什么时间接收到谷歌服务器200-OK的HTTP消息-携带此HTTP-200-OK消息的IP数据报的源IP地址和目的IP地址以及TCP源端口和目的端口是什么"><a href="#4．在什么时间接收到谷歌服务器200-OK的HTTP消息-携带此HTTP-200-OK消息的IP数据报的源IP地址和目的IP地址以及TCP源端口和目的端口是什么" class="headerlink" title="4．在什么时间接收到谷歌服务器200 OK的HTTP消息?携带此HTTP 200 OK消息的IP数据报的源IP地址和目的IP地址以及TCP源端口和目的端口是什么?"></a>4．在什么时间接收到谷歌服务器200 OK的HTTP消息?携带此HTTP 200 OK消息的IP数据报的源IP地址和目的IP地址以及TCP源端口和目的端口是什么?</h4><p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220504140210815.png" alt="image-20220504140210815"></p>
-<p>得到源IP是64.233.169.104，目的IP是192.168.1.100；TCP源端口号80，目的端口号4335。</p>
-<h4 id="5-在GET命令发送到HTTP服务器之前，TCP必须首先三次握手设置连接。对于在7-109267时发的送的HTTP-GET报文，客户端到服务器的TCP-SYN是在什么时间发送的？TCP-SYN的源和目的地IP地址以及源和目的地端口是什么？ACK的源和目的地IP地址以及响应SYN发送的源和目的地端口是什么？此ACK在客户端收到的时间是哪个时间？"><a href="#5-在GET命令发送到HTTP服务器之前，TCP必须首先三次握手设置连接。对于在7-109267时发的送的HTTP-GET报文，客户端到服务器的TCP-SYN是在什么时间发送的？TCP-SYN的源和目的地IP地址以及源和目的地端口是什么？ACK的源和目的地IP地址以及响应SYN发送的源和目的地端口是什么？此ACK在客户端收到的时间是哪个时间？" class="headerlink" title="5.在GET命令发送到HTTP服务器之前，TCP必须首先三次握手设置连接。对于在7.109267时发的送的HTTP GET报文，客户端到服务器的TCP SYN是在什么时间发送的？TCP SYN的源和目的地IP地址以及源和目的地端口是什么？ACK的源和目的地IP地址以及响应SYN发送的源和目的地端口是什么？此ACK在客户端收到的时间是哪个时间？"></a>5.在GET命令发送到HTTP服务器之前，TCP必须首先三次握手设置连接。对于在7.109267时发的送的HTTP GET报文，客户端到服务器的TCP SYN是在什么时间发送的？TCP SYN的源和目的地IP地址以及源和目的地端口是什么？ACK的源和目的地IP地址以及响应SYN发送的源和目的地端口是什么？此ACK在客户端收到的时间是哪个时间？</h4><p>在筛选器输入“tcp”，找到7.109267时间对应的HTTP GET和三次握手。</p>
-<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220504140227651.png" alt="image-20220504140227651"></p>
-<p>第一个TCP就是客户端发送的SYN，</p>
-<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220504140331806.png" alt="image-20220504140331806"></p>
-<p>时间是7.075657，源IP是192.168.1.100，目的IP是64.233.169.104；TCP源端口号4335，目的端口号80。</p>
-<p>第二个TCP是客户端发送的ACK。</p>
-<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220504140242170.png" alt="image-20220504140242170"></p>
-<p>接收时间是7.108986。源IP是64.233.169.104，目的IP是192.168.1.100；TCP源端口号80，目的端口号4335。</p>
-<h4 id="6-打开NAT-ISP-side。找到跟刚才客户端7-109267同样的HTTP-GET消息（这个时间是在-NAT-home-side-跟踪文件中记录的时间）。该消息何时出现在-NAT-ISP-side跟踪文件中？承载此HTTP-GET消息的IP数据报的源和目标IP地址以及TCP源和目的端口是多少？与您对上述问题3的回答相比，哪些字段相同，哪些字段不同？"><a href="#6-打开NAT-ISP-side。找到跟刚才客户端7-109267同样的HTTP-GET消息（这个时间是在-NAT-home-side-跟踪文件中记录的时间）。该消息何时出现在-NAT-ISP-side跟踪文件中？承载此HTTP-GET消息的IP数据报的源和目标IP地址以及TCP源和目的端口是多少？与您对上述问题3的回答相比，哪些字段相同，哪些字段不同？" class="headerlink" title="6.打开NAT_ISP_side。找到跟刚才客户端7.109267同样的HTTP GET消息（这个时间是在 NAT_home_side 跟踪文件中记录的时间）。该消息何时出现在 NAT_ISP_side跟踪文件中？承载此HTTP GET消息的IP数据报的源和目标IP地址以及TCP源和目的端口是多少？与您对上述问题3的回答相比，哪些字段相同，哪些字段不同？"></a>6.打开NAT_ISP_side。找到跟刚才客户端7.109267同样的HTTP GET消息（这个时间是在 NAT_home_side 跟踪文件中记录的时间）。该消息何时出现在 NAT_ISP_side跟踪文件中？承载此HTTP GET消息的IP数据报的源和目标IP地址以及TCP源和目的端口是多少？与您对上述问题3的回答相比，哪些字段相同，哪些字段不同？</h4><p>注意到7.109267的HTTP GET的长度是689：</p>
-<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220504140345503.png" alt="image-20220504140345503"></p>
-<p>所以在NAT_ISP_side文件中寻找长度相同的报文。</p>
-<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220504140351093.png" alt="image-20220504140351093"></p>
-<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220504140357786.png" alt="image-20220504140357786"></p>
-<p>接收时间是6.069168。源IP是71.192.34.104，目的IP是64.233.169.104；TCP源端口号4335，目的端口号80。</p>
-<p>它们不同的字段是源IP地址和checksum（因为源IP地址不同），其他都相同。</p>
-<h4 id="7-HTTP-GET消息中的任何字段是否已更改？携带HTTP-GET的IP数据报中的以下哪个字段发生了变化：版本，标题长度，标志，校验和。如果这些字段中的任何一个发生了变化，请说明为什么。"><a href="#7-HTTP-GET消息中的任何字段是否已更改？携带HTTP-GET的IP数据报中的以下哪个字段发生了变化：版本，标题长度，标志，校验和。如果这些字段中的任何一个发生了变化，请说明为什么。" class="headerlink" title="7. HTTP GET消息中的任何字段是否已更改？携带HTTP GET的IP数据报中的以下哪个字段发生了变化：版本，标题长度，标志，校验和。如果这些字段中的任何一个发生了变化，请说明为什么。**"></a><strong>7.</strong> HTTP GET消息中的任何字段是否已更改？携带HTTP GET的IP数据报中的以下哪个字段发生了变化：版本，标题长度，标志，校验和。如果这些字段中的任何一个发生了变化，请说明为什么。**</h4><p>只有校验和发生了变化。因为问题六中已经说明了，只有IP数据报的源地址发生了改变，版本、长度和标志都不变，但因为地址变了所以校验和变化了。</p>
-<h4 id="8-在NAT-ISP-side跟踪文件中，从Google服务器收到的第一条HTTP-200-OK-消息在什么时间？携带此HTTP-200-OK消息的IP数据报上的源和目标IP地址以及TCP源和目标端口是什么？与第4问回答的NAT-home-side结果相比哪些字段相同，哪些字段不同？"><a href="#8-在NAT-ISP-side跟踪文件中，从Google服务器收到的第一条HTTP-200-OK-消息在什么时间？携带此HTTP-200-OK消息的IP数据报上的源和目标IP地址以及TCP源和目标端口是什么？与第4问回答的NAT-home-side结果相比哪些字段相同，哪些字段不同？" class="headerlink" title="8. 在NAT_ISP_side跟踪文件中，从Google服务器收到的第一条HTTP 200 OK 消息在什么时间？携带此HTTP 200 OK消息的IP数据报上的源和目标IP地址以及TCP源和目标端口是什么？与第4问回答的NAT_home_side结果相比哪些字段相同，哪些字段不同？"></a><strong>8.</strong> <strong>在NAT_ISP_side跟踪文件中，从Google服务器收到的第一条HTTP 200 OK 消息在什么时间？携带此HTTP 200 OK消息的IP数据报上的源和目标IP地址以及TCP源和目标端口是什么？与第4问回答的NAT_home_side结果相比哪些字段相同，哪些字段不同？</strong></h4><p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220504140410135.png" alt="image-20220504140410135"></p>
-<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220504140416739.png" alt="image-20220504140416739"></p>
-<p>接收时间是6.117570。源IP是64.233.169.104，目的IP是71.192.34.104；TCP源端口号80，目的端口号4335。</p>
-<p>它们不同的字段是目的IP地址和checksum（因为目的IP地址不同），其他都相同。</p>
-<h4 id="9-在NAT-ISP-side跟踪文件中，客户端到服务器TCP-SYN段和服务器对客户端TCP-ACK段在什么时间与上述问题5的段对应？这两个段的源和目的地-IP-地址以及来源和目的地端口是什么？这些字段中哪些字段相同，哪些字段与上述问题5的回答不同？"><a href="#9-在NAT-ISP-side跟踪文件中，客户端到服务器TCP-SYN段和服务器对客户端TCP-ACK段在什么时间与上述问题5的段对应？这两个段的源和目的地-IP-地址以及来源和目的地端口是什么？这些字段中哪些字段相同，哪些字段与上述问题5的回答不同？" class="headerlink" title="9. 在NAT_ISP_side跟踪文件中，客户端到服务器TCP SYN段和服务器对客户端TCP ACK段在什么时间与上述问题5的段对应？这两个段的源和目的地 IP 地址以及来源和目的地端口是什么？这些字段中哪些字段相同，哪些字段与上述问题5的回答不同？"></a><strong>9.</strong> <strong>在NAT_ISP_side跟踪文件中，客户端到服务器TCP SYN段和服务器对客户端TCP ACK段在什么时间与上述问题5的段对应？这两个段的源和目的地 IP 地址以及来源和目的地端口是什么？这些字段中哪些字段相同，哪些字段与上述问题5的回答不同？</strong></h4><p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220504140428618.png" alt="image-20220504140428618"></p>
-<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220504140433783.png" alt="image-20220504140433783"></p>
-<p>客户端到服务器的SYN接收时间是6.035475，源IP是71.192.34.104，目的IP是64.233.169.104；TCP源端口号4335，目的端口号80。</p>
-<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220504140440533.png" alt="image-20220504140440533"></p>
-<p>ACK的接收时间是6.067775。源IP是64.233.169.104，目的IP是71.192.34.104；TCP源端口号80，目的端口号4335。</p>
-<p>和问题五的回答相比，同样是SYN的源IP地址和ACK的目的IP地址变了。</p>
-<h4 id="10-做出类似的-HTTP-连接的-NAT-转换表。"><a href="#10-做出类似的-HTTP-连接的-NAT-转换表。" class="headerlink" title="10. 做出类似的 HTTP 连接的 NAT 转换表。"></a><strong>10.</strong> <strong>做出类似的 HTTP 连接的 NAT 转换表。</strong></h4><table>
-<thead>
-<tr>
-<th><strong>WAN</strong> <strong>端</strong></th>
-<th><strong>LAN</strong> <strong>端</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>71.192.34.104, 4335</td>
-<td>192.168.1.100, 4335</td>
-</tr>
-</tbody></table>
+                <h1 id="计算机网络课程实验四：Ethernet-and-ARP"><a href="#计算机网络课程实验四：Ethernet-and-ARP" class="headerlink" title="计算机网络课程实验四：Ethernet and ARP"></a><strong>计算机网络课程实验四：</strong>Ethernet and ARP</h1><p>下载实验数据包：<a target="_blank" rel="noopener" href="http://gaia.cs.umass.edu/wireshark-labs/wireshark-traces.zip">http://gaia.cs.umass.edu/wireshark-labs/wireshark-traces.zip</a></p>
+<p>下载实验题目综述：<a target="_blank" rel="noopener" href="http://www-net.cs.umass.edu/wireshark-labs/Wireshark_Ethernet_ARP_v7.0.pdf">http://www-net.cs.umass.edu/wireshark-labs/Wireshark_Ethernet_ARP_v7.0.pdf</a></p>
+<h3 id="捕获和分析以太网帧"><a href="#捕获和分析以太网帧" class="headerlink" title="捕获和分析以太网帧"></a>捕获和分析以太网帧</h3><p>这里选择直接解压文件包，用wireshark打开ethernet–ethereal-trace-1。</p>
+<p><strong>选择包含HTTP GET消息的以太网帧，在报文详细信息窗口中展开Ethernet II信息。</strong></p>
+<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220511124641636.png" alt="image-20220511124641636"></p>
+<h4 id="1-电脑的48位以太网地址是多少？"><a href="#1-电脑的48位以太网地址是多少？" class="headerlink" title="1.电脑的48位以太网地址是多少？"></a>1.电脑的48位以太网地址是多少？</h4><p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220511124825718.png" alt="image-20220511124825718"></p>
+<p>源地址就是电脑的以太网地址：0x00 d0 59 a9 3d 68。</p>
+<pr>
+
+<h4 id="2-以太网帧的48位目的地址是什么-这是gaia-cs-umass-edu的以太网地址吗？什么设备的以太网地址是这个"><a href="#2-以太网帧的48位目的地址是什么-这是gaia-cs-umass-edu的以太网地址吗？什么设备的以太网地址是这个" class="headerlink" title="2.以太网帧的48位目的地址是什么?这是gaia.cs.umass.edu的以太网地址吗？什么设备的以太网地址是这个?"></a>2.以太网帧的48位目的地址是什么?这是gaia.cs.umass.edu的以太网地址吗？什么设备的以太网地址是这个?</h4><p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220511125038268.png" alt="image-20220511125038268"></p>
+<p>目的地址是：0x00 06 25 da af 73。</p>
+<p>这个地址并非gaia.cs.umass.edu的以太网地址，而是是路由器接口的MA地址。</p>
+<pr>
+
+<h4 id="3-Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么"><a href="#3-Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么" class="headerlink" title="3.Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么?"></a>3.Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么?</h4><p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220511125433348.png" alt="image-20220511125433348"></p>
+<p>0x0800对应的上层协议是IPV4。</p>
+<pr>
+
+<h4 id="4-从以太网帧的最开始算起，到“GET”中的ASCII码“G”，一共出现了多少个字节"><a href="#4-从以太网帧的最开始算起，到“GET”中的ASCII码“G”，一共出现了多少个字节" class="headerlink" title="4.从以太网帧的最开始算起，到“GET”中的ASCII码“G”，一共出现了多少个字节?"></a>4.从以太网帧的最开始算起，到“GET”中的ASCII码“G”，一共出现了多少个字节?</h4><p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220511125628474.png" alt="image-20220511125628474"></p>
+<p>如图，第55个字节0x47是“G”，它的前面一共有54个字节。</p>
+<pr>
+
+<p><strong>接下来，根据包含HTTP响应消息的第一个字节的以太网帧的内容回答以下问题。</strong></p>
+<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220511130008016.png" alt="image-20220511130008016"></p>
+<pr>
+
+<h4 id="5-以太网源地址的值是多少-这是您的计算机地址，还是gaa-cs-umass-edu的地址？什么设备的以太网地址是这个"><a href="#5-以太网源地址的值是多少-这是您的计算机地址，还是gaa-cs-umass-edu的地址？什么设备的以太网地址是这个" class="headerlink" title="5.以太网源地址的值是多少?这是您的计算机地址，还是gaa.cs .umass.edu的地址？什么设备的以太网地址是这个?"></a>5.以太网源地址的值是多少?这是您的计算机地址，还是gaa.cs .umass.edu的地址？什么设备的以太网地址是这个?</h4><p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220511130056987.png" alt="image-20220511130056987"></p>
+<p>源地址是0x00 06 25 da af 73。这个地址和第二问同样是是路由器的接口MAC地址。</p>
+<pr>
+
+<h4 id="6-以太网帧中的目的地址是什么-这是你电脑的以太网地址吗"><a href="#6-以太网帧中的目的地址是什么-这是你电脑的以太网地址吗" class="headerlink" title="6.以太网帧中的目的地址是什么?这是你电脑的以太网地址吗?"></a>6.以太网帧中的目的地址是什么?这是你电脑的以太网地址吗?</h4><p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220511130248462.png" alt="image-20220511130248462"></p>
+<p>目的地址是：0x00 d0 59 a9 3d 68。这就是电脑主机的以太网地址。</p>
+<pr>
+
+<h4 id="7-Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么"><a href="#7-Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么" class="headerlink" title="7.Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么?"></a>7.Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么?</h4><p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220511130520278.png" alt="image-20220511130520278"></p>
+<p>同样是IPV4。</p>
+<pr>
+
+<h4 id="8-从以太网帧的最开始算起，到“OK”中的ASCII码“O”，一共出现了多少个字节"><a href="#8-从以太网帧的最开始算起，到“OK”中的ASCII码“O”，一共出现了多少个字节" class="headerlink" title="8.从以太网帧的最开始算起，到“OK”中的ASCII码“O”，一共出现了多少个字节?"></a>8.从以太网帧的最开始算起，到“OK”中的ASCII码“O”，一共出现了多少个字节?</h4><p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220511131915878.png" alt="image-20220511131915878"></p>
+<p>前面的到tcp报头为止，一共54个字节。</p>
+<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220511131536769.png" alt="image-20220511131536769"></p>
+<p>HTTP报文中O是第14个字节。那么从最开始算起，O出现在第68个字节处。</p>
+<pr>
+
+<h3 id="ARP-地址解析协议"><a href="#ARP-地址解析协议" class="headerlink" title="ARP 地址解析协议"></a>ARP 地址解析协议</h3><p>查看ARP命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c:\windows\system32\arp</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220511132407101.png" alt="image-20220511132407101"></p>
+<pr>
+
+<h4 id="9-写下你电脑的ARP缓存的内容。每个列值的含义是什么"><a href="#9-写下你电脑的ARP缓存的内容。每个列值的含义是什么" class="headerlink" title="9.写下你电脑的ARP缓存的内容。每个列值的含义是什么?"></a>9.写下你电脑的ARP缓存的内容。每个列值的含义是什么?</h4><p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220511132629079.png" alt="image-20220511132629079">**</p>
+<p>分别表示IP地)、MAC地址和类型。类型分为静态和动态，动态表示若是某个表项在必定的时间内没有被用到就被删除，静态则永久保存。</p>
+<pr>
+
+<p><strong>为了观察计算机发送和接收 ARP消息，要清除 ARP缓存，防止在其缓存中找到所需的 IP-Ethernet地址转换关系而不会发送 ARP 消息。</strong></p>
+<p>清除浏览器的缓存后，启动 Wireshark捕捉。打开URL：<a target="_blank" rel="noopener" href="http://gaia.cs.umass.edu/wireshark-labs/HTTP-ethereal-lab-file3.html%E3%80%82">http://gaia.cs.umass.edu/wireshark-labs/HTTP-ethereal-lab-file3.html。</a></p>
+<h4 id="10-包含ARP请求消息的以太网帧的源地址和目的地址的十六进制值是多少"><a href="#10-包含ARP请求消息的以太网帧的源地址和目的地址的十六进制值是多少" class="headerlink" title="10.包含ARP请求消息的以太网帧的源地址和目的地址的十六进制值是多少?"></a>10.包含ARP请求消息的以太网帧的源地址和目的地址的十六进制值是多少?</h4><p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220511134141521.png" alt="image-20220511134141521"></p>
+<p>源地址是0x00 d0 59 a9 3d 68；</p>
+<p>目的地址是0xff ff ff ff ff ff。</p>
+<pr>
+
+<h4 id="11-Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么"><a href="#11-Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么" class="headerlink" title="11.Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么?"></a>11.Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么?</h4><p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220511134311355.png" alt="image-20220511134311355"></p>
+<p>类型是ARP，0x0806。</p>
+<pr>
+
+<h4 id="12-从-ftp-ftp-rfc-editor-org-in-notes-std-std37-txt下载ARP报文格式规范。分析："><a href="#12-从-ftp-ftp-rfc-editor-org-in-notes-std-std37-txt下载ARP报文格式规范。分析：" class="headerlink" title="12.从 ftp://ftp.rfc-editor.org/in-notes/std/std37.txt下载ARP报文格式规范。分析："></a>12.从 <a href="ftp://ftp.rfc-editor.org/in-notes/std/std37.txt%E4%B8%8B%E8%BD%BDARP%E6%8A%A5%E6%96%87%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83%E3%80%82%E5%88%86%E6%9E%90%EF%BC%9A">ftp://ftp.rfc-editor.org/in-notes/std/std37.txt下载ARP报文格式规范。分析：</a></h4><h5 id="1）从以太网帧的最开始ARP操作码字段开始的字节数是多少"><a href="#1）从以太网帧的最开始ARP操作码字段开始的字节数是多少" class="headerlink" title="(1）从以太网帧的最开始ARP操作码字段开始的字节数是多少?"></a>(1）从以太网帧的最开始ARP操作码字段开始的字节数是多少?</h5><p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220511134940944.png" alt="image-20220511134940944"></p>
+<p>如图，21个字节。</p>
+<pr>
+
+<h5 id="2-发出ARP请求的以太网帧的ARP-payload部分的操作码字段值是多少"><a href="#2-发出ARP请求的以太网帧的ARP-payload部分的操作码字段值是多少" class="headerlink" title="(2)发出ARP请求的以太网帧的ARP-payload部分的操作码字段值是多少?"></a>(2)发出ARP请求的以太网帧的ARP-payload部分的操作码字段值是多少?</h5><p>如上图，操作码Opcode为0x00 01。</p>
+<pr>
+
+<h5 id="3-ARP消息中是否包含发送者的IP地址"><a href="#3-ARP消息中是否包含发送者的IP地址" class="headerlink" title="(3)ARP消息中是否包含发送者的IP地址?"></a>(3)ARP消息中是否包含发送者的IP地址?</h5><p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220511135138668.png" alt="image-20220511135138668"></p>
+<p>如图，包含的发送者IP地址是0x00 d0 59 a9 3d 68。</p>
+<pr>
+
+<h5 id="4-从哪里查询相应-IP-的以太网地址"><a href="#4-从哪里查询相应-IP-的以太网地址" class="headerlink" title="(4)从哪里查询相应 IP 的以太网地址?"></a>(4)<strong>从哪里查询相应 IP 的以太网地址</strong>?</h5><p>操作码为0x00 01，是request，表示ARP请求，即查询响应IP的以太网地址。</p>
+<pr>
+
+<h4 id="13-查找响应ARP请求而发送的ARP应答。"><a href="#13-查找响应ARP请求而发送的ARP应答。" class="headerlink" title="13.查找响应ARP请求而发送的ARP应答。"></a>13.查找响应ARP请求而发送的ARP应答。</h4><h5 id="（1）从以太网帧的最开始ARP操作码字段开始的字节数是多少"><a href="#（1）从以太网帧的最开始ARP操作码字段开始的字节数是多少" class="headerlink" title="（1）从以太网帧的最开始ARP操作码字段开始的字节数是多少?"></a>（1）从以太网帧的最开始ARP操作码字段开始的字节数是多少?</h5><p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220511135629074.png" alt="image-20220511135629074"></p>
+<p>如图，第21个字节</p>
+<pr>
+
+<h5 id="（2）ARP响应的以太网帧的ARP-payload部分的操作码字段值是多少"><a href="#（2）ARP响应的以太网帧的ARP-payload部分的操作码字段值是多少" class="headerlink" title="（2）ARP响应的以太网帧的ARP-payload部分的操作码字段值是多少?"></a>（2）ARP响应的以太网帧的ARP-payload部分的操作码字段值是多少?</h5><p>同样地，操作码字段0x00 02，表示reply。</p>
+<pr>
+
+<h5 id="（3）-在响应-ARP-中从哪里看出现-ARP-请求的答案"><a href="#（3）-在响应-ARP-中从哪里看出现-ARP-请求的答案" class="headerlink" title="（3） 在响应 ARP 中从哪里看出现 ARP 请求的答案?"></a>（3） <strong>在响应 ARP 中从哪里看出现 ARP 请求的答案?</strong></h5><p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220511135858725.png" alt="image-20220511135858725"></p>
+<pr>
+
+<h4 id="14-包含ARP应答消息的以太网帧的源地址和目的地址的十六进制值是什么"><a href="#14-包含ARP应答消息的以太网帧的源地址和目的地址的十六进制值是什么" class="headerlink" title="14.包含ARP应答消息的以太网帧的源地址和目的地址的十六进制值是什么?"></a>14.包含ARP应答消息的以太网帧的源地址和目的地址的十六进制值是什么?</h4><p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220511140014351.png" alt="image-20220511140014351"></p>
+<p>源地址：0x00 06 25 da af 91;</p>
+<p>目的地址：0x00 d0 59 a9 3d 68。</p>
+<pr>
+
+<h4 id="15-如果在一台计算机发送ARP请求和应答的网络上，还有另一台计算机发送了另一个ARP请求，为什么在报文跟踪中没有ARP应答？"><a href="#15-如果在一台计算机发送ARP请求和应答的网络上，还有另一台计算机发送了另一个ARP请求，为什么在报文跟踪中没有ARP应答？" class="headerlink" title="15.如果在一台计算机发送ARP请求和应答的网络上，还有另一台计算机发送了另一个ARP请求，为什么在报文跟踪中没有ARP应答？"></a>15.如果在一台计算机发送ARP请求和应答的网络上，还有另一台计算机发送了另一个ARP请求，为什么在报文跟踪中没有ARP应答？</h4><p>因为ARP查询是广播的，全部该网段内的电脑都能收到。但是 ARP 广播回复是单播的，只有请求的那台电脑才能收到，所以抓不到另一台电脑的 ARP 请求。</p>
 
             </div>
             <hr/>
@@ -415,7 +459,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://aucuba-hh.github.io/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/">http://aucuba-hh.github.io/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/</a>
+                    <a href="http://aucuba-hh.github.io/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/">http://aucuba-hh.github.io/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -618,9 +662,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/">
                     <div class="card-image">
@@ -638,9 +683,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -653,6 +698,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -663,24 +709,24 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/04/27/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/3.%E4%BC%A0%E8%BE%93%E5%B1%82/">
+                <a href="/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="运输层">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="计算机网络课程实验三,NET">
                         
-                        <span class="card-title">运输层</span>
+                        <span class="card-title">计算机网络课程实验三,NET</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            什么是运输层？
+                            计网实验，抓包
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-04
                             </span>
                         <span class="publish-author">
                             
