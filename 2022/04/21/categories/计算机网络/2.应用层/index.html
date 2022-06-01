@@ -339,16 +339,16 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="计算机网络——自顶向下"><a href="#计算机网络——自顶向下" class="headerlink" title="计算机网络——自顶向下"></a>计算机网络——自顶向下</h1><h2 id="2-应用层"><a href="#2-应用层" class="headerlink" title="2 应用层"></a>2 应用层</h2><h3 id="2-1-应用层协议原理"><a href="#2-1-应用层协议原理" class="headerlink" title="2.1 应用层协议原理"></a>2.1 应用层协议原理</h3><h4 id="2-1-1-网络应用程序体系结构"><a href="#2-1-1-网络应用程序体系结构" class="headerlink" title="2.1.1 网络应用程序体系结构"></a>2.1.1 网络应用程序体系结构</h4><p><strong>客户机/服务器</strong>：<img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220408115155480.png" alt="image-20220408115155480"></p>
+                <h1 id="计算机网络——自顶向下"><a href="#计算机网络——自顶向下" class="headerlink" title="计算机网络——自顶向下"></a>计算机网络——自顶向下</h1><h2 id="2-应用层"><a href="#2-应用层" class="headerlink" title="2 应用层"></a>2 应用层</h2><h3 id="2-1-应用层协议原理"><a href="#2-1-应用层协议原理" class="headerlink" title="2.1 应用层协议原理"></a>2.1 应用层协议原理</h3><h4 id="2-1-1-网络应用程序体系结构"><a href="#2-1-1-网络应用程序体系结构" class="headerlink" title="2.1.1 网络应用程序体系结构"></a>2.1.1 网络应用程序体系结构</h4><p><strong>客户机/服务器</strong>：<img src="C:/Users/Aucuba/Pictures/upload/_pictures/image-20220408115155480.png" alt="image-20220408115155480"></p>
 <p>例：web、FTP、e-main</p>
-<p><strong>对等P2P</strong>：<img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220408115220496.png" alt="image-20220408115220496"></p>
+<p><strong>对等P2P</strong>：<img src="C:/Users/Aucuba/Pictures/upload/_pictures/image-20220408115220496.png" alt="image-20220408115220496"></p>
 <p>例：Gnurella、迅雷</p>
 <p><strong>混合模式</strong></p>
 <h4 id="2-1-2-进程通信"><a href="#2-1-2-进程通信" class="headerlink" title="2.1.2 进程通信"></a>2.1.2 进程通信</h4><p>同一主机中，使用IPC（操作系统定义）通信。</p>
 <p>不同主机中，进城process通过交换报文messgae进行通信。</p>
 <p><strong>客户和服务器进程</strong>：客户机发起通信，服务器等待联系。P2P体系的应用进城具有双重特性。</p>
 <p><strong>进程的接口</strong>：套接字，是应用层与运输层之间的接口。</p>
-<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220408115956927.png" alt="image-20220408115956927"></p>
+<p><img src="C:/Users/Aucuba/Pictures/upload/_pictures/image-20220408115956927.png" alt="image-20220408115956927"></p>
 <p><strong>进程寻址</strong>：主机IP地址+进程端口号。</p>
 <h4 id="2-1-3-可供应用程序使用的传输服务"><a href="#2-1-3-可供应用程序使用的传输服务" class="headerlink" title="2.1.3 可供应用程序使用的传输服务"></a>2.1.3 可供应用程序使用的传输服务</h4><p><strong>可靠数据传输</strong>：是否容忍丢失。</p>
 <p><strong>吞吐量</strong>：传送比特的速率。不同应用对带宽的限制。</p>
@@ -357,7 +357,7 @@
 <h3 id="2-2-Web应用和HTTP协议"><a href="#2-2-Web应用和HTTP协议" class="headerlink" title="2.2 Web应用和HTTP协议"></a>2.2 Web应用和HTTP协议</h3><p>Web的应用层协议是HTTP，超文本传输协议。</p>
 <h4 id="2-2-1-HTTP概况"><a href="#2-2-1-HTTP概况" class="headerlink" title="2.2.1 HTTP概况"></a>2.2.1 HTTP概况</h4><p>HTTP由客户机程序和服务器程序实现，通过交换HTTP报文进行会话。</p>
 <p>Web页面由对象（HTML文件、JPG图片等）组成，每个对象由URL(( Uniform Resource Locator)进行寻址。</p>
-<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220408120725355.png" alt="image-20220408120725355"></p>
+<p><img src="C:/Users/Aucuba/Pictures/upload/_pictures/image-20220408120725355.png" alt="image-20220408120725355"></p>
 <p>HTTP是一个无状态协议，因为服务器并不保存关于客户的任何信息。</p>
 <h4 id="2-2-2-非持续连接和持续连接"><a href="#2-2-2-非持续连接和持续连接" class="headerlink" title="2.2.2 非持续连接和持续连接"></a>2.2.2 非持续连接和持续连接</h4><p><strong>非持续连接</strong>(Version=1.0)：TCP每发送一个对象后就关闭。</p>
 <p>1.客户进程在80端口号（默认）发起向客户机<a target="_blank" rel="noopener" href="http://www.swust.edu.cn的tcp连接;/">www.swust.edu.cn的TCP连接；</a></p>
@@ -370,12 +370,12 @@
 <p><strong>缺点</strong>：串行访问时间长；并行访问占用资源多(分配的TCP缓冲区和TCP变量)。</p>
 <p><strong>持续连接</strong>(Version=1.11)：TCP为相同的客户-服务器间的请求和响应持续打开。</p>
 <h4 id="2-2-3-HTTP报文格式"><a href="#2-2-3-HTTP报文格式" class="headerlink" title="2.2.3 HTTP报文格式"></a>2.2.3 HTTP报文格式</h4><p><strong>请求报文</strong>:第一行为请求行（方法method+URL+HTTP版本)，后继行为首部行，最后是实体。</p>
-<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220408123221263.png" alt="image-20220408123221263"></p>
-<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220408123347554.png" alt="image-20220408123347554"></p>
+<p><img src="C:/Users/Aucuba/Pictures/upload/_pictures/image-20220408123221263.png" alt="image-20220408123221263"></p>
+<p><img src="C:/Users/Aucuba/Pictures/upload/_pictures/image-20220408123347554.png" alt="image-20220408123347554"></p>
 <p>method方法类型有:GET（请求访问，实体为空）、POST、HEAD、PUT、DELETE。</p>
 <p><strong>响应报文</strong>：第一行为状态行（HTTP版本+状态码+短语phrase)，后继行为首部行，最后是实体。</p>
-<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220408133759610.png" alt="image-20220408133759610"></p>
-<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220408133811897.png" alt="image-20220408133811897"></p>
+<p><img src="C:/Users/Aucuba/Pictures/upload/_pictures/image-20220408133759610.png" alt="image-20220408133759610"></p>
+<p><img src="C:/Users/Aucuba/Pictures/upload/_pictures/image-20220408133811897.png" alt="image-20220408133811897"></p>
 <p>常见的状态码和短语：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">200</span> <span class="variable constant_">OK</span></span><br><span class="line"><span class="comment">//请求成功，请求的对象在这个报文后面</span></span><br><span class="line"><span class="number">301</span> <span class="title class_">Moved</span> <span class="title class_">Permanently</span></span><br><span class="line"><span class="comment">//请求的对象已转移，新的URL在响应报文的Location:首部行中指定</span></span><br><span class="line"><span class="number">400</span> <span class="title class_">Bad</span> <span class="title class_">Request</span></span><br><span class="line"><span class="comment">//请求报文不为服务器理解</span></span><br><span class="line"><span class="number">404</span> <span class="title class_">Not</span> <span class="title class_">Found</span></span><br><span class="line"><span class="comment">//请求的文档没有在该服务器上发现</span></span><br><span class="line"><span class="number">505</span> <span class="variable constant_">HTTP</span> <span class="title class_">Version</span> <span class="title class_">Not</span> <span class="title class_">Supported</span></span><br></pre></td></tr></table></figure>
 
@@ -384,12 +384,12 @@
 <h4 id="2-2-4-用户与服务器的交互：Cookie"><a href="#2-2-4-用户与服务器的交互：Cookie" class="headerlink" title="2.2.4 用户与服务器的交互：Cookie"></a>2.2.4 用户与服务器的交互：Cookie</h4><p>无状态的HTTP简化了服务器的设计，但不能保存用户信息。所以HTTP使用Cookie对用户进行跟踪。</p>
 <p><strong>cookie组件</strong>包括：HTTP响应报文中的cookie首部行；请求报文中的cookie首部行；用户主机保留的cookie文件；Web站点的后端数据库。</p>
 <p>用户每请求一个Web页面，浏览器会从cookie文件中获取对这个网站的识别码，放到HTTP请求报文中的包括识别码的cookie首部行中。cookie首部用来标识一个用户。</p>
-<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220408134647714.png" alt="image-20220408134647714"></p>
+<p><img src="C:/Users/Aucuba/Pictures/upload/_pictures/image-20220408134647714.png" alt="image-20220408134647714"></p>
 <h4 id="2-2-5-Web缓存"><a href="#2-2-5-Web缓存" class="headerlink" title="2.2.5 Web缓存"></a>2.2.5 Web缓存</h4><p><strong>Web缓存器</strong>：保存最近请求的web对象。浏览器向缓存发送所有HTTP请求，若对象在缓存中：缓存返回对象；否则缓存向起始服务器请求对象，然后向客户机返回对象。</p>
 <p>好处：1）减小客户机请求的响应时间；2）减少机构内部网与因特网接入链路的通信量。</p>
 <h4 id="2-2-6-条件GET方法"><a href="#2-2-6-条件GET方法" class="headerlink" title="2.2.6 条件GET方法"></a>2.2.6 条件GET方法</h4><p>为解决缓存中对象始终最新的问题，用<strong>条件GET</strong>方法：缓存器在HTTP请求中包含一个“If-modified-since: <date>”，指定缓存版本的日期，服务器判断如果缓存的拷贝是最新，就响应不包含对象: </p>
 <p>“HTTP/1.0 304 Not Modified”，否则修改对象。</p>
-<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220408135709719.png" alt="image-20220408135709719"></p>
+<p><img src="C:/Users/Aucuba/Pictures/upload/_pictures/image-20220408135709719.png" alt="image-20220408135709719"></p>
 <h3 id="2-3-文件传输协议：FTP"><a href="#2-3-文件传输协议：FTP" class="headerlink" title="2.3 文件传输协议：FTP"></a>2.3 文件传输协议：FTP</h3><p><strong>特点</strong>：使用双TCP连接，一个<strong>控制连接</strong>(端口21)，一个<strong>数据连接</strong>(端口20)。</p>
 <p><strong>控制连接</strong>用于在两台主机传输控制信息，如用户标识、口令、控制命令等，<strong>数据连接</strong>用于实际发送文件。</p>
 <p>FTP使用独立的控制连接，我们称FTP是<strong>带外控制</strong>；而HTTP是带内控制。</p>
@@ -404,10 +404,10 @@
 <h3 id="2-5-DNS"><a href="#2-5-DNS" class="headerlink" title="2.5 DNS"></a>2.5 DNS</h3><p>Domain Name Server域名服务器。</p>
 <p>使用UDP。</p>
 <p>例：主机名为<a target="_blank" rel="noopener" href="http://www.swust.edu.cn,ip地址/">www.swust.edu.cn，IP地址</a>(32 bit) 为220.166.52.4，DNS完成主机名到IP地址的解析。</p>
-<h4 id="2-5-1-分布式、等级制数据库"><a href="#2-5-1-分布式、等级制数据库" class="headerlink" title="2.5.1 分布式、等级制数据库"></a>2.5.1 分布式、等级制数据库</h4><h4 id=""><a href="#" class="headerlink" title=""></a><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220408141738936.png" alt="image-20220408141738936"></h4><h4 id="2-5-2两种查询方式"><a href="#2-5-2两种查询方式" class="headerlink" title="2.5.2两种查询方式"></a>2.5.2两种查询方式</h4><p><strong>迭代查询</strong>：我的理解是，去去就回。</p>
-<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220408142004722.png" alt="image-20220408142004722"></p>
+<h4 id="2-5-1-分布式、等级制数据库"><a href="#2-5-1-分布式、等级制数据库" class="headerlink" title="2.5.1 分布式、等级制数据库"></a>2.5.1 分布式、等级制数据库</h4><h4 id=""><a href="#" class="headerlink" title=""></a><img src="C:/Users/Aucuba/Pictures/upload/_pictures/image-20220408141738936.png" alt="image-20220408141738936"></h4><h4 id="2-5-2两种查询方式"><a href="#2-5-2两种查询方式" class="headerlink" title="2.5.2两种查询方式"></a>2.5.2两种查询方式</h4><p><strong>迭代查询</strong>：我的理解是，去去就回。</p>
+<p><img src="C:/Users/Aucuba/Pictures/upload/_pictures/image-20220408142004722.png" alt="image-20220408142004722"></p>
 <p><strong>递归查询</strong>：我的理解是，先去后回。</p>
-<p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220408142036974.png" alt="image-20220408142036974"></p>
+<p><img src="C:/Users/Aucuba/Pictures/upload/_pictures/image-20220408142036974.png" alt="image-20220408142036974"></p>
 
             </div>
             <hr/>
