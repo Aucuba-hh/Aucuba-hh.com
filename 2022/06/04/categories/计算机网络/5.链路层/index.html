@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="应用层, Aucuba">
+    <meta name="keywords" content="链路层, Aucuba">
     <meta name="referrer" content="no-referrer" />
     <meta name="description" content="早睡晚起小能手，不知名话痨艺术家">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>应用层 | Aucuba</title>
+    <title>链路层 | Aucuba</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -180,12 +180,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">应用层</h1>
+                    <h1 class="description center-align post-title">链路层</h1>
                 </div>
             </div>
         </div>
@@ -323,7 +323,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-04-21
+                    2022-06-04
                 </div>
                 
 
@@ -339,76 +339,84 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="计算机网络——自顶向下"><a href="#计算机网络——自顶向下" class="headerlink" title="计算机网络——自顶向下"></a>计算机网络——自顶向下</h1><h2 id="2-应用层"><a href="#2-应用层" class="headerlink" title="2 应用层"></a>2 应用层</h2><h3 id="2-1-应用层协议原理"><a href="#2-1-应用层协议原理" class="headerlink" title="2.1 应用层协议原理"></a>2.1 应用层协议原理</h3><h4 id="2-1-1-网络应用程序体系结构"><a href="#2-1-1-网络应用程序体系结构" class="headerlink" title="2.1.1 网络应用程序体系结构"></a>2.1.1 网络应用程序体系结构</h4><p><strong>客户机/服务器</strong>：<img src="/2022/04/21/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/2/Users/Aucuba/Pictures/upload/_pictures/image-20220408115155480.png" alt="image-20220408115155480"></p>
-<p>例：web、FTP、e-main</p>
-<p><strong>对等P2P</strong>：<img src="/2022/04/21/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/2/Users/Aucuba/Pictures/upload/_pictures/image-20220408115220496.png" alt="image-20220408115220496"></p>
-<p>例：Gnurella、迅雷</p>
-<p><strong>混合模式</strong></p>
-<h4 id="2-1-2-进程通信"><a href="#2-1-2-进程通信" class="headerlink" title="2.1.2 进程通信"></a>2.1.2 进程通信</h4><p>同一主机中，使用IPC（操作系统定义）通信。</p>
-<p>不同主机中，进城process通过交换报文messgae进行通信。</p>
-<p><strong>客户和服务器进程</strong>：客户机发起通信，服务器等待联系。P2P体系的应用进城具有双重特性。</p>
-<p><strong>进程的接口</strong>：套接字，是应用层与运输层之间的接口。</p>
-<p><img src="/2022/04/21/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/2/Users/Aucuba/Pictures/upload/_pictures/image-20220408115956927.png" alt="image-20220408115956927"></p>
-<p><strong>进程寻址</strong>：主机IP地址+进程端口号。</p>
-<h4 id="2-1-3-可供应用程序使用的传输服务"><a href="#2-1-3-可供应用程序使用的传输服务" class="headerlink" title="2.1.3 可供应用程序使用的传输服务"></a>2.1.3 可供应用程序使用的传输服务</h4><p><strong>可靠数据传输</strong>：是否容忍丢失。</p>
-<p><strong>吞吐量</strong>：传送比特的速率。不同应用对带宽的限制。</p>
-<p><strong>定时</strong>：就是延时。</p>
-<p><strong>安全</strong>。</p>
-<h3 id="2-2-Web应用和HTTP协议"><a href="#2-2-Web应用和HTTP协议" class="headerlink" title="2.2 Web应用和HTTP协议"></a>2.2 Web应用和HTTP协议</h3><p>Web的应用层协议是HTTP，超文本传输协议。</p>
-<h4 id="2-2-1-HTTP概况"><a href="#2-2-1-HTTP概况" class="headerlink" title="2.2.1 HTTP概况"></a>2.2.1 HTTP概况</h4><p>HTTP由客户机程序和服务器程序实现，通过交换HTTP报文进行会话。</p>
-<p>Web页面由对象（HTML文件、JPG图片等）组成，每个对象由URL(( Uniform Resource Locator)进行寻址。</p>
-<p><img src="/2022/04/21/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/2/Users/Aucuba/Pictures/upload/_pictures/image-20220408120725355.png" alt="image-20220408120725355"></p>
-<p>HTTP是一个无状态协议，因为服务器并不保存关于客户的任何信息。</p>
-<h4 id="2-2-2-非持续连接和持续连接"><a href="#2-2-2-非持续连接和持续连接" class="headerlink" title="2.2.2 非持续连接和持续连接"></a>2.2.2 非持续连接和持续连接</h4><p><strong>非持续连接</strong>(Version=1.0)：TCP每发送一个对象后就关闭。</p>
-<p>1.客户进程在80端口号（默认）发起向客户机<a target="_blank" rel="noopener" href="http://www.swust.edu.cn的tcp连接;/">www.swust.edu.cn的TCP连接；</a></p>
-<p>2.客户经过它的套接字向服务器发送请求报文；</p>
-<p>3.服务器经过它的套接字接收请求报文，检索出对象<a target="_blank" rel="noopener" href="http://www.swust.edu.cn/someDept/pic.gif%E5%B9%B6%E5%B0%81%E8%A3%85%E5%88%B0%E6%8A%A5%E6%96%87%E4%B8%AD%EF%BC%8C%E5%86%8D%E9%80%9A%E8%BF%87%E5%A5%97%E6%8E%A5%E5%AD%97%E5%90%91%E5%AE%A2%E6%88%B7%E5%8F%91%E9%80%81%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87%EF%BC%9B">www.swust.edu.cn/someDept/pic.gif并封装到报文中，再通过套接字向客户发送响应报文；</a></p>
-<p>4.服务器进程断开TCP连接；</p>
-<p>5.客户收到响应报文，连接关闭；</p>
-<p>6.重复上述步骤引用其他对象。</p>
-<p><strong>总响应时间：</strong>2个RTT+服务器传输时间。原因：TCP三次握手的前两个部分占用1个RTT，客户机结合握手的第三个部分向TCP发送一个HTTP请求报文，然后服务器响应，这用去了另一个RTT。</p>
-<p><strong>缺点</strong>：串行访问时间长；并行访问占用资源多(分配的TCP缓冲区和TCP变量)。</p>
-<p><strong>持续连接</strong>(Version=1.11)：TCP为相同的客户-服务器间的请求和响应持续打开。</p>
-<h4 id="2-2-3-HTTP报文格式"><a href="#2-2-3-HTTP报文格式" class="headerlink" title="2.2.3 HTTP报文格式"></a>2.2.3 HTTP报文格式</h4><p><strong>请求报文</strong>:第一行为请求行（方法method+URL+HTTP版本)，后继行为首部行，最后是实体。</p>
-<p><img src="/2022/04/21/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/2/Users/Aucuba/Pictures/upload/_pictures/image-20220408123221263.png" alt="image-20220408123221263"></p>
-<p><img src="/2022/04/21/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/2/Users/Aucuba/Pictures/upload/_pictures/image-20220408123347554.png" alt="image-20220408123347554"></p>
-<p>method方法类型有:GET（请求访问，实体为空）、POST、HEAD、PUT、DELETE。</p>
-<p><strong>响应报文</strong>：第一行为状态行（HTTP版本+状态码+短语phrase)，后继行为首部行，最后是实体。</p>
-<p><img src="/2022/04/21/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/2/Users/Aucuba/Pictures/upload/_pictures/image-20220408133759610.png" alt="image-20220408133759610"></p>
-<p><img src="/2022/04/21/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/2/Users/Aucuba/Pictures/upload/_pictures/image-20220408133811897.png" alt="image-20220408133811897"></p>
-<p>常见的状态码和短语：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">200</span> <span class="variable constant_">OK</span></span><br><span class="line"><span class="comment">//请求成功，请求的对象在这个报文后面</span></span><br><span class="line"><span class="number">301</span> <span class="title class_">Moved</span> <span class="title class_">Permanently</span></span><br><span class="line"><span class="comment">//请求的对象已转移，新的URL在响应报文的Location:首部行中指定</span></span><br><span class="line"><span class="number">400</span> <span class="title class_">Bad</span> <span class="title class_">Request</span></span><br><span class="line"><span class="comment">//请求报文不为服务器理解</span></span><br><span class="line"><span class="number">404</span> <span class="title class_">Not</span> <span class="title class_">Found</span></span><br><span class="line"><span class="comment">//请求的文档没有在该服务器上发现</span></span><br><span class="line"><span class="number">505</span> <span class="variable constant_">HTTP</span> <span class="title class_">Version</span> <span class="title class_">Not</span> <span class="title class_">Supported</span></span><br></pre></td></tr></table></figure>
+                <h1 id="计算机网络——自顶向下-笔记"><a href="#计算机网络——自顶向下-笔记" class="headerlink" title="计算机网络——自顶向下  笔记"></a>计算机网络——自顶向下  笔记</h1><h2 id="5-链路层"><a href="#5-链路层" class="headerlink" title="5. 链路层"></a>5. 链路层</h2><h3 id="5-1-链路层概述"><a href="#5-1-链路层概述" class="headerlink" title="5.1 链路层概述"></a>5.1 链路层概述</h3><p>我们把主机和路由器称作结点，连接沿通信路径的相邻节点的路径是<strong>链路</strong>。链路层的分组叫做帧，地址是MAC地址。</p>
+<p>使用不同的链路协议经不同的链路传输数据报，例如第一段链路是以太网，中间链路是帧中继，最后链路是 802.11，每个链路协议提供不同的服务。</p>
+<p>链路层可能提供的服务还包括：</p>
+<p><strong>可靠交付</strong>：一般由确认和重传实现，通常用于高差错率的链路（如无线链路，光纤的差错低）；</p>
+<p><strong>差错检验和纠正</strong>：发送方在帧中包括差错检验比特，接收方检验后，如果出现较少差错可以进行纠正而避免重传。</p>
+<p>链路层的主体部分是在网络适配器实现的，网络适配器核心的链路层控制器实现了多种链路层服务。</p>
+<p><img src="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5/Users/Aucuba/Pictures/my_typora/5.%E9%93%BE%E8%B7%AF%E5%B1%82/image-20220603165152084.png" alt="image-20220603165152084"></p>
+<pr>
 
+<h3 id="5-2-差错检测和纠正"><a href="#5-2-差错检测和纠正" class="headerlink" title="5.2 差错检测和纠正"></a>5.2 差错检测和纠正</h3><p>在发送方采用差错检测和纠正比特来增强数据。</p>
+<p>差错检测的3种技术：奇偶校验、检验和、循环冗余检测。</p>
+<h4 id="5-2-1-奇偶校验"><a href="#5-2-1-奇偶校验" class="headerlink" title="5.2.1 奇偶校验"></a>5.2.1 奇偶校验</h4><p>专门设置一个奇偶校验位，用它使这组代码中“1”的个数为奇数或偶数。 </p>
+<p>如果采用单比特奇偶校验，只能检测单个比特差错：</p>
+<p><img src="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5/Users/Aucuba/Pictures/my_typora/5.%E9%93%BE%E8%B7%AF%E5%B1%82/image-20220603165750695.png" alt="image-20220603165750695"></p>
+<p>如果采用二维比特奇偶校验，可以检测和纠正单个比特差错：</p>
+<p><img src="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5/Users/Aucuba/Pictures/my_typora/5.%E9%93%BE%E8%B7%AF%E5%B1%82/image-20220603165820294.png" alt="image-20220603165820294"></p>
+<p>接收方检测和纠错的能力被称为<strong>前向纠错</strong>，它可以减少重传次数和避免往返时延（发送方收到NAK后重传产生的）。</p>
+<pr>
 
+<h4 id="5-2-2-检验和"><a href="#5-2-2-检验和" class="headerlink" title="5.2.2 检验和"></a>5.2.2 检验和</h4><p>将数据内容作为16比特的整数序列，对它们的和进行反码运算，求和时遇到的溢出都被回卷。</p>
+<pr>
 
-<h4 id="2-2-4-用户与服务器的交互：Cookie"><a href="#2-2-4-用户与服务器的交互：Cookie" class="headerlink" title="2.2.4 用户与服务器的交互：Cookie"></a>2.2.4 用户与服务器的交互：Cookie</h4><p>无状态的HTTP简化了服务器的设计，但不能保存用户信息。所以HTTP使用Cookie对用户进行跟踪。</p>
-<p><strong>cookie组件</strong>包括：HTTP响应报文中的cookie首部行；请求报文中的cookie首部行；用户主机保留的cookie文件；Web站点的后端数据库。</p>
-<p>用户每请求一个Web页面，浏览器会从cookie文件中获取对这个网站的识别码，放到HTTP请求报文中的包括识别码的cookie首部行中。cookie首部用来标识一个用户。</p>
-<p><img src="/2022/04/21/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/2/Users/Aucuba/Pictures/upload/_pictures/image-20220408134647714.png" alt="image-20220408134647714"></p>
-<h4 id="2-2-5-Web缓存"><a href="#2-2-5-Web缓存" class="headerlink" title="2.2.5 Web缓存"></a>2.2.5 Web缓存</h4><p><strong>Web缓存器</strong>：保存最近请求的web对象。浏览器向缓存发送所有HTTP请求，若对象在缓存中：缓存返回对象；否则缓存向起始服务器请求对象，然后向客户机返回对象。</p>
-<p>好处：1）减小客户机请求的响应时间；2）减少机构内部网与因特网接入链路的通信量。</p>
-<h4 id="2-2-6-条件GET方法"><a href="#2-2-6-条件GET方法" class="headerlink" title="2.2.6 条件GET方法"></a>2.2.6 条件GET方法</h4><p>为解决缓存中对象始终最新的问题，用<strong>条件GET</strong>方法：缓存器在HTTP请求中包含一个“If-modified-since: <date>”，指定缓存版本的日期，服务器判断如果缓存的拷贝是最新，就响应不包含对象: </date></p>
-<p>“HTTP/1.0 304 Not Modified”，否则修改对象。</p>
-<p><img src="/2022/04/21/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/2/Users/Aucuba/Pictures/upload/_pictures/image-20220408135709719.png" alt="image-20220408135709719"></p>
-<h3 id="2-3-文件传输协议：FTP"><a href="#2-3-文件传输协议：FTP" class="headerlink" title="2.3 文件传输协议：FTP"></a>2.3 文件传输协议：FTP</h3><p><strong>特点</strong>：使用双TCP连接，一个<strong>控制连接</strong>(端口21)，一个<strong>数据连接</strong>(端口20)。</p>
-<p><strong>控制连接</strong>用于在两台主机传输控制信息，如用户标识、口令、控制命令等，<strong>数据连接</strong>用于实际发送文件。</p>
-<p>FTP使用独立的控制连接，我们称FTP是<strong>带外控制</strong>；而HTTP是带内控制。</p>
-<h3 id="2-4-电子邮件"><a href="#2-4-电子邮件" class="headerlink" title="2.4  电子邮件"></a>2.4  电子邮件</h3><p>电子邮件系统组成：用户代理(阅读器，如Outlook,Foxmail)、邮件服务器、简单邮件<strong>传输</strong>协议: SMTP。</p>
-<p>从发送方的用户代理开始，传输到发送方的邮件服务器，再传输到接收方的邮件服务器，最后被分发到接收方的邮箱中。</p>
-<h4 id="2-4-1-SMTP"><a href="#2-4-1-SMTP" class="headerlink" title="2.4.1 SMTP"></a>2.4.1 SMTP</h4><p>报文格式：7bitASCII。</p>
-<p>端口号：25。</p>
-<p>使用TCP连接。传输阶段有握手、传输、关闭。</p>
-<h4 id="2-4-4-邮件访问协议"><a href="#2-4-4-邮件访问协议" class="headerlink" title="2.4.4 邮件访问协议"></a>2.4.4 邮件访问协议</h4><p>POP3邮局协议</p>
-<p>IMAP4因特网邮件访问协议</p>
-<p>基于Web的电子邮件：用户代理就是浏览器，使用HTTP与其他远程邮箱进行通信。但邮件服务器和其他服务器间仍使用SMTP。 </p>
-<h3 id="2-5-DNS"><a href="#2-5-DNS" class="headerlink" title="2.5 DNS"></a>2.5 DNS</h3><p>Domain Name Server域名服务器。</p>
-<p>使用UDP。</p>
-<p>例：主机名为<a target="_blank" rel="noopener" href="http://www.swust.edu.cn,ip地址/">www.swust.edu.cn，IP地址</a>(32 bit) 为220.166.52.4，DNS完成主机名到IP地址的解析。</p>
-<h4 id="2-5-1-分布式、等级制数据库"><a href="#2-5-1-分布式、等级制数据库" class="headerlink" title="2.5.1 分布式、等级制数据库"></a>2.5.1 分布式、等级制数据库</h4><h4 id><a href="#" class="headerlink" title></a><img src="/2022/04/21/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/2/Users/Aucuba/Pictures/upload/_pictures/image-20220408141738936.png" alt="image-20220408141738936"></h4><h4 id="2-5-2两种查询方式"><a href="#2-5-2两种查询方式" class="headerlink" title="2.5.2两种查询方式"></a>2.5.2两种查询方式</h4><p><strong>迭代查询</strong>：我的理解是，去去就回。</p>
-<p><img src="/2022/04/21/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/2/Users/Aucuba/Pictures/upload/_pictures/image-20220408142004722.png" alt="image-20220408142004722"></p>
-<p><strong>递归查询</strong>：我的理解是，先去后回。</p>
-<p><img src="/2022/04/21/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/2/Users/Aucuba/Pictures/upload/_pictures/image-20220408142036974.png" alt="image-20220408142036974"></p>
+<h4 id="5-2-3-循环冗余检测"><a href="#5-2-3-循环冗余检测" class="headerlink" title="5.2.3 循环冗余检测"></a>5.2.3 循环冗余检测</h4><p>即CRC编码，多项式编码，将比特串看做系数是0和1的多项式。</p>
+<p><img src="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5/Users/Aucuba/Pictures/my_typora/5.%E9%93%BE%E8%B7%AF%E5%B1%82/image-20220604134022533.png" alt="image-20220604134022533"></p>
+<p>发送方和接收方先协商一个r+1的生成多项式G，要求G的最左边是1，</p>
+<p><img src="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5/Users/Aucuba/Pictures/my_typora/5.%E9%93%BE%E8%B7%AF%E5%B1%82/image-20220604134155028.png" alt="image-20220604134155028"></p>
+<p>发送方用位串D及 G(x)进行某种运算得到校验和R，并在帧的末尾加上校验和，使带校验和的帧的多项式(D+R)能被 G(x) 整除，接收方收到后，用 G(x) 除多项式，若有余数则传输有错。</p>
+<p>多项式D+R=D*2^r XOR R=nG，等价为R=(D*2^R)/G的余数。</p>
+<p><img src="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5/Users/Aucuba/Pictures/my_typora/5.%E9%93%BE%E8%B7%AF%E5%B1%82/image-20220604135016515.png" alt="image-20220604135016515"></p>
+<pr>
 
+<h3 id="5-3-多路访问协议"><a href="#5-3-多路访问协议" class="headerlink" title="5.3 多路访问协议"></a>5.3 多路访问协议</h3><p><strong>点对点链路</strong>：链路一端的单个发送方和链路另一端的单个接收方组成。点对点协议和高级数据链路控制都是这样的协议；</p>
+<p><strong>广播链路</strong>：多个发送和接收节点都连接到相同、单一、共享的信道上。以太网和无线局域网是广播链路层技术的例子。</p>
+<p><strong>多路访问协议</strong>就是如何协调多个发送和接收结点对一个共享广播信道的访问，规范在共享广播信道上的传输行为。</p>
+<p><strong>碰撞</strong>：结点同时接收到多个帧，没有任何结点有效获得了信号。</p>
+<p>理想的多路访问协议：</p>
+<p>（1）当一个节点要传输，它能够以速率R发送；</p>
+<p>（2）当M节点要传输，每个能以平均速率R/M发送；</p>
+<p>（3） 全分散:无特殊节点来协调传输；无同步时钟、时隙；</p>
+<p>（4） 实现简单。</p>
+<h4 id="5-3-1-信道划分协议"><a href="#5-3-1-信道划分协议" class="headerlink" title="5.3.1 信道划分协议"></a>5.3.1 信道划分协议</h4><p>TDMA和FDMA，时分复用访问和频分复用访问。</p>
+<p><strong>TDM</strong>将时间划分为时间帧，将时间帧划分为N个时隙，把每个时隙分配给N个结点中的一个。在循环的TDM帧中，被指派的时隙把分组传输给相应结点。</p>
+<p>缺点：出现不使用的时隙空闲。</p>
+<p><img src="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5/Users/Aucuba/Pictures/my_typora/5.%E9%93%BE%E8%B7%AF%E5%B1%82/image-20220604140321968.png" alt="image-20220604140321968"></p>
+<p><strong>FDMA</strong>将信道频谱划分为频带，每个结点分配固定的频带。</p>
+<p>缺点：频带中未使用的传输时间空闲。</p>
+<pr>
+
+<h4 id="5-3-2-随机接入协议"><a href="#5-3-2-随机接入协议" class="headerlink" title="5.3.2 随机接入协议"></a>5.3.2 随机接入协议</h4><p>一个结点全速发送，出现碰撞时，涉及碰撞的结点独立等待一个随机时延，然后重发该帧，直到无碰撞地通过。</p>
+<h5 id="5-3-2-1-时隙ALOHA"><a href="#5-3-2-1-时隙ALOHA" class="headerlink" title="5.3.2.1 时隙ALOHA"></a>5.3.2.1 时隙ALOHA</h5><h5 id="5-3-2-2-ALOHA"><a href="#5-3-2-2-ALOHA" class="headerlink" title="5.3.2.2 ALOHA"></a>5.3.2.2 ALOHA</h5><h5 id="5-3-2-3-CSMA-载波侦听多路访问"><a href="#5-3-2-3-CSMA-载波侦听多路访问" class="headerlink" title="5.3.2.3  CSMA(载波侦听多路访问)"></a>5.3.2.3  CSMA(载波侦听多路访问)</h5><h5 id="5-3-2-4-CSMA-CD-具有碰撞检测的载波侦听多路访问"><a href="#5-3-2-4-CSMA-CD-具有碰撞检测的载波侦听多路访问" class="headerlink" title="5.3.2.4  CSMA/CD(具有碰撞检测的载波侦听多路访问)"></a>5.3.2.4  CSMA/CD(具有碰撞检测的载波侦听多路访问)</h5><pr>
+
+<h4 id="5-3-3-轮流协议"><a href="#5-3-3-轮流协议" class="headerlink" title="5.3.3 轮流协议"></a>5.3.3 轮流协议</h4><pr>
+
+<h3 id="5-4-链路层编址"><a href="#5-4-链路层编址" class="headerlink" title="5.4 链路层编址"></a>5.4 链路层编址</h3><p>主机和路由器的网络接口具有MAC地址，高层程序仅希望与IP地址交往，地址解析协议负责在MAC地址和IP地址之间转换。</p>
+<p><strong>在同一个局域网</strong>中，发送主机的ARP适配器模块会根据输入的IP地址返回MAC地址。ARP表包含了对某些LAN节点的IP/MAC地址映射  &lt; IP地址; MAC地址; TTL&gt;。</p>
+<p>如果B的MAC地址不在A的ARP表中，A广播ARP请求分组, 包含B的IP地址，目的MAC地址 = FF-FF-FF-FF-FF-FF，在LAN上的所有机器接收ARP请求。B接收到ARP分组，用它的MAC地址单播回答A。</p>
+<p>发送数据报<strong>到另一个局域网</strong>，在两个局域网相连的路由器中有两个ARP表, 每张表对应一个IP网络。</p>
+<p><img src="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5/Users/Aucuba/Pictures/my_typora/5.%E9%93%BE%E8%B7%AF%E5%B1%82/image-20220604142812799.png" alt="image-20220604142812799"></p>
+<pr>
+
+<h3 id="5-5-以太网"><a href="#5-5-以太网" class="headerlink" title="5.5 以太网"></a>5.5 以太网</h3><p>以太网是如今最流行的有线局域网技术。</p>
+<p><img src="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5/Users/Aucuba/Pictures/my_typora/5.%E9%93%BE%E8%B7%AF%E5%B1%82/image-20220604143401641.png" alt="image-20220604143401641"></p>
+<p>Preamble前同步码前7个字节都是10101010 ，后1个字节为是10101011，用于同步接收方、发送方的时钟速率。</p>
+<p>类型指示了更高层的协议。</p>
+<p>以太网使用了<strong>CSMA/CD协议</strong>：</p>
+<p>（1）载波侦听：先听再说。适配器在发送前监听总线是否空闲，总线空闲则发送数据，不空闲则继续监听；</p>
+<p>（2）冲突检测：边说边听。数据在发送的同时保持对总线的监听，发现冲突则停止发送；</p>
+<p>（3）随机延迟后重发。冲突发生后，采用指数回退方法等待一段随机时间后，再进行监听和发送。</p>
+<pr>
+
+<h3 id="5-6-链路层交换机"><a href="#5-6-链路层交换机" class="headerlink" title="5.6 链路层交换机"></a>5.6 链路层交换机</h3><p><strong>集线器</strong>基本上是物理层中继器 ，它没有缓存，来自一条链路的比特从其他所有链路出去。主干集线器互联LAN网段，扩展节点之间的最大距离。</p>
+<p><img src="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5/Users/Aucuba/Pictures/my_typora/5.%E9%93%BE%E8%B7%AF%E5%B1%82/image-20220604144019063.png" alt="image-20220604144019063"></p>
+<p><strong>以太网交换机</strong>实际是一个基于网桥技术的多端口工作在链路层的网络设备，它为数据帧从一个端口到另一个任意端口的转发提供了低时延、低开销的通路。特点是即插即用，自学习与线速转发。</p>
+<p><img src="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5/Users/Aucuba/Pictures/my_typora/5.%E9%93%BE%E8%B7%AF%E5%B1%82/image-20220604144155287.png" alt="image-20220604144155287"></p>
+<p><strong>自学习</strong>：一个交换机具有一个交换机表（转发表），表项: &lt;MAC地址, 接口, 时戳&gt;。交换机学习通过哪个接口能够到达哪台主机。</p>
+<p><strong>流量隔离</strong>：交换机将子网分割成局域网段，过滤分组，相同局域网的帧通常不在其他LAN段上转发。</p>
+<p><strong>交换机和路由器的比较</strong></p>
+</pr></pr></pr></pr></pr></pr></pr></pr></pr>
             </div>
             <hr/>
 
@@ -433,7 +441,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://aucuba-hh.github.io/2022/04/21/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/2.%E5%BA%94%E7%94%A8%E5%B1%82/">http://aucuba-hh.github.io/2022/04/21/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/2.%E5%BA%94%E7%94%A8%E5%B1%82/</a>
+                    <a href="http://aucuba-hh.github.io/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5.%E9%93%BE%E8%B7%AF%E5%B1%82/">http://aucuba-hh.github.io/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5.%E9%93%BE%E8%B7%AF%E5%B1%82/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -636,41 +644,43 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2022/04/25/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/CNN/">
+                <a href="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5.%E9%93%BE%E8%B7%AF%E5%B1%82/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="卷积神经网络 CNN">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="链路层">
                         
-                        <span class="card-title">卷积神经网络 CNN</span>
+                        <span class="card-title">链路层</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            什么是卷积神经网络？
+                            什么是链路层？
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    机器学习
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
+                                    计算机网络
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -681,31 +691,31 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/03/22/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%B9%B3%E5%8F%B0%E2%80%94%E2%80%94AutoDL%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">
+                <a href="/2022/06/02/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4.%E7%BD%91%E7%BB%9C%E5%B1%82/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="深度学习服务器平台简单手册——AutoDL">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="网络层">
                         
-                        <span class="card-title">深度学习服务器平台简单手册——AutoDL</span>
+                        <span class="card-title">网络层</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            推荐一个便宜好用的深度学习服务器平台——AutoDL和上手使用手册
+                            什么是网络层？
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-02
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    深度学习
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
+                                    计算机网络
                                 </a>
                             
                             
