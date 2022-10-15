@@ -348,13 +348,13 @@
 
 <h3 id="4-3-路由器工作原理"><a href="#4-3-路由器工作原理" class="headerlink" title="4.3 路由器工作原理"></a>4.3 路由器工作原理</h3><p>路由器的功能：运行路由算法以得到转发表；根据转发表对IP分组进行转发；提供多种网络类型接口，完成不同网络的互联</p>
 <p>路由器的结构：输入、输出端口；交换结构；选路处理器</p>
-<p><img src="/2022/06/02/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4/Users/Aucuba/Pictures/my_typora/4.%E7%BD%91%E7%BB%9C%E5%B1%82/image-20220601162636119.png" alt="image-20220601162636119"></p>
+<p><img src="/2022/06/02/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4.%E7%BD%91%E7%BB%9C%E5%B1%82/Users/Aucuba/Pictures/my_typora/4.%E7%BD%91%E7%BB%9C%E5%B1%82/image-20220601162636119.png" alt="image-20220601162636119"></p>
 <p>数据链路层处理模块剥去帧首部和尾部后，将分组送到网络层的队列中排队等待处理。这会产生一定的时延。在输入端口，路由器使用转发表查找输出端口。</p>
 <p>在输出端口，交换结构传送过来的分组先进行缓存。数据链路层处理模块将分组加上链路层的首部和尾部，交给物理层后发送到外部线路。</p>
 <p>随着输入、输出端口排队队列的增长，耗尽路由器的缓存空间，就会出现<strong>丢包</strong>。</p>
 <pr>
 
-<h3 id="4-4-网际协议"><a href="#4-4-网际协议" class="headerlink" title="4.4 网际协议"></a>4.4 网际协议</h3><h4 id="4-4-1-IP数据报格式"><a href="#4-4-1-IP数据报格式" class="headerlink" title="4.4.1 IP数据报格式"></a>4.4.1 IP数据报格式</h4><p><img src="/2022/06/02/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4/Users/Aucuba/Pictures/my_typora/4.%E7%BD%91%E7%BB%9C%E5%B1%82/image-20220601163607796.png" alt="image-20220601163607796"></p>
+<h3 id="4-4-网际协议"><a href="#4-4-网际协议" class="headerlink" title="4.4 网际协议"></a>4.4 网际协议</h3><h4 id="4-4-1-IP数据报格式"><a href="#4-4-1-IP数据报格式" class="headerlink" title="4.4.1 IP数据报格式"></a>4.4.1 IP数据报格式</h4><p><img src="/2022/06/02/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4.%E7%BD%91%E7%BB%9C%E5%B1%82/Users/Aucuba/Pictures/my_typora/4.%E7%BD%91%E7%BB%9C%E5%B1%82/image-20220601163607796.png" alt="image-20220601163607796"></p>
 <p><strong>标识、标志和片偏移</strong>与IP分片有关；</p>
 <p><strong>分片</strong>：因为MTU的限制，一个大数据报在传输中被分成一片一片的。标识可以理解为是数据报的编号，而标志是最后一片为0，其它为1，片偏移指示了该片应该放在原始数据报中的位置（单位为字节，且是8的倍数）；</p>
 <p><strong>总长度</strong>是整个数据包的长度，不能超过MTU</p>
@@ -362,14 +362,14 @@
 <pr>
 
 <h4 id="4-4-2-IPv4编址"><a href="#4-4-2-IPv4编址" class="headerlink" title="4.4.2 IPv4编址"></a>4.4.2 IPv4编址</h4><p>IP地址：对主机、路由器接口的32-bit 标识符 </p>
-<p><img src="/2022/06/02/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4/Users/Aucuba/Pictures/my_typora/4.%E7%BD%91%E7%BB%9C%E5%B1%82/image-20220601165405736.png" alt="image-20220601165405736"></p>
-<p><strong>子网</strong>：路由器的一个接口连接的一个网络就可以理解为一个子网。子网可以由子网掩码和前缀/长度表示。</p>
+<p><img src="/2022/06/02/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4.%E7%BD%91%E7%BB%9C%E5%B1%82/Users/Aucuba/Pictures/my_typora/4.%E7%BD%91%E7%BB%9C%E5%B1%82/image-20220601165405736.png" alt="image-20220601165405736"></p>
+<p><strong>子网</strong>：路由器的一个接口连接的一个网络就可以理解为一个子网。子网可以由子网掩码和前缀&#x2F;长度表示。</p>
 <p>子网掩码：255.255.255.0；</p>
-<p>前缀/长度：223.1.1.0/24；</p>
+<p>前缀&#x2F;长度：223.1.1.0&#x2F;24；</p>
 <p><strong>分类编址</strong>：具有8、16、24字节子网地址的子网被称为A、B、C类网络。但是有大的太大，小的不够用的问题。</p>
 <p><strong>无类别域间路由选择</strong>的地址块描述的例子：</p>
-<p>某地址块为200.23.16.0/23，则其</p>
-<p>子网掩码为：255.255.254.0  或  /23；</p>
+<p>某地址块为200.23.16.0&#x2F;23，则其</p>
+<p>子网掩码为：255.255.254.0  或  &#x2F;23；</p>
 <p>网络地址为：200.23.16.0 (主机比特全0)；</p>
 <p>可用主机地址为：200.23.16.1~200.23.17.254；</p>
 <p>广播地址为：200.23.17.255 (主机比特全1)。</p>
@@ -384,9 +384,9 @@
 <p>NAT路由器将内网IP地址通过NAT转换表转换为面对外网的地址。</p>
 <pr>
 
-<h4 id="4-4-3-因特网控制报文协议"><a href="#4-4-3-因特网控制报文协议" class="headerlink" title="4.4.3 因特网控制报文协议"></a>4.4.3 因特网控制报文协议</h4><p>IP网络是尽力而为（不可靠）的，ICMP通过差错报文和询问报文（Ping，回声请求/回答）来辅助IP网络的功能。</p>
+<h4 id="4-4-3-因特网控制报文协议"><a href="#4-4-3-因特网控制报文协议" class="headerlink" title="4.4.3 因特网控制报文协议"></a>4.4.3 因特网控制报文协议</h4><p>IP网络是尽力而为（不可靠）的，ICMP通过差错报文和询问报文（Ping，回声请求&#x2F;回答）来辅助IP网络的功能。</p>
 <p>ICMP被承载在IP数据报分组中，所以应该是位于IP上层结构的。</p>
-<p><img src="/2022/06/02/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4/Users/Aucuba/Pictures/my_typora/4.%E7%BD%91%E7%BB%9C%E5%B1%82/image-20220601184655745.png" alt="image-20220601184655745"></p>
+<p><img src="/2022/06/02/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4.%E7%BD%91%E7%BB%9C%E5%B1%82/Users/Aucuba/Pictures/my_typora/4.%E7%BD%91%E7%BB%9C%E5%B1%82/image-20220601184655745.png" alt="image-20220601184655745"></p>
 <p>Traceout就是由ICMP实现的。源主机发送一系列携带不可达UDP端口号的UDP报文段的数据报，TTL分别为1、2、3……同时启动定时器，当第n个数据报到达第n台路由器时，这个数据报正好过期，路由器丢弃该数据报并发送一个ICMP报警报文给源主机，就能得知第n台路由器的名字、IP和往返时延。</p>
 <pr>
 
@@ -400,15 +400,15 @@
 <p>D(v):从源到目的地v路径费用的当前值；</p>
 <p>p(v): 从源到v沿路径的前任节点；</p>
 <p>N‘: 已知在最小费用路径中的节点集合。</p>
-<p><img src="/2022/06/02/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4/Users/Aucuba/Pictures/my_typora/4.%E7%BD%91%E7%BB%9C%E5%B1%82/image-20220601185640945.png" alt="image-20220601185640945"></p>
-<p>时间复杂度：每次迭代:需要检查所有 不在N中的节点，n(n+1)/2 ~O(n2)。</p>
+<p><img src="/2022/06/02/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4.%E7%BD%91%E7%BB%9C%E5%B1%82/Users/Aucuba/Pictures/my_typora/4.%E7%BD%91%E7%BB%9C%E5%B1%82/image-20220601185640945.png" alt="image-20220601185640945"></p>
+<p>时间复杂度：每次迭代:需要检查所有 不在N中的节点，n(n+1)&#x2F;2 ~O(n2)。</p>
 <p>缺点：震荡现象。</p>
 <pr>
 
 <h4 id="4-5-2-距离向量算法"><a href="#4-5-2-距离向量算法" class="headerlink" title="4.5.2 距离向量算法"></a>4.5.2 距离向量算法</h4><p>迭代、异步、分布式的动态规划算法，不是全局的，只需要知道邻居的信息。</p>
 <p><strong>定义</strong>：dx(y) 是从x到y最低费用路径的费用。</p>
-<p>有dx(y) = min {c(x,v) + dv(y) }。</p>
-<p><img src="/2022/06/02/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4/Users/Aucuba/Pictures/my_typora/4.%E7%BD%91%E7%BB%9C%E5%B1%82/image-20220601190319580.png" alt="image-20220601190319580">每个节点周期性的发送它自己的距离向量到其邻居，然后邻居更新距离向量。</p>
+<p>有dx(y) &#x3D; min {c(x,v) + dv(y) }。</p>
+<p><img src="/2022/06/02/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4.%E7%BD%91%E7%BB%9C%E5%B1%82/Users/Aucuba/Pictures/my_typora/4.%E7%BD%91%E7%BB%9C%E5%B1%82/image-20220601190319580.png" alt="image-20220601190319580">每个节点周期性的发送它自己的距离向量到其邻居，然后邻居更新距离向量。</p>
 <pr>
 
 <h4 id="4-5-3-层次路由选择"><a href="#4-5-3-层次路由选择" class="headerlink" title="4.5.3 层次路由选择"></a>4.5.3 层次路由选择</h4><p>在同一<strong>自治系统</strong>AS中，路由器执行相同的路由选择算法，即<strong>自治系统内部路由选择协议</strong>。不同AS互联处的路由器叫做网关路由器，它们之间使用<strong>自治系统间路由选择协议</strong>。</p>

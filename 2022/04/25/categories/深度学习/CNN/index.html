@@ -340,15 +340,15 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="卷积神经网络-CNN"><a href="#卷积神经网络-CNN" class="headerlink" title="卷积神经网络 CNN"></a>卷积神经网络 CNN</h1><p>Convolutional Neural Network——designed for image</p>
-<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><p>一张图片有三维的tensor（可以理解为大于2的矩阵），一个维度是长，一个维度是宽，一个维度是channels。长和宽代表着图片的解析度，像素点的个数；channels=3就是RGB，=1就是灰度图像。我们把图片拉直成向量，就可以作为一个neural的输入，这个向量每一维的数值就代表这个像素颜色的强度。</p>
+<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><p>一张图片有三维的tensor（可以理解为大于2的矩阵），一个维度是长，一个维度是宽，一个维度是channels。长和宽代表着图片的解析度，像素点的个数；channels&#x3D;3就是RGB，&#x3D;1就是灰度图像。我们把图片拉直成向量，就可以作为一个neural的输入，这个向量每一维的数值就代表这个像素颜色的强度。</p>
 <p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220125113646601.png" alt="image-20220125113646601"></p>
 <h2 id="卷积处理"><a href="#卷积处理" class="headerlink" title="卷积处理"></a>卷积处理</h2><p>假设我们用1000个神经元直接进行训练，需要3*10^7个参数。对于我们来说参数越多，模型的弹性越大，越会有overfitting的风险。为了避免使用这么多的参数，同时考虑到影像辨识的目的，我们希望模型能够根据一定特征的patterns来做识别，比如鸟嘴、鸟的眼睛，图片的其他部分就不需要作为神经的输入，不需要fully connected。</p>
 <p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220125113938251.png" alt="image-20220125113938251"></p>
 <p>convolution就是用不同的filter来识别patterns。</p>
 <p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220125121007441.png" alt="image-20220125121007441"></p>
-<p>stride:步长；        </p>
-<p>padding:填充；        </p>
-<p>feature map:图片通过一个卷积层之后得到的新的特征图片，它的channels=上一个卷积层filters的个数。下一卷积层中filter的高度就是图片的channels。</p>
+<p>stride:步长；		</p>
+<p>padding:填充；		</p>
+<p>feature map:图片通过一个卷积层之后得到的新的特征图片，它的channels&#x3D;上一个卷积层filters的个数。下一卷积层中filter的高度就是图片的channels。</p>
 <p>每一个filter矩阵中的元素对应了神经元共用的参数，让一个卷积核扫过整张图片（卷积，让不同的receptive field 可以共用参数），这样就降低了弹性，避免过拟合问题。</p>
 <p><img src="https://gitee.com/aucuba/my_blogs/raw/master/_pictures/image-20220125122147730.png" alt="image-20220125122147730"></p>
 <h2 id="池化-Pooling"><a href="#池化-Pooling" class="headerlink" title="池化 Pooling"></a>池化 Pooling</h2><p>我们发现对大的图片进行抽样后，依旧保持图像特征。做完convolution后，可以进行pooling，把图片变小（channels不变），减少运算量。池化的filter进行运算之后，选择只保留一定区域里的代表（比如max）。</p>
