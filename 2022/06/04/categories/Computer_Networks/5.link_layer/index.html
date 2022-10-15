@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="计算机网络课程实验四,Ethernet and ARP, Aucuba">
+    <meta name="keywords" content="链路层, Aucuba">
     <meta name="referrer" content="no-referrer" />
     <meta name="description" content="早睡晚起小能手，不知名话痨艺术家">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>计算机网络课程实验四,Ethernet and ARP | Aucuba</title>
+    <title>链路层 | Aucuba</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -180,12 +180,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">计算机网络课程实验四,Ethernet and ARP</h1>
+                    <h1 class="description center-align post-title">链路层</h1>
                 </div>
             </div>
         </div>
@@ -323,7 +323,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-05-11
+                    2022-06-04
                 </div>
                 
 
@@ -339,102 +339,84 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="计算机网络课程实验四：Ethernet-and-ARP"><a href="#计算机网络课程实验四：Ethernet-and-ARP" class="headerlink" title="计算机网络课程实验四：Ethernet and ARP"></a><strong>计算机网络课程实验四：</strong>Ethernet and ARP</h1><p>下载实验数据包：<a target="_blank" rel="noopener" href="http://gaia.cs.umass.edu/wireshark-labs/wireshark-traces.zip">http://gaia.cs.umass.edu/wireshark-labs/wireshark-traces.zip</a></p>
-<p>下载实验题目综述：<a target="_blank" rel="noopener" href="http://www-net.cs.umass.edu/wireshark-labs/Wireshark_Ethernet_ARP_v7.0.pdf">http://www-net.cs.umass.edu/wireshark-labs/Wireshark_Ethernet_ARP_v7.0.pdf</a></p>
-<h3 id="捕获和分析以太网帧"><a href="#捕获和分析以太网帧" class="headerlink" title="捕获和分析以太网帧"></a>捕获和分析以太网帧</h3><p>这里选择直接解压文件包，用wireshark打开ethernet–ethereal-trace-1。</p>
-<p><strong>选择包含HTTP GET消息的以太网帧，在报文详细信息窗口中展开Ethernet II信息。</strong></p>
-<p><img src="/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/Users/Aucuba/Pictures/upload/_pictures/image-20220511124641636.png" alt="image-20220511124641636"></p>
-<h4 id="1-电脑的48位以太网地址是多少？"><a href="#1-电脑的48位以太网地址是多少？" class="headerlink" title="1.电脑的48位以太网地址是多少？"></a>1.电脑的48位以太网地址是多少？</h4><p><img src="/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/Users/Aucuba/Pictures/upload/_pictures/image-20220511124825718.png" alt="image-20220511124825718"></p>
-<p>源地址就是电脑的以太网地址：0x00 d0 59 a9 3d 68。</p>
+                <h1 id="计算机网络——自顶向下-笔记"><a href="#计算机网络——自顶向下-笔记" class="headerlink" title="计算机网络——自顶向下  笔记"></a>计算机网络——自顶向下  笔记</h1><h2 id="5-链路层"><a href="#5-链路层" class="headerlink" title="5. 链路层"></a>5. 链路层</h2><h3 id="5-1-链路层概述"><a href="#5-1-链路层概述" class="headerlink" title="5.1 链路层概述"></a>5.1 链路层概述</h3><p>我们把主机和路由器称作结点，连接沿通信路径的相邻节点的路径是<strong>链路</strong>。链路层的分组叫做帧，地址是MAC地址。</p>
+<p>使用不同的链路协议经不同的链路传输数据报，例如第一段链路是以太网，中间链路是帧中继，最后链路是 802.11，每个链路协议提供不同的服务。</p>
+<p>链路层可能提供的服务还包括：</p>
+<p><strong>可靠交付</strong>：一般由确认和重传实现，通常用于高差错率的链路（如无线链路，光纤的差错低）；</p>
+<p><strong>差错检验和纠正</strong>：发送方在帧中包括差错检验比特，接收方检验后，如果出现较少差错可以进行纠正而避免重传。</p>
+<p>链路层的主体部分是在网络适配器实现的，网络适配器核心的链路层控制器实现了多种链路层服务。</p>
+<p><img src="/./5.link_layer/image-20220603165152084.png"></p>
 <pr>
 
-<h4 id="2-以太网帧的48位目的地址是什么-这是gaia-cs-umass-edu的以太网地址吗？什么设备的以太网地址是这个"><a href="#2-以太网帧的48位目的地址是什么-这是gaia-cs-umass-edu的以太网地址吗？什么设备的以太网地址是这个" class="headerlink" title="2.以太网帧的48位目的地址是什么?这是gaia.cs.umass.edu的以太网地址吗？什么设备的以太网地址是这个?"></a>2.以太网帧的48位目的地址是什么?这是gaia.cs.umass.edu的以太网地址吗？什么设备的以太网地址是这个?</h4><p><img src="/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/Users/Aucuba/Pictures/upload/_pictures/image-20220511125038268.png" alt="image-20220511125038268"></p>
-<p>目的地址是：0x00 06 25 da af 73。</p>
-<p>这个地址并非gaia.cs.umass.edu的以太网地址，而是是路由器接口的MA地址。</p>
+<h3 id="5-2-差错检测和纠正"><a href="#5-2-差错检测和纠正" class="headerlink" title="5.2 差错检测和纠正"></a>5.2 差错检测和纠正</h3><p>在发送方采用差错检测和纠正比特来增强数据。</p>
+<p>差错检测的3种技术：奇偶校验、检验和、循环冗余检测。</p>
+<h4 id="5-2-1-奇偶校验"><a href="#5-2-1-奇偶校验" class="headerlink" title="5.2.1 奇偶校验"></a>5.2.1 奇偶校验</h4><p>专门设置一个奇偶校验位，用它使这组代码中“1”的个数为奇数或偶数。 </p>
+<p>如果采用单比特奇偶校验，只能检测单个比特差错：</p>
+<p><img src="/./5.link_layer/image-20220603165750695.png"></p>
+<p>如果采用二维比特奇偶校验，可以检测和纠正单个比特差错：</p>
+<p><img src="/./5.link_layer/image-20220603165820294.png"></p>
+<p>接收方检测和纠错的能力被称为<strong>前向纠错</strong>，它可以减少重传次数和避免往返时延（发送方收到NAK后重传产生的）。</p>
 <pr>
 
-<h4 id="3-Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么"><a href="#3-Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么" class="headerlink" title="3.Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么?"></a>3.Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么?</h4><p><img src="/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/Users/Aucuba/Pictures/upload/_pictures/image-20220511125433348.png" alt="image-20220511125433348"></p>
-<p>0x0800对应的上层协议是IPV4。</p>
+<h4 id="5-2-2-检验和"><a href="#5-2-2-检验和" class="headerlink" title="5.2.2 检验和"></a>5.2.2 检验和</h4><p>将数据内容作为16比特的整数序列，对它们的和进行反码运算，求和时遇到的溢出都被回卷。</p>
 <pr>
 
-<h4 id="4-从以太网帧的最开始算起，到“GET”中的ASCII码“G”，一共出现了多少个字节"><a href="#4-从以太网帧的最开始算起，到“GET”中的ASCII码“G”，一共出现了多少个字节" class="headerlink" title="4.从以太网帧的最开始算起，到“GET”中的ASCII码“G”，一共出现了多少个字节?"></a>4.从以太网帧的最开始算起，到“GET”中的ASCII码“G”，一共出现了多少个字节?</h4><p><img src="/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/Users/Aucuba/Pictures/upload/_pictures/image-20220511125628474.png" alt="image-20220511125628474"></p>
-<p>如图，第55个字节0x47是“G”，它的前面一共有54个字节。</p>
+<h4 id="5-2-3-循环冗余检测"><a href="#5-2-3-循环冗余检测" class="headerlink" title="5.2.3 循环冗余检测"></a>5.2.3 循环冗余检测</h4><p>即CRC编码，多项式编码，将比特串看做系数是0和1的多项式。</p>
+<p><img src="/./5.link_layer/image-20220604134022533.png"></p>
+<p>发送方和接收方先协商一个r+1的生成多项式G，要求G的最左边是1，</p>
+<p><img src="/./5.link_layer/image-20220604134155028.png"></p>
+<p>发送方用位串D及 G(x)进行某种运算得到校验和R，并在帧的末尾加上校验和，使带校验和的帧的多项式(D+R)能被 G(x) 整除，接收方收到后，用 G(x) 除多项式，若有余数则传输有错。</p>
+<p>多项式D+R&#x3D;D*2^r XOR R&#x3D;nG，等价为R&#x3D;(D*2^R)&#x2F;G的余数。</p>
+<p><img src="/./5.link_layer/image-20220604135016515.png"></p>
 <pr>
 
-<p><strong>接下来，根据包含HTTP响应消息的第一个字节的以太网帧的内容回答以下问题。</strong></p>
-<p><img src="/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/Users/Aucuba/Pictures/upload/_pictures/image-20220511130008016.png" alt="image-20220511130008016"></p>
+<h3 id="5-3-多路访问协议"><a href="#5-3-多路访问协议" class="headerlink" title="5.3 多路访问协议"></a>5.3 多路访问协议</h3><p><strong>点对点链路</strong>：链路一端的单个发送方和链路另一端的单个接收方组成。点对点协议和高级数据链路控制都是这样的协议；</p>
+<p><strong>广播链路</strong>：多个发送和接收节点都连接到相同、单一、共享的信道上。以太网和无线局域网是广播链路层技术的例子。</p>
+<p><strong>多路访问协议</strong>就是如何协调多个发送和接收结点对一个共享广播信道的访问，规范在共享广播信道上的传输行为。</p>
+<p><strong>碰撞</strong>：结点同时接收到多个帧，没有任何结点有效获得了信号。</p>
+<p>理想的多路访问协议：</p>
+<p>（1）当一个节点要传输，它能够以速率R发送；</p>
+<p>（2）当M节点要传输，每个能以平均速率R&#x2F;M发送；</p>
+<p>（3） 全分散:无特殊节点来协调传输；无同步时钟、时隙；</p>
+<p>（4） 实现简单。</p>
+<h4 id="5-3-1-信道划分协议"><a href="#5-3-1-信道划分协议" class="headerlink" title="5.3.1 信道划分协议"></a>5.3.1 信道划分协议</h4><p>TDMA和FDMA，时分复用访问和频分复用访问。</p>
+<p><strong>TDM</strong>将时间划分为时间帧，将时间帧划分为N个时隙，把每个时隙分配给N个结点中的一个。在循环的TDM帧中，被指派的时隙把分组传输给相应结点。</p>
+<p>缺点：出现不使用的时隙空闲。</p>
+<p><img src="/./5.link_layer/image-20220604140321968.png"></p>
+<p><strong>FDMA</strong>将信道频谱划分为频带，每个结点分配固定的频带。</p>
+<p>缺点：频带中未使用的传输时间空闲。</p>
 <pr>
 
-<h4 id="5-以太网源地址的值是多少-这是您的计算机地址，还是gaa-cs-umass-edu的地址？什么设备的以太网地址是这个"><a href="#5-以太网源地址的值是多少-这是您的计算机地址，还是gaa-cs-umass-edu的地址？什么设备的以太网地址是这个" class="headerlink" title="5.以太网源地址的值是多少?这是您的计算机地址，还是gaa.cs .umass.edu的地址？什么设备的以太网地址是这个?"></a>5.以太网源地址的值是多少?这是您的计算机地址，还是gaa.cs .umass.edu的地址？什么设备的以太网地址是这个?</h4><p><img src="/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/Users/Aucuba/Pictures/upload/_pictures/image-20220511130056987.png" alt="image-20220511130056987"></p>
-<p>源地址是0x00 06 25 da af 73。这个地址和第二问同样是是路由器的接口MAC地址。</p>
+<h4 id="5-3-2-随机接入协议"><a href="#5-3-2-随机接入协议" class="headerlink" title="5.3.2 随机接入协议"></a>5.3.2 随机接入协议</h4><p>一个结点全速发送，出现碰撞时，涉及碰撞的结点独立等待一个随机时延，然后重发该帧，直到无碰撞地通过。</p>
+<h5 id="5-3-2-1-时隙ALOHA"><a href="#5-3-2-1-时隙ALOHA" class="headerlink" title="5.3.2.1 时隙ALOHA"></a>5.3.2.1 时隙ALOHA</h5><h5 id="5-3-2-2-ALOHA"><a href="#5-3-2-2-ALOHA" class="headerlink" title="5.3.2.2 ALOHA"></a>5.3.2.2 ALOHA</h5><h5 id="5-3-2-3-CSMA-载波侦听多路访问"><a href="#5-3-2-3-CSMA-载波侦听多路访问" class="headerlink" title="5.3.2.3  CSMA(载波侦听多路访问)"></a>5.3.2.3  CSMA(载波侦听多路访问)</h5><h5 id="5-3-2-4-CSMA-x2F-CD-具有碰撞检测的载波侦听多路访问"><a href="#5-3-2-4-CSMA-x2F-CD-具有碰撞检测的载波侦听多路访问" class="headerlink" title="5.3.2.4  CSMA&#x2F;CD(具有碰撞检测的载波侦听多路访问)"></a>5.3.2.4  CSMA&#x2F;CD(具有碰撞检测的载波侦听多路访问)</h5><pr>
+
+<h4 id="5-3-3-轮流协议"><a href="#5-3-3-轮流协议" class="headerlink" title="5.3.3 轮流协议"></a>5.3.3 轮流协议</h4><pr>
+
+<h3 id="5-4-链路层编址"><a href="#5-4-链路层编址" class="headerlink" title="5.4 链路层编址"></a>5.4 链路层编址</h3><p>主机和路由器的网络接口具有MAC地址，高层程序仅希望与IP地址交往，地址解析协议负责在MAC地址和IP地址之间转换。</p>
+<p><strong>在同一个局域网</strong>中，发送主机的ARP适配器模块会根据输入的IP地址返回MAC地址。ARP表包含了对某些LAN节点的IP&#x2F;MAC地址映射  &lt; IP地址; MAC地址; TTL&gt;。</p>
+<p>如果B的MAC地址不在A的ARP表中，A广播ARP请求分组, 包含B的IP地址，目的MAC地址 &#x3D; FF-FF-FF-FF-FF-FF，在LAN上的所有机器接收ARP请求。B接收到ARP分组，用它的MAC地址单播回答A。</p>
+<p>发送数据报<strong>到另一个局域网</strong>，在两个局域网相连的路由器中有两个ARP表, 每张表对应一个IP网络。</p>
+<p><img src="/./5.link_layer/image-20220604142812799.png"></p>
 <pr>
 
-<h4 id="6-以太网帧中的目的地址是什么-这是你电脑的以太网地址吗"><a href="#6-以太网帧中的目的地址是什么-这是你电脑的以太网地址吗" class="headerlink" title="6.以太网帧中的目的地址是什么?这是你电脑的以太网地址吗?"></a>6.以太网帧中的目的地址是什么?这是你电脑的以太网地址吗?</h4><p><img src="/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/Users/Aucuba/Pictures/upload/_pictures/image-20220511130248462.png" alt="image-20220511130248462"></p>
-<p>目的地址是：0x00 d0 59 a9 3d 68。这就是电脑主机的以太网地址。</p>
+<h3 id="5-5-以太网"><a href="#5-5-以太网" class="headerlink" title="5.5 以太网"></a>5.5 以太网</h3><p>以太网是如今最流行的有线局域网技术。</p>
+<p><img src="/./5.link_layer/image-20220604143401641.png"></p>
+<p>Preamble前同步码前7个字节都是10101010 ，后1个字节为是10101011，用于同步接收方、发送方的时钟速率。</p>
+<p>类型指示了更高层的协议。</p>
+<p>以太网使用了<strong>CSMA&#x2F;CD协议</strong>：</p>
+<p>（1）载波侦听：先听再说。适配器在发送前监听总线是否空闲，总线空闲则发送数据，不空闲则继续监听；</p>
+<p>（2）冲突检测：边说边听。数据在发送的同时保持对总线的监听，发现冲突则停止发送；</p>
+<p>（3）随机延迟后重发。冲突发生后，采用指数回退方法等待一段随机时间后，再进行监听和发送。</p>
 <pr>
 
-<h4 id="7-Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么"><a href="#7-Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么" class="headerlink" title="7.Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么?"></a>7.Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么?</h4><p><img src="/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/Users/Aucuba/Pictures/upload/_pictures/image-20220511130520278.png" alt="image-20220511130520278"></p>
-<p>同样是IPV4。</p>
-<pr>
-
-<h4 id="8-从以太网帧的最开始算起，到“OK”中的ASCII码“O”，一共出现了多少个字节"><a href="#8-从以太网帧的最开始算起，到“OK”中的ASCII码“O”，一共出现了多少个字节" class="headerlink" title="8.从以太网帧的最开始算起，到“OK”中的ASCII码“O”，一共出现了多少个字节?"></a>8.从以太网帧的最开始算起，到“OK”中的ASCII码“O”，一共出现了多少个字节?</h4><p><img src="/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/Users/Aucuba/Pictures/upload/_pictures/image-20220511131915878.png" alt="image-20220511131915878"></p>
-<p>前面的到tcp报头为止，一共54个字节。</p>
-<p><img src="/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/Users/Aucuba/Pictures/upload/_pictures/image-20220511131536769.png" alt="image-20220511131536769"></p>
-<p>HTTP报文中O是第14个字节。那么从最开始算起，O出现在第68个字节处。</p>
-<pr>
-
-<h3 id="ARP-地址解析协议"><a href="#ARP-地址解析协议" class="headerlink" title="ARP 地址解析协议"></a>ARP 地址解析协议</h3><p>查看ARP命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c:\windows\system32\arp</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/Users/Aucuba/Pictures/upload/_pictures/image-20220511132407101.png" alt="image-20220511132407101"></p>
-<pr>
-
-<h4 id="9-写下你电脑的ARP缓存的内容。每个列值的含义是什么"><a href="#9-写下你电脑的ARP缓存的内容。每个列值的含义是什么" class="headerlink" title="9.写下你电脑的ARP缓存的内容。每个列值的含义是什么?"></a>9.写下你电脑的ARP缓存的内容。每个列值的含义是什么?</h4><p><img src="/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/Users/Aucuba/Pictures/upload/_pictures/image-20220511132629079.png" alt="image-20220511132629079">**</p>
-<p>分别表示IP地)、MAC地址和类型。类型分为静态和动态，动态表示若是某个表项在必定的时间内没有被用到就被删除，静态则永久保存。</p>
-<pr>
-
-<p><strong>为了观察计算机发送和接收 ARP消息，要清除 ARP缓存，防止在其缓存中找到所需的 IP-Ethernet地址转换关系而不会发送 ARP 消息。</strong></p>
-<p>清除浏览器的缓存后，启动 Wireshark捕捉。打开URL：<a target="_blank" rel="noopener" href="http://gaia.cs.umass.edu/wireshark-labs/HTTP-ethereal-lab-file3.html%E3%80%82">http://gaia.cs.umass.edu/wireshark-labs/HTTP-ethereal-lab-file3.html。</a></p>
-<h4 id="10-包含ARP请求消息的以太网帧的源地址和目的地址的十六进制值是多少"><a href="#10-包含ARP请求消息的以太网帧的源地址和目的地址的十六进制值是多少" class="headerlink" title="10.包含ARP请求消息的以太网帧的源地址和目的地址的十六进制值是多少?"></a>10.包含ARP请求消息的以太网帧的源地址和目的地址的十六进制值是多少?</h4><p><img src="/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/Users/Aucuba/Pictures/upload/_pictures/image-20220511134141521.png" alt="image-20220511134141521"></p>
-<p>源地址是0x00 d0 59 a9 3d 68；</p>
-<p>目的地址是0xff ff ff ff ff ff。</p>
-<pr>
-
-<h4 id="11-Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么"><a href="#11-Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么" class="headerlink" title="11.Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么?"></a>11.Frame的类型字段的两个字节的十六进制值，它对应的上层协议是什么?</h4><p><img src="/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/Users/Aucuba/Pictures/upload/_pictures/image-20220511134311355.png" alt="image-20220511134311355"></p>
-<p>类型是ARP，0x0806。</p>
-<pr>
-
-<h4 id="12-从-ftp-ftp-rfc-editor-org-in-notes-std-std37-txt下载ARP报文格式规范。分析："><a href="#12-从-ftp-ftp-rfc-editor-org-in-notes-std-std37-txt下载ARP报文格式规范。分析：" class="headerlink" title="12.从 ftp://ftp.rfc-editor.org/in-notes/std/std37.txt下载ARP报文格式规范。分析："></a>12.从 <a href="ftp://ftp.rfc-editor.org/in-notes/std/std37.txt%E4%B8%8B%E8%BD%BDARP%E6%8A%A5%E6%96%87%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83%E3%80%82%E5%88%86%E6%9E%90%EF%BC%9A">ftp://ftp.rfc-editor.org/in-notes/std/std37.txt下载ARP报文格式规范。分析：</a></h4><h5 id="1）从以太网帧的最开始ARP操作码字段开始的字节数是多少"><a href="#1）从以太网帧的最开始ARP操作码字段开始的字节数是多少" class="headerlink" title="(1）从以太网帧的最开始ARP操作码字段开始的字节数是多少?"></a>(1）从以太网帧的最开始ARP操作码字段开始的字节数是多少?</h5><p><img src="/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/Users/Aucuba/Pictures/upload/_pictures/image-20220511134940944.png" alt="image-20220511134940944"></p>
-<p>如图，21个字节。</p>
-<pr>
-
-<h5 id="2-发出ARP请求的以太网帧的ARP-payload部分的操作码字段值是多少"><a href="#2-发出ARP请求的以太网帧的ARP-payload部分的操作码字段值是多少" class="headerlink" title="(2)发出ARP请求的以太网帧的ARP-payload部分的操作码字段值是多少?"></a>(2)发出ARP请求的以太网帧的ARP-payload部分的操作码字段值是多少?</h5><p>如上图，操作码Opcode为0x00 01。</p>
-<pr>
-
-<h5 id="3-ARP消息中是否包含发送者的IP地址"><a href="#3-ARP消息中是否包含发送者的IP地址" class="headerlink" title="(3)ARP消息中是否包含发送者的IP地址?"></a>(3)ARP消息中是否包含发送者的IP地址?</h5><p><img src="/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/Users/Aucuba/Pictures/upload/_pictures/image-20220511135138668.png" alt="image-20220511135138668"></p>
-<p>如图，包含的发送者IP地址是0x00 d0 59 a9 3d 68。</p>
-<pr>
-
-<h5 id="4-从哪里查询相应-IP-的以太网地址"><a href="#4-从哪里查询相应-IP-的以太网地址" class="headerlink" title="(4)从哪里查询相应 IP 的以太网地址?"></a>(4)<strong>从哪里查询相应 IP 的以太网地址</strong>?</h5><p>操作码为0x00 01，是request，表示ARP请求，即查询响应IP的以太网地址。</p>
-<pr>
-
-<h4 id="13-查找响应ARP请求而发送的ARP应答。"><a href="#13-查找响应ARP请求而发送的ARP应答。" class="headerlink" title="13.查找响应ARP请求而发送的ARP应答。"></a>13.查找响应ARP请求而发送的ARP应答。</h4><h5 id="（1）从以太网帧的最开始ARP操作码字段开始的字节数是多少"><a href="#（1）从以太网帧的最开始ARP操作码字段开始的字节数是多少" class="headerlink" title="（1）从以太网帧的最开始ARP操作码字段开始的字节数是多少?"></a>（1）从以太网帧的最开始ARP操作码字段开始的字节数是多少?</h5><p><img src="/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/Users/Aucuba/Pictures/upload/_pictures/image-20220511135629074.png" alt="image-20220511135629074"></p>
-<p>如图，第21个字节</p>
-<pr>
-
-<h5 id="（2）ARP响应的以太网帧的ARP-payload部分的操作码字段值是多少"><a href="#（2）ARP响应的以太网帧的ARP-payload部分的操作码字段值是多少" class="headerlink" title="（2）ARP响应的以太网帧的ARP-payload部分的操作码字段值是多少?"></a>（2）ARP响应的以太网帧的ARP-payload部分的操作码字段值是多少?</h5><p>同样地，操作码字段0x00 02，表示reply。</p>
-<pr>
-
-<h5 id="（3）-在响应-ARP-中从哪里看出现-ARP-请求的答案"><a href="#（3）-在响应-ARP-中从哪里看出现-ARP-请求的答案" class="headerlink" title="（3） 在响应 ARP 中从哪里看出现 ARP 请求的答案?"></a>（3） <strong>在响应 ARP 中从哪里看出现 ARP 请求的答案?</strong></h5><p><img src="/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/Users/Aucuba/Pictures/upload/_pictures/image-20220511135858725.png" alt="image-20220511135858725"></p>
-<pr>
-
-<h4 id="14-包含ARP应答消息的以太网帧的源地址和目的地址的十六进制值是什么"><a href="#14-包含ARP应答消息的以太网帧的源地址和目的地址的十六进制值是什么" class="headerlink" title="14.包含ARP应答消息的以太网帧的源地址和目的地址的十六进制值是什么?"></a>14.包含ARP应答消息的以太网帧的源地址和目的地址的十六进制值是什么?</h4><p><img src="/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/Users/Aucuba/Pictures/upload/_pictures/image-20220511140014351.png" alt="image-20220511140014351"></p>
-<p>源地址：0x00 06 25 da af 91;</p>
-<p>目的地址：0x00 d0 59 a9 3d 68。</p>
-<pr>
-
-<h4 id="15-如果在一台计算机发送ARP请求和应答的网络上，还有另一台计算机发送了另一个ARP请求，为什么在报文跟踪中没有ARP应答？"><a href="#15-如果在一台计算机发送ARP请求和应答的网络上，还有另一台计算机发送了另一个ARP请求，为什么在报文跟踪中没有ARP应答？" class="headerlink" title="15.如果在一台计算机发送ARP请求和应答的网络上，还有另一台计算机发送了另一个ARP请求，为什么在报文跟踪中没有ARP应答？"></a>15.如果在一台计算机发送ARP请求和应答的网络上，还有另一台计算机发送了另一个ARP请求，为什么在报文跟踪中没有ARP应答？</h4><p>因为ARP查询是广播的，全部该网段内的电脑都能收到。但是 ARP 广播回复是单播的，只有请求的那台电脑才能收到，所以抓不到另一台电脑的 ARP 请求。</p>
-</pr></pr></pr></pr></pr></pr></pr></pr></pr></pr></pr></pr></pr></pr></pr></pr></pr></pr></pr></pr></pr>
+<h3 id="5-6-链路层交换机"><a href="#5-6-链路层交换机" class="headerlink" title="5.6 链路层交换机"></a>5.6 链路层交换机</h3><p><strong>集线器</strong>基本上是物理层中继器 ，它没有缓存，来自一条链路的比特从其他所有链路出去。主干集线器互联LAN网段，扩展节点之间的最大距离。</p>
+<p><img src="/./5.link_layer/image-20220604144019063.png"></p>
+<p><strong>以太网交换机</strong>实际是一个基于网桥技术的多端口工作在链路层的网络设备，它为数据帧从一个端口到另一个任意端口的转发提供了低时延、低开销的通路。特点是即插即用，自学习与线速转发。</p>
+<p><img src="/./5.link_layer/image-20220604144155287.png"></p>
+<p><strong>自学习</strong>：一个交换机具有一个交换机表（转发表），表项: &lt;MAC地址, 接口, 时戳&gt;。交换机学习通过哪个接口能够到达哪台主机。</p>
+<p><strong>流量隔离</strong>：交换机将子网分割成局域网段，过滤分组，相同局域网的帧通常不在其他LAN段上转发。</p>
+<p><strong>交换机和路由器的比较</strong></p>
+</pr></pr></pr></pr></pr></pr></pr></pr></pr>
             </div>
             <hr/>
 
@@ -459,7 +441,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://aucuba-hh.github.io/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/">http://aucuba-hh.github.io/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/</a>
+                    <a href="http://aucuba-hh.github.io/2022/06/04/categories/Computer_Networks/5.link_layer/">http://aucuba-hh.github.io/2022/06/04/categories/Computer_Networks/5.link_layer/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -662,45 +644,43 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2022/05/30/tags/sort-out/%E5%90%8D%E4%BE%A6%E6%8E%A2%E6%9F%AF%E5%8D%97/">
+                <a href="/2022/06/04/categories/Computer_Networks/5.link_layer/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="名侦探柯南剧情梳理">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="链路层">
                         
-                        <span class="card-title">名侦探柯南剧情梳理</span>
+                        <span class="card-title">链路层</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            主线剧情
+                            什么是链路层？
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-04
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Aucuba
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
+                                    计算机网络
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/sort-out/">
-                        <span class="chip bg-color">sort-out</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -711,24 +691,24 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/">
+                <a href="/2022/06/02/categories/Computer_Networks/4.network%20_ayer/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="计算机网络课程实验三,NET">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="网络层">
                         
-                        <span class="card-title">计算机网络课程实验三,NET</span>
+                        <span class="card-title">网络层</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            计网实验，抓包
+                            什么是网络层？
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-02
                             </span>
                         <span class="publish-author">
                             

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="链路层, Aucuba">
+    <meta name="keywords" content="计算机网络概述, Aucuba">
     <meta name="referrer" content="no-referrer" />
     <meta name="description" content="早睡晚起小能手，不知名话痨艺术家">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>链路层 | Aucuba</title>
+    <title>计算机网络概述 | Aucuba</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -180,12 +180,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">链路层</h1>
+                    <h1 class="description center-align post-title">计算机网络概述</h1>
                 </div>
             </div>
         </div>
@@ -323,7 +323,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-06-04
+                    2022-02-15
                 </div>
                 
 
@@ -339,84 +339,69 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="计算机网络——自顶向下-笔记"><a href="#计算机网络——自顶向下-笔记" class="headerlink" title="计算机网络——自顶向下  笔记"></a>计算机网络——自顶向下  笔记</h1><h2 id="5-链路层"><a href="#5-链路层" class="headerlink" title="5. 链路层"></a>5. 链路层</h2><h3 id="5-1-链路层概述"><a href="#5-1-链路层概述" class="headerlink" title="5.1 链路层概述"></a>5.1 链路层概述</h3><p>我们把主机和路由器称作结点，连接沿通信路径的相邻节点的路径是<strong>链路</strong>。链路层的分组叫做帧，地址是MAC地址。</p>
-<p>使用不同的链路协议经不同的链路传输数据报，例如第一段链路是以太网，中间链路是帧中继，最后链路是 802.11，每个链路协议提供不同的服务。</p>
-<p>链路层可能提供的服务还包括：</p>
-<p><strong>可靠交付</strong>：一般由确认和重传实现，通常用于高差错率的链路（如无线链路，光纤的差错低）；</p>
-<p><strong>差错检验和纠正</strong>：发送方在帧中包括差错检验比特，接收方检验后，如果出现较少差错可以进行纠正而避免重传。</p>
-<p>链路层的主体部分是在网络适配器实现的，网络适配器核心的链路层控制器实现了多种链路层服务。</p>
-<p><img src="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5.%E9%93%BE%E8%B7%AF%E5%B1%82/Users/Aucuba/Pictures/my_typora/5.%E9%93%BE%E8%B7%AF%E5%B1%82/image-20220603165152084.png" alt="image-20220603165152084"></p>
-<pr>
+                <h1 id="计算机网络概述"><a href="#计算机网络概述" class="headerlink" title="计算机网络概述"></a>计算机网络概述</h1><h2 id="1-1-什么是Internet"><a href="#1-1-什么是Internet" class="headerlink" title="1.1 什么是Internet"></a>1.1 什么是Internet</h2><p>网络：结点和边</p>
+<p>计算机网络：</p>
+<p>（1）结点（端系统（主机）结点：手机、pad、电脑……和上面运行的网络应用程序；数据交换结点：路由器、交换机）</p>
+<p>（2）边：通信链路（接入网链路：主机连接到互联网的链路；主干链路：路由器间的链路）</p>
+<p>（3）协议：标准。协议定义了在两个或多个通信实体之间交换的报文格式和次序，以及在报文传输和接受或其他事件方面所采取的动作。</p>
+<h2 id="1-2-网络边缘"><a href="#1-2-网络边缘" class="headerlink" title="1.2 网络边缘"></a>1.2 网络边缘</h2><p>按组成类型将互联网的网络结构分成</p>
+<p>网络边缘edge：主机、应用程序；</p>
+<p>网络核心core：路由器、网络的网络；</p>
+<p>网络接入access：连接edge和core的通信链路；</p>
+<p><img src="/./1.Computer_Network_Overview/image-20220204153616869.png"></p>
+<p>边缘通过接入连接核心，从而使任意两个端系统之间可以相互通信。网络核心起着数据交换的作用。 </p>
+<h3 id="1、两种模式"><a href="#1、两种模式" class="headerlink" title="1、两种模式"></a>1、两种模式</h3><h4 id="（1）C-x2F-S-客户端-x2F-服务器模式"><a href="#（1）C-x2F-S-客户端-x2F-服务器模式" class="headerlink" title="（1）C&#x2F;S  客户端&#x2F;服务器模式"></a>（1）C&#x2F;S  客户端&#x2F;服务器模式</h4><p>客户端向服务器请求、接收服务，服务器为主，客户端为从。</p>
+<p>存在可扩充性差的问题，比如客户端请求多了就会不响应。</p>
+<h4 id="（2）对等peer-peer模式"><a href="#（2）对等peer-peer模式" class="headerlink" title="（2）对等peer-peer模式"></a>（2）对等peer-peer模式</h4><p>例如迅雷等分布式的文件分发系统。请求多，相应的结点也多。</p>
+<h3 id="2-、通信方式"><a href="#2-、通信方式" class="headerlink" title="2 、通信方式"></a>2 、通信方式</h3><h4 id="（1）面向连接的通信方式"><a href="#（1）面向连接的通信方式" class="headerlink" title="（1）面向连接的通信方式"></a>（1）面向连接的通信方式</h4><p>在端系统之间传输数据，传输之前先握手做好准备，建立连接。</p>
+<p>TCP服务（可靠性、流量控制、拥塞控制）。</p>
+<h4 id="（2）无连接的服务"><a href="#（2）无连接的服务" class="headerlink" title="（2）无连接的服务"></a>（2）无连接的服务</h4><p>UDP:不打招呼，很简单。</p>
+<p>如实时聊天。</p>
+<h2 id="1-3-网络核心"><a href="#1-3-网络核心" class="headerlink" title="1.3 网络核心"></a>1.3 网络核心</h2><p>路由器的网状网络</p>
+<p><strong>怎样通过网络进行数据传输</strong></p>
+<h4 id="（1）电路交换"><a href="#（1）电路交换" class="headerlink" title="（1）电路交换"></a>（1）电路交换</h4><p>将网络资源分成片，为呼叫分配片。为每个呼叫预留一条专有电路。如传统电话网络。</p>
+<p>不适合计算机之间的通信。</p>
+<h4 id="（2）分组交换"><a href="#（2）分组交换" class="headerlink" title="（2）分组交换"></a>（2）分组交换</h4><p>将传送的数据分成组，以分组packet为单位存储-转发。</p>
+<p>存储-转发：被传输到下一个链路之前，整个分组必须到达路由器。 </p>
+<p>排队和延迟：到达速率&gt;链路输出速率。</p>
+<p><strong>网络核心的关键功能</strong></p>
+<p>（1）路由：决定分组采用的源到目标的路径。</p>
+<p>（2）转发：将分组从路由器的输入链路转移到输出链路。</p>
+<h2 id="1-4-接入网和物理媒体"><a href="#1-4-接入网和物理媒体" class="headerlink" title="1.4 接入网和物理媒体"></a>1.4 接入网和物理媒体</h2><h3 id="1-4-1-接入网"><a href="#1-4-1-接入网" class="headerlink" title="1.4.1 接入网"></a>1.4.1 接入网</h3><h4 id="1、住宅接入：modem"><a href="#1、住宅接入：modem" class="headerlink" title="1、住宅接入：modem"></a>1、住宅接入：modem</h4><p>将上网数据调制加载到音频信号上，在电话线上传输，在局端将其中的数据解调出来。</p>
+<p>带宽很窄,不能同时上网和通话。</p>
+<h4 id="2、接入网：DSL"><a href="#2、接入网：DSL" class="headerlink" title="2、接入网：DSL"></a>2、接入网：DSL</h4><p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/Users/Aucuba/Pictures/my_typora/1.Computer_Network_Overview/image-20220207133300830.png"></p>
+<p>0~4kHz仍作音频传输，高于4k的一部分作下行，一部分作上行，使用额外的带宽，仍然采用调制和解调的方式。</p>
+<h4 id="3、接入网：线缆网络"><a href="#3、接入网：线缆网络" class="headerlink" title="3、接入网：线缆网络"></a>3、接入网：线缆网络</h4><p>把有线电视信号线缆双向改造，在不同频段传输不同信道的数据。</p>
+<p>线缆和光纤网路将各个家庭用户接入到ISP路由器。与DSL不同，各用户共享上行带宽。</p>
+<h4 id="4、接入网：家庭网络"><a href="#4、接入网：家庭网络" class="headerlink" title="4、接入网：家庭网络"></a>4、接入网：家庭网络</h4><p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/Users/Aucuba/Pictures/my_typora/1.Computer_Network_Overview/image-20220207134156849.png"></p>
+<h4 id="5、企业接入网络"><a href="#5、企业接入网络" class="headerlink" title="5、企业接入网络"></a>5、企业接入网络</h4><p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/Users/Aucuba/Pictures/my_typora/1.Computer_Network_Overview/image-20220207134345428.png"></p>
+<p>通过交换机的集联。</p>
+<h4 id="6、无线接入网络"><a href="#6、无线接入网络" class="headerlink" title="6、无线接入网络"></a>6、无线接入网络</h4><p>各无线端系统共享无线接入网络（端系统到路由器），通过无线LAN或广域无线接入的方式。</p>
+<h3 id="1-4-2-物理媒体"><a href="#1-4-2-物理媒体" class="headerlink" title="1.4.2 物理媒体"></a>1.4.2 物理媒体</h3><p>物理链路：在每个传输-接收对，跨越一种物理媒体的介质。</p>
+<p>导引型媒体：信号沿着固体媒介被导引，如同轴电缆、光纤、双绞线。非导引型媒体是信号自由传输。</p>
+<p>无线链路：开放空间传输电磁波。无需物理线缆。</p>
+<h2 id="1-5-Internet结构和ISP"><a href="#1-5-Internet结构和ISP" class="headerlink" title="1.5 Internet结构和ISP"></a>1.5 Internet结构和ISP</h2><p>互联网结构是网络的网络，端系统通过<strong>接入ISPs</strong>接到互联网。</p>
+<p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/Users/Aucuba/Pictures/my_typora/1.Computer_Network_Overview/image-20220215122033621.png"></p>
+<p>然后内容提供商网络ICP可能会构建自己的网络（靠近ISP），将自己的服务、内容更加靠近用户，减少自己支出。</p>
+<p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/Users/Aucuba/Pictures/my_typora/1.Computer_Network_Overview/image-20220215124059819.png"></p>
+<p><strong>第一层ISP</strong>完成全球的国家&#x2F;国际覆盖，点很少，速率极高。它们之间直接或通过IXP连接，并与大量的第二层ISP和其他客户网相连。</p>
+<p><strong>第二层ISP</strong>（包括更小的区域ISP），与一个或多个第一层ISPs相连，也可能与第二层ISP相连。</p>
+<p>终端通过local ISP、第三层、第二层、第一层ISP接入互联网。</p>
+<h2 id="1-7-协议层次和服务模型"><a href="#1-7-协议层次和服务模型" class="headerlink" title="1.7  协议层次和服务模型"></a>1.7  协议层次和服务模型</h2><p>将网络的复杂功能分层，每层实现一组功能：本层协议实体交互执行本层的协议动作，通过接口访问下层的提供的服务，来实现本层的功能。</p>
+<p><strong>协议</strong>：本层协议实体交互的应该遵守的协议动作的集合。</p>
+<p><strong>数据单元DU：</strong>上层的服务数据单元SDU传给下层，加上一个头部封装成这一层的协议数据单元PDU。</p>
+<p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/Users/Aucuba/Pictures/my_typora/1.Computer_Network_Overview/image-20220215174311868.png"></p>
+<p><strong>服务</strong>：低层实体向上层实体提供它们之间的通信的能力。服务访问点SAP用来区分上层不同服务用户的信息。</p>
+<p>本层提供的服务不仅包括所有下层提供的服务，还包括同层之间通过接口实现的新的服务特性（可以向上层提供的服务）。</p>
+<p><strong>原语</strong>：上层使用下层服务的形式，即提供什么类型的服务（面向连接的或无连接的）。</p>
+<p><strong>Internet协议栈</strong></p>
+<p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/Users/Aucuba/Pictures/my_typora/1.Computer_Network_Overview/image-20220215175055180.png"></p>
+<p><strong>传输层</strong>：在网络层主机到主机传输基础之上的进程到进程的区分数据传输；可靠。</p>
+<p><strong>网络层</strong>：在链路层基础上，传输以分组为单位的端到端的数据；不可靠。</p>
+<p><strong>链路层</strong>：以帧frame为单位，把bit组合根据帧头帧尾区分出一帧一帧，在<strong>相邻</strong>网点之间传送数据。</p>
+<p><strong>各层次的协议数据单元：</strong></p>
+<p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/Users/Aucuba/Pictures/my_typora/1.Computer_Network_Overview/image-20220215191048948.png"></p>
 
-<h3 id="5-2-差错检测和纠正"><a href="#5-2-差错检测和纠正" class="headerlink" title="5.2 差错检测和纠正"></a>5.2 差错检测和纠正</h3><p>在发送方采用差错检测和纠正比特来增强数据。</p>
-<p>差错检测的3种技术：奇偶校验、检验和、循环冗余检测。</p>
-<h4 id="5-2-1-奇偶校验"><a href="#5-2-1-奇偶校验" class="headerlink" title="5.2.1 奇偶校验"></a>5.2.1 奇偶校验</h4><p>专门设置一个奇偶校验位，用它使这组代码中“1”的个数为奇数或偶数。 </p>
-<p>如果采用单比特奇偶校验，只能检测单个比特差错：</p>
-<p><img src="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5.%E9%93%BE%E8%B7%AF%E5%B1%82/Users/Aucuba/Pictures/my_typora/5.%E9%93%BE%E8%B7%AF%E5%B1%82/image-20220603165750695.png" alt="image-20220603165750695"></p>
-<p>如果采用二维比特奇偶校验，可以检测和纠正单个比特差错：</p>
-<p><img src="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5.%E9%93%BE%E8%B7%AF%E5%B1%82/Users/Aucuba/Pictures/my_typora/5.%E9%93%BE%E8%B7%AF%E5%B1%82/image-20220603165820294.png" alt="image-20220603165820294"></p>
-<p>接收方检测和纠错的能力被称为<strong>前向纠错</strong>，它可以减少重传次数和避免往返时延（发送方收到NAK后重传产生的）。</p>
-<pr>
-
-<h4 id="5-2-2-检验和"><a href="#5-2-2-检验和" class="headerlink" title="5.2.2 检验和"></a>5.2.2 检验和</h4><p>将数据内容作为16比特的整数序列，对它们的和进行反码运算，求和时遇到的溢出都被回卷。</p>
-<pr>
-
-<h4 id="5-2-3-循环冗余检测"><a href="#5-2-3-循环冗余检测" class="headerlink" title="5.2.3 循环冗余检测"></a>5.2.3 循环冗余检测</h4><p>即CRC编码，多项式编码，将比特串看做系数是0和1的多项式。</p>
-<p><img src="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5.%E9%93%BE%E8%B7%AF%E5%B1%82/Users/Aucuba/Pictures/my_typora/5.%E9%93%BE%E8%B7%AF%E5%B1%82/image-20220604134022533.png" alt="image-20220604134022533"></p>
-<p>发送方和接收方先协商一个r+1的生成多项式G，要求G的最左边是1，</p>
-<p><img src="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5.%E9%93%BE%E8%B7%AF%E5%B1%82/Users/Aucuba/Pictures/my_typora/5.%E9%93%BE%E8%B7%AF%E5%B1%82/image-20220604134155028.png" alt="image-20220604134155028"></p>
-<p>发送方用位串D及 G(x)进行某种运算得到校验和R，并在帧的末尾加上校验和，使带校验和的帧的多项式(D+R)能被 G(x) 整除，接收方收到后，用 G(x) 除多项式，若有余数则传输有错。</p>
-<p>多项式D+R&#x3D;D*2^r XOR R&#x3D;nG，等价为R&#x3D;(D*2^R)&#x2F;G的余数。</p>
-<p><img src="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5.%E9%93%BE%E8%B7%AF%E5%B1%82/Users/Aucuba/Pictures/my_typora/5.%E9%93%BE%E8%B7%AF%E5%B1%82/image-20220604135016515.png" alt="image-20220604135016515"></p>
-<pr>
-
-<h3 id="5-3-多路访问协议"><a href="#5-3-多路访问协议" class="headerlink" title="5.3 多路访问协议"></a>5.3 多路访问协议</h3><p><strong>点对点链路</strong>：链路一端的单个发送方和链路另一端的单个接收方组成。点对点协议和高级数据链路控制都是这样的协议；</p>
-<p><strong>广播链路</strong>：多个发送和接收节点都连接到相同、单一、共享的信道上。以太网和无线局域网是广播链路层技术的例子。</p>
-<p><strong>多路访问协议</strong>就是如何协调多个发送和接收结点对一个共享广播信道的访问，规范在共享广播信道上的传输行为。</p>
-<p><strong>碰撞</strong>：结点同时接收到多个帧，没有任何结点有效获得了信号。</p>
-<p>理想的多路访问协议：</p>
-<p>（1）当一个节点要传输，它能够以速率R发送；</p>
-<p>（2）当M节点要传输，每个能以平均速率R&#x2F;M发送；</p>
-<p>（3） 全分散:无特殊节点来协调传输；无同步时钟、时隙；</p>
-<p>（4） 实现简单。</p>
-<h4 id="5-3-1-信道划分协议"><a href="#5-3-1-信道划分协议" class="headerlink" title="5.3.1 信道划分协议"></a>5.3.1 信道划分协议</h4><p>TDMA和FDMA，时分复用访问和频分复用访问。</p>
-<p><strong>TDM</strong>将时间划分为时间帧，将时间帧划分为N个时隙，把每个时隙分配给N个结点中的一个。在循环的TDM帧中，被指派的时隙把分组传输给相应结点。</p>
-<p>缺点：出现不使用的时隙空闲。</p>
-<p><img src="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5.%E9%93%BE%E8%B7%AF%E5%B1%82/Users/Aucuba/Pictures/my_typora/5.%E9%93%BE%E8%B7%AF%E5%B1%82/image-20220604140321968.png" alt="image-20220604140321968"></p>
-<p><strong>FDMA</strong>将信道频谱划分为频带，每个结点分配固定的频带。</p>
-<p>缺点：频带中未使用的传输时间空闲。</p>
-<pr>
-
-<h4 id="5-3-2-随机接入协议"><a href="#5-3-2-随机接入协议" class="headerlink" title="5.3.2 随机接入协议"></a>5.3.2 随机接入协议</h4><p>一个结点全速发送，出现碰撞时，涉及碰撞的结点独立等待一个随机时延，然后重发该帧，直到无碰撞地通过。</p>
-<h5 id="5-3-2-1-时隙ALOHA"><a href="#5-3-2-1-时隙ALOHA" class="headerlink" title="5.3.2.1 时隙ALOHA"></a>5.3.2.1 时隙ALOHA</h5><h5 id="5-3-2-2-ALOHA"><a href="#5-3-2-2-ALOHA" class="headerlink" title="5.3.2.2 ALOHA"></a>5.3.2.2 ALOHA</h5><h5 id="5-3-2-3-CSMA-载波侦听多路访问"><a href="#5-3-2-3-CSMA-载波侦听多路访问" class="headerlink" title="5.3.2.3  CSMA(载波侦听多路访问)"></a>5.3.2.3  CSMA(载波侦听多路访问)</h5><h5 id="5-3-2-4-CSMA-x2F-CD-具有碰撞检测的载波侦听多路访问"><a href="#5-3-2-4-CSMA-x2F-CD-具有碰撞检测的载波侦听多路访问" class="headerlink" title="5.3.2.4  CSMA&#x2F;CD(具有碰撞检测的载波侦听多路访问)"></a>5.3.2.4  CSMA&#x2F;CD(具有碰撞检测的载波侦听多路访问)</h5><pr>
-
-<h4 id="5-3-3-轮流协议"><a href="#5-3-3-轮流协议" class="headerlink" title="5.3.3 轮流协议"></a>5.3.3 轮流协议</h4><pr>
-
-<h3 id="5-4-链路层编址"><a href="#5-4-链路层编址" class="headerlink" title="5.4 链路层编址"></a>5.4 链路层编址</h3><p>主机和路由器的网络接口具有MAC地址，高层程序仅希望与IP地址交往，地址解析协议负责在MAC地址和IP地址之间转换。</p>
-<p><strong>在同一个局域网</strong>中，发送主机的ARP适配器模块会根据输入的IP地址返回MAC地址。ARP表包含了对某些LAN节点的IP&#x2F;MAC地址映射  &lt; IP地址; MAC地址; TTL&gt;。</p>
-<p>如果B的MAC地址不在A的ARP表中，A广播ARP请求分组, 包含B的IP地址，目的MAC地址 &#x3D; FF-FF-FF-FF-FF-FF，在LAN上的所有机器接收ARP请求。B接收到ARP分组，用它的MAC地址单播回答A。</p>
-<p>发送数据报<strong>到另一个局域网</strong>，在两个局域网相连的路由器中有两个ARP表, 每张表对应一个IP网络。</p>
-<p><img src="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5.%E9%93%BE%E8%B7%AF%E5%B1%82/Users/Aucuba/Pictures/my_typora/5.%E9%93%BE%E8%B7%AF%E5%B1%82/image-20220604142812799.png" alt="image-20220604142812799"></p>
-<pr>
-
-<h3 id="5-5-以太网"><a href="#5-5-以太网" class="headerlink" title="5.5 以太网"></a>5.5 以太网</h3><p>以太网是如今最流行的有线局域网技术。</p>
-<p><img src="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5.%E9%93%BE%E8%B7%AF%E5%B1%82/Users/Aucuba/Pictures/my_typora/5.%E9%93%BE%E8%B7%AF%E5%B1%82/image-20220604143401641.png" alt="image-20220604143401641"></p>
-<p>Preamble前同步码前7个字节都是10101010 ，后1个字节为是10101011，用于同步接收方、发送方的时钟速率。</p>
-<p>类型指示了更高层的协议。</p>
-<p>以太网使用了<strong>CSMA&#x2F;CD协议</strong>：</p>
-<p>（1）载波侦听：先听再说。适配器在发送前监听总线是否空闲，总线空闲则发送数据，不空闲则继续监听；</p>
-<p>（2）冲突检测：边说边听。数据在发送的同时保持对总线的监听，发现冲突则停止发送；</p>
-<p>（3）随机延迟后重发。冲突发生后，采用指数回退方法等待一段随机时间后，再进行监听和发送。</p>
-<pr>
-
-<h3 id="5-6-链路层交换机"><a href="#5-6-链路层交换机" class="headerlink" title="5.6 链路层交换机"></a>5.6 链路层交换机</h3><p><strong>集线器</strong>基本上是物理层中继器 ，它没有缓存，来自一条链路的比特从其他所有链路出去。主干集线器互联LAN网段，扩展节点之间的最大距离。</p>
-<p><img src="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5.%E9%93%BE%E8%B7%AF%E5%B1%82/Users/Aucuba/Pictures/my_typora/5.%E9%93%BE%E8%B7%AF%E5%B1%82/image-20220604144019063.png" alt="image-20220604144019063"></p>
-<p><strong>以太网交换机</strong>实际是一个基于网桥技术的多端口工作在链路层的网络设备，它为数据帧从一个端口到另一个任意端口的转发提供了低时延、低开销的通路。特点是即插即用，自学习与线速转发。</p>
-<p><img src="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5.%E9%93%BE%E8%B7%AF%E5%B1%82/Users/Aucuba/Pictures/my_typora/5.%E9%93%BE%E8%B7%AF%E5%B1%82/image-20220604144155287.png" alt="image-20220604144155287"></p>
-<p><strong>自学习</strong>：一个交换机具有一个交换机表（转发表），表项: &lt;MAC地址, 接口, 时戳&gt;。交换机学习通过哪个接口能够到达哪台主机。</p>
-<p><strong>流量隔离</strong>：交换机将子网分割成局域网段，过滤分组，相同局域网的帧通常不在其他LAN段上转发。</p>
-<p><strong>交换机和路由器的比较</strong></p>
-</pr></pr></pr></pr></pr></pr></pr></pr></pr>
             </div>
             <hr/>
 
@@ -441,7 +426,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://aucuba-hh.github.io/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5.%E9%93%BE%E8%B7%AF%E5%B1%82/">http://aucuba-hh.github.io/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5.%E9%93%BE%E8%B7%AF%E5%B1%82/</a>
+                    <a href="http://aucuba-hh.github.io/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/">http://aucuba-hh.github.io/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -644,43 +629,41 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2022/06/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5.%E9%93%BE%E8%B7%AF%E5%B1%82/">
+                <a href="/2022/03/22/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%B9%B3%E5%8F%B0%E2%80%94%E2%80%94AutoDL%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="链路层">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="深度学习服务器平台简单手册——AutoDL">
                         
-                        <span class="card-title">链路层</span>
+                        <span class="card-title">深度学习服务器平台简单手册——AutoDL</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            什么是链路层？
+                            推荐一个便宜好用的深度学习服务器平台——AutoDL和上手使用手册
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-04
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-22
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
-                                    计算机网络
+                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    深度学习
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -691,31 +674,31 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/06/02/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4.%E7%BD%91%E7%BB%9C%E5%B1%82/">
+                <a href="/2022/01/23/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/abstrac%20of%20machine-learning/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="网络层">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Deep learning学习笔记">
                         
-                        <span class="card-title">网络层</span>
+                        <span class="card-title">Deep learning学习笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            什么是网络层？
+                            什么是深度学习？
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-23
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
-                                    计算机网络
+                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    深度学习
                                 </a>
                             
                             

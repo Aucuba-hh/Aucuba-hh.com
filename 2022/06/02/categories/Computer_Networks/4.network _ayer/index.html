@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="计算机网络概述, Aucuba">
+    <meta name="keywords" content="网络层, Aucuba">
     <meta name="referrer" content="no-referrer" />
     <meta name="description" content="早睡晚起小能手，不知名话痨艺术家">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>计算机网络概述 | Aucuba</title>
+    <title>网络层 | Aucuba</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -180,12 +180,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">计算机网络概述</h1>
+                    <h1 class="description center-align post-title">网络层</h1>
                 </div>
             </div>
         </div>
@@ -307,6 +307,15 @@
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
+                                计算机网络
+                            </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
@@ -314,7 +323,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-02-15
+                    2022-06-02
                 </div>
                 
 
@@ -330,71 +339,96 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="计算机网络概述"><a href="#计算机网络概述" class="headerlink" title="计算机网络概述"></a>计算机网络概述</h1><h2 id="1-1-什么是Internet"><a href="#1-1-什么是Internet" class="headerlink" title="1.1 什么是Internet"></a>1.1 什么是Internet</h2><p>网络：结点和边</p>
-<p>计算机网络：</p>
-<p>（1）结点（端系统（主机）结点：手机、pad、电脑……和上面运行的网络应用程序；数据交换结点：路由器、交换机）</p>
-<p>（2）边：通信链路（接入网链路：主机连接到互联网的链路；主干链路：路由器间的链路）</p>
-<p>（3）协议：标准。协议定义了在两个或多个通信实体之间交换的报文格式和次序，以及在报文传输和接受或其他事件方面所采取的动作。</p>
-<h2 id="1-2-网络边缘"><a href="#1-2-网络边缘" class="headerlink" title="1.2 网络边缘"></a>1.2 网络边缘</h2><p>按组成类型将互联网的网络结构分成</p>
-<p>网络边缘edge：主机、应用程序；</p>
-<p>网络核心core：路由器、网络的网络；</p>
-<p>网络接入access：连接edge和core的通信链路；</p>
-<img src="/2022/02/15/1.Computer%20Network%20Overview/02/15/1.Computer%20Network%20Overview/image-20220204153616869.png" class>
+                <h1 id="计算机网络——自顶向下-笔记"><a href="#计算机网络——自顶向下-笔记" class="headerlink" title="计算机网络——自顶向下  笔记"></a>计算机网络——自顶向下  笔记</h1><h2 id="4-网络层"><a href="#4-网络层" class="headerlink" title="4.网络层"></a>4.网络层</h2><h3 id="4-1-概述"><a href="#4-1-概述" class="headerlink" title="4.1 概述"></a>4.1 概述</h3><p>网络层提供尽力而为的服务。</p>
+<p>路由器的功能：</p>
+<p>（1）转发：将分组从路由器的输入移动到适当的路由器输出；</p>
+<p>（2）路由：决定分组从源到目的地所采用的路径；</p>
+<p>（3）连接建立。</p>
+<pr>
 
-<p><img src="/2022/02/15/1.Computer%20Network%20Overview/02/15/1.Computer%20Network%20Overview/image-20220204153616869.png"></p>
-<p>边缘通过接入连接核心，从而使任意两个端系统之间可以相互通信。网络核心起着数据交换的作用。 </p>
-<h3 id="1、两种模式"><a href="#1、两种模式" class="headerlink" title="1、两种模式"></a>1、两种模式</h3><h4 id="（1）C-x2F-S-客户端-x2F-服务器模式"><a href="#（1）C-x2F-S-客户端-x2F-服务器模式" class="headerlink" title="（1）C&#x2F;S  客户端&#x2F;服务器模式"></a>（1）C&#x2F;S  客户端&#x2F;服务器模式</h4><p>客户端向服务器请求、接收服务，服务器为主，客户端为从。</p>
-<p>存在可扩充性差的问题，比如客户端请求多了就会不响应。</p>
-<h4 id="（2）对等peer-peer模式"><a href="#（2）对等peer-peer模式" class="headerlink" title="（2）对等peer-peer模式"></a>（2）对等peer-peer模式</h4><p>例如迅雷等分布式的文件分发系统。请求多，相应的结点也多。</p>
-<h3 id="2-、通信方式"><a href="#2-、通信方式" class="headerlink" title="2 、通信方式"></a>2 、通信方式</h3><h4 id="（1）面向连接的通信方式"><a href="#（1）面向连接的通信方式" class="headerlink" title="（1）面向连接的通信方式"></a>（1）面向连接的通信方式</h4><p>在端系统之间传输数据，传输之前先握手做好准备，建立连接。</p>
-<p>TCP服务（可靠性、流量控制、拥塞控制）。</p>
-<h4 id="（2）无连接的服务"><a href="#（2）无连接的服务" class="headerlink" title="（2）无连接的服务"></a>（2）无连接的服务</h4><p>UDP:不打招呼，很简单。</p>
-<p>如实时聊天。</p>
-<h2 id="1-3-网络核心"><a href="#1-3-网络核心" class="headerlink" title="1.3 网络核心"></a>1.3 网络核心</h2><p>路由器的网状网络</p>
-<p><strong>怎样通过网络进行数据传输</strong></p>
-<h4 id="（1）电路交换"><a href="#（1）电路交换" class="headerlink" title="（1）电路交换"></a>（1）电路交换</h4><p>将网络资源分成片，为呼叫分配片。为每个呼叫预留一条专有电路。如传统电话网络。</p>
-<p>不适合计算机之间的通信。</p>
-<h4 id="（2）分组交换"><a href="#（2）分组交换" class="headerlink" title="（2）分组交换"></a>（2）分组交换</h4><p>将传送的数据分成组，以分组packet为单位存储-转发。</p>
-<p>存储-转发：被传输到下一个链路之前，整个分组必须到达路由器。 </p>
-<p>排队和延迟：到达速率&gt;链路输出速率。</p>
-<p><strong>网络核心的关键功能</strong></p>
-<p>（1）路由：决定分组采用的源到目标的路径。</p>
-<p>（2）转发：将分组从路由器的输入链路转移到输出链路。</p>
-<h2 id="1-4-接入网和物理媒体"><a href="#1-4-接入网和物理媒体" class="headerlink" title="1.4 接入网和物理媒体"></a>1.4 接入网和物理媒体</h2><h3 id="1-4-1-接入网"><a href="#1-4-1-接入网" class="headerlink" title="1.4.1 接入网"></a>1.4.1 接入网</h3><h4 id="1、住宅接入：modem"><a href="#1、住宅接入：modem" class="headerlink" title="1、住宅接入：modem"></a>1、住宅接入：modem</h4><p>将上网数据调制加载到音频信号上，在电话线上传输，在局端将其中的数据解调出来。</p>
-<p>带宽很窄,不能同时上网和通话。</p>
-<h4 id="2、接入网：DSL"><a href="#2、接入网：DSL" class="headerlink" title="2、接入网：DSL"></a>2、接入网：DSL</h4><p><img src="/2022/02/15/1.Computer%20Network%20Overview/02/15/1.Computer%20Network%20Overview/image-20220207133300830.png"></p>
-<p>0~4kHz仍作音频传输，高于4k的一部分作下行，一部分作上行，使用额外的带宽，仍然采用调制和解调的方式。</p>
-<h4 id="3、接入网：线缆网络"><a href="#3、接入网：线缆网络" class="headerlink" title="3、接入网：线缆网络"></a>3、接入网：线缆网络</h4><p>把有线电视信号线缆双向改造，在不同频段传输不同信道的数据。</p>
-<p>线缆和光纤网路将各个家庭用户接入到ISP路由器。与DSL不同，各用户共享上行带宽。</p>
-<h4 id="4、接入网：家庭网络"><a href="#4、接入网：家庭网络" class="headerlink" title="4、接入网：家庭网络"></a>4、接入网：家庭网络</h4><p><img src="/2022/02/15/1.Computer%20Network%20Overview/02/15/1.Computer%20Network%20Overview/image-20220207134156849.png"></p>
-<h4 id="5、企业接入网络"><a href="#5、企业接入网络" class="headerlink" title="5、企业接入网络"></a>5、企业接入网络</h4><p><img src="/2022/02/15/1.Computer%20Network%20Overview/02/15/1.Computer%20Network%20Overview/image-20220207134345428.png"></p>
-<p>通过交换机的集联。</p>
-<h4 id="6、无线接入网络"><a href="#6、无线接入网络" class="headerlink" title="6、无线接入网络"></a>6、无线接入网络</h4><p>各无线端系统共享无线接入网络（端系统到路由器），通过无线LAN或广域无线接入的方式。</p>
-<h3 id="1-4-2-物理媒体"><a href="#1-4-2-物理媒体" class="headerlink" title="1.4.2 物理媒体"></a>1.4.2 物理媒体</h3><p>物理链路：在每个传输-接收对，跨越一种物理媒体的介质。</p>
-<p>导引型媒体：信号沿着固体媒介被导引，如同轴电缆、光纤、双绞线。非导引型媒体是信号自由传输。</p>
-<p>无线链路：开放空间传输电磁波。无需物理线缆。</p>
-<h2 id="1-5-Internet结构和ISP"><a href="#1-5-Internet结构和ISP" class="headerlink" title="1.5 Internet结构和ISP"></a>1.5 Internet结构和ISP</h2><p>互联网结构是网络的网络，端系统通过<strong>接入ISPs</strong>接到互联网。</p>
-<p><img src="/2022/02/15/1.Computer%20Network%20Overview/02/15/1.Computer%20Network%20Overview/image-20220215122033621.png"></p>
-<p>然后内容提供商网络ICP可能会构建自己的网络（靠近ISP），将自己的服务、内容更加靠近用户，减少自己支出。</p>
-<p><img src="/2022/02/15/1.Computer%20Network%20Overview/02/15/1.Computer%20Network%20Overview/image-20220215124059819.png"></p>
-<p><strong>第一层ISP</strong>完成全球的国家&#x2F;国际覆盖，点很少，速率极高。它们之间直接或通过IXP连接，并与大量的第二层ISP和其他客户网相连。</p>
-<p><strong>第二层ISP</strong>（包括更小的区域ISP），与一个或多个第一层ISPs相连，也可能与第二层ISP相连。</p>
-<p>终端通过local ISP、第三层、第二层、第一层ISP接入互联网。</p>
-<h2 id="1-7-协议层次和服务模型"><a href="#1-7-协议层次和服务模型" class="headerlink" title="1.7  协议层次和服务模型"></a>1.7  协议层次和服务模型</h2><p>将网络的复杂功能分层，每层实现一组功能：本层协议实体交互执行本层的协议动作，通过接口访问下层的提供的服务，来实现本层的功能。</p>
-<p><strong>协议</strong>：本层协议实体交互的应该遵守的协议动作的集合。</p>
-<p><strong>数据单元DU：</strong>上层的服务数据单元SDU传给下层，加上一个头部封装成这一层的协议数据单元PDU。</p>
-<p><img src="/2022/02/15/1.Computer%20Network%20Overview/02/15/1.Computer%20Network%20Overview/image-20220215174311868.png"></p>
-<p><strong>服务</strong>：低层实体向上层实体提供它们之间的通信的能力。服务访问点SAP用来区分上层不同服务用户的信息。</p>
-<p>本层提供的服务不仅包括所有下层提供的服务，还包括同层之间通过接口实现的新的服务特性（可以向上层提供的服务）。</p>
-<p><strong>原语</strong>：上层使用下层服务的形式，即提供什么类型的服务（面向连接的或无连接的）。</p>
-<p><strong>Internet协议栈</strong></p>
-<p><img src="/2022/02/15/1.Computer%20Network%20Overview/02/15/1.Computer%20Network%20Overview/image-20220215175055180.png"></p>
-<p><strong>传输层</strong>：在网络层主机到主机传输基础之上的进程到进程的区分数据传输；可靠。</p>
-<p><strong>网络层</strong>：在链路层基础上，传输以分组为单位的端到端的数据；不可靠。</p>
-<p><strong>链路层</strong>：以帧frame为单位，把bit组合根据帧头帧尾区分出一帧一帧，在<strong>相邻</strong>网点之间传送数据。</p>
-<p><strong>各层次的协议数据单元：</strong></p>
-<p><img src="/2022/02/15/1.Computer%20Network%20Overview/02/15/1.Computer%20Network%20Overview/image-20220215191048948.png"></p>
+<h3 id="4-3-路由器工作原理"><a href="#4-3-路由器工作原理" class="headerlink" title="4.3 路由器工作原理"></a>4.3 路由器工作原理</h3><p>路由器的功能：运行路由算法以得到转发表；根据转发表对IP分组进行转发；提供多种网络类型接口，完成不同网络的互联</p>
+<p>路由器的结构：输入、输出端口；交换结构；选路处理器</p>
+<p>![](.&#x2F;4.network _ayer&#x2F;image-20220601162636119.png)</p>
+<p>数据链路层处理模块剥去帧首部和尾部后，将分组送到网络层的队列中排队等待处理。这会产生一定的时延。在输入端口，路由器使用转发表查找输出端口。</p>
+<p>在输出端口，交换结构传送过来的分组先进行缓存。数据链路层处理模块将分组加上链路层的首部和尾部，交给物理层后发送到外部线路。</p>
+<p>随着输入、输出端口排队队列的增长，耗尽路由器的缓存空间，就会出现<strong>丢包</strong>。</p>
+<pr>
 
+<h3 id="4-4-网际协议"><a href="#4-4-网际协议" class="headerlink" title="4.4 网际协议"></a>4.4 网际协议</h3><h4 id="4-4-1-IP数据报格式"><a href="#4-4-1-IP数据报格式" class="headerlink" title="4.4.1 IP数据报格式"></a>4.4.1 IP数据报格式</h4><p>![](.&#x2F;4.network _ayer&#x2F;image-20220601163607796.png)</p>
+<p><strong>标识、标志和片偏移</strong>与IP分片有关；</p>
+<p><strong>分片</strong>：因为MTU的限制，一个大数据报在传输中被分成一片一片的。标识可以理解为是数据报的编号，而标志是最后一片为0，其它为1，片偏移指示了该片应该放在原始数据报中的位置（单位为字节，且是8的倍数）；</p>
+<p><strong>总长度</strong>是整个数据包的长度，不能超过MTU</p>
+<p><strong>协议</strong>号表明了这个数据报应交给那个运输层协议。6为TCP，17为UDP。</p>
+<pr>
+
+<h4 id="4-4-2-IPv4编址"><a href="#4-4-2-IPv4编址" class="headerlink" title="4.4.2 IPv4编址"></a>4.4.2 IPv4编址</h4><p>IP地址：对主机、路由器接口的32-bit 标识符 </p>
+<p>![](.&#x2F;4.network _ayer&#x2F;image-20220601165405736.png)</p>
+<p><strong>子网</strong>：路由器的一个接口连接的一个网络就可以理解为一个子网。子网可以由子网掩码和前缀&#x2F;长度表示。</p>
+<p>子网掩码：255.255.255.0；</p>
+<p>前缀&#x2F;长度：223.1.1.0&#x2F;24；</p>
+<p><strong>分类编址</strong>：具有8、16、24字节子网地址的子网被称为A、B、C类网络。但是有大的太大，小的不够用的问题。</p>
+<p><strong>无类别域间路由选择</strong>的地址块描述的例子：</p>
+<p>某地址块为200.23.16.0&#x2F;23，则其</p>
+<p>子网掩码为：255.255.254.0  或  &#x2F;23；</p>
+<p>网络地址为：200.23.16.0 (主机比特全0)；</p>
+<p>可用主机地址为：200.23.16.1~200.23.17.254；</p>
+<p>广播地址为：200.23.17.255 (主机比特全1)。</p>
+<p>如何获取IP地址？</p>
+<p>（1）管理员配置静态地址；</p>
+<p>（2）DHCP</p>
+<p>主机要发送DHCP发现报文发现DHCP服务器，使用广播目的地址255.255.255.255，源地址0.0.0.0；</p>
+<p>DHCP收到发现报文后响应DHCP提供报文，使用广播目的地址255.255.255.255；</p>
+<p>客户机选择一个DHCP服务器，发送一个DHCP请求报文，回显配置参数；</p>
+<p>服务器用DHCP ACK确认。</p>
+<p>（3）NAT</p>
+<p>NAT路由器将内网IP地址通过NAT转换表转换为面对外网的地址。</p>
+<pr>
+
+<h4 id="4-4-3-因特网控制报文协议"><a href="#4-4-3-因特网控制报文协议" class="headerlink" title="4.4.3 因特网控制报文协议"></a>4.4.3 因特网控制报文协议</h4><p>IP网络是尽力而为（不可靠）的，ICMP通过差错报文和询问报文（Ping，回声请求&#x2F;回答）来辅助IP网络的功能。</p>
+<p>ICMP被承载在IP数据报分组中，所以应该是位于IP上层结构的。</p>
+<p>![](.&#x2F;4.network _ayer&#x2F;image-20220601184655745.png)</p>
+<p>Traceout就是由ICMP实现的。源主机发送一系列携带不可达UDP端口号的UDP报文段的数据报，TTL分别为1、2、3……同时启动定时器，当第n个数据报到达第n台路由器时，这个数据报正好过期，路由器丢弃该数据报并发送一个ICMP报警报文给源主机，就能得知第n台路由器的名字、IP和往返时延。</p>
+<pr>
+
+<h4 id="4-4-4-IPv6"><a href="#4-4-4-IPv6" class="headerlink" title="4.4.4 IPv6"></a>4.4.4 IPv6</h4><pr>
+
+<h3 id="4-5-路由选择算法"><a href="#4-5-路由选择算法" class="headerlink" title="4.5 路由选择算法"></a>4.5 路由选择算法</h3><p>源主机直接连接的路由器称为源路由器，目的主机直接连接的路由器成为目的路由器，将主机间的路由选择问题归结为源路由器到目的路由器的路由选择问题。</p>
+<p><strong>分类</strong>：全局的和分散的、静态的和动态的。</p>
+<h4 id="4-5-1-链路状态算法"><a href="#4-5-1-链路状态算法" class="headerlink" title="4.5.1 链路状态算法"></a>4.5.1 链路状态算法</h4><p>是全局的算法，经“链路状态广播”，所有路由器具有完全的拓扑、链路费用信息。</p>
+<p><strong>定义：</strong></p>
+<p>C(x,y): 从节点x到y的链路费用，如果不是直接邻居就是∞；</p>
+<p>D(v):从源到目的地v路径费用的当前值；</p>
+<p>p(v): 从源到v沿路径的前任节点；</p>
+<p>N‘: 已知在最小费用路径中的节点集合。</p>
+<p>![](.&#x2F;4.network _ayer&#x2F;image-20220601185640945.png)</p>
+<p>时间复杂度：每次迭代:需要检查所有 不在N中的节点，n(n+1)&#x2F;2 ~O(n2)。</p>
+<p>缺点：震荡现象。</p>
+<pr>
+
+<h4 id="4-5-2-距离向量算法"><a href="#4-5-2-距离向量算法" class="headerlink" title="4.5.2 距离向量算法"></a>4.5.2 距离向量算法</h4><p>迭代、异步、分布式的动态规划算法，不是全局的，只需要知道邻居的信息。</p>
+<p><strong>定义</strong>：dx(y) 是从x到y最低费用路径的费用。</p>
+<p>有dx(y) &#x3D; min {c(x,v) + dv(y) }。</p>
+<p>![](.&#x2F;4.network _ayer&#x2F;image-20220601190319580.png)每个节点周期性的发送它自己的距离向量到其邻居，然后邻居更新距离向量。</p>
+<pr>
+
+<h4 id="4-5-3-层次路由选择"><a href="#4-5-3-层次路由选择" class="headerlink" title="4.5.3 层次路由选择"></a>4.5.3 层次路由选择</h4><p>在同一<strong>自治系统</strong>AS中，路由器执行相同的路由选择算法，即<strong>自治系统内部路由选择协议</strong>。不同AS互联处的路由器叫做网关路由器，它们之间使用<strong>自治系统间路由选择协议</strong>。</p>
+<pr>
+
+<h3 id="4-6-因特网中的路由选择"><a href="#4-6-因特网中的路由选择" class="headerlink" title="4.6 因特网中的路由选择"></a>4.6 因特网中的路由选择</h3><h4 id="4-6-1-自治系统内部路由选择：RIP"><a href="#4-6-1-自治系统内部路由选择：RIP" class="headerlink" title="4.6.1 自治系统内部路由选择：RIP"></a>4.6.1 自治系统内部路由选择：RIP</h4><p>RIP是一种距离向量协议，使用跳数作为费用测度，每条链路为1，最大费用限制在15。</p>
+<p>邻居间用RIP响应报文，大概30秒交换一次自己的路由表信息。</p>
+<p>优点：实现简单、开销小。</p>
+<p>缺点：受到网络规模限制，最大费用为15，并且交换的路由表信息太大增加开销；当网络出现故障时，要经过长时间才能将此信息传送到所有的路由器。</p>
+<pr>
+
+<h4 id="4-6-2-自治系统内部路由选择：OSPF"><a href="#4-6-2-自治系统内部路由选择：OSPF" class="headerlink" title="4.6.2 自治系统内部路由选择：OSPF"></a>4.6.2 自治系统内部路由选择：OSPF</h4><p>使用洪泛链路状态信息的链路状态协议和Dijkstra路径算法。</p>
+<p>状态变化或周期性广播链路状态信息。</p>
+<pr>
+
+<h4 id="4-6-3-自治系统间路由选择：BGP"><a href="#4-6-3-自治系统间路由选择：BGP" class="headerlink" title="4.6.3 自治系统间路由选择：BGP"></a>4.6.3 自治系统间路由选择：BGP</h4><pr>
+
+<h3 id="4-7-广播和多播路由选择"><a href="#4-7-广播和多播路由选择" class="headerlink" title="4.7 广播和多播路由选择"></a>4.7 广播和多播路由选择</h3><h4 id="4-7-1-广播"><a href="#4-7-1-广播" class="headerlink" title="4.7.1 广播"></a>4.7.1 广播</h4><pr>
+
+<h4 id="4-7-2-多播"><a href="#4-7-2-多播" class="headerlink" title="4.7.2 多播"></a>4.7.2 多播</h4><pr></pr></pr></pr></pr></pr></pr></pr></pr></pr></pr></pr></pr></pr></pr>
             </div>
             <hr/>
 
@@ -419,7 +453,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://aucuba-hh.github.io/2022/02/15/1.Computer%20Network%20Overview/">http://aucuba-hh.github.io/2022/02/15/1.Computer%20Network%20Overview/</a>
+                    <a href="http://aucuba-hh.github.io/2022/06/02/categories/Computer_Networks/4.network%20_ayer/">http://aucuba-hh.github.io/2022/06/02/categories/Computer_Networks/4.network%20_ayer/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -626,31 +660,31 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2022/03/22/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%B9%B3%E5%8F%B0%E2%80%94%E2%80%94AutoDL%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">
+                <a href="/2022/06/04/categories/Computer_Networks/5.link_layer/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="深度学习服务器平台简单手册——AutoDL">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="链路层">
                         
-                        <span class="card-title">深度学习服务器平台简单手册——AutoDL</span>
+                        <span class="card-title">链路层</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            推荐一个便宜好用的深度学习服务器平台——AutoDL和上手使用手册
+                            什么是链路层？
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-22
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-04
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    深度学习
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
+                                    计算机网络
                                 </a>
                             
                             
@@ -667,36 +701,40 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/02/15/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.Computer%20Network%20Overview/">
+                <a href="/2022/05/30/tags/sort-out/%E5%90%8D%E4%BE%A6%E6%8E%A2%E6%9F%AF%E5%8D%97/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="计算机网络概述">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="名侦探柯南剧情梳理">
                         
-                        <span class="card-title">计算机网络概述</span>
+                        <span class="card-title">名侦探柯南剧情梳理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            什么是Internet？
+                            主线剧情
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-30
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
-                                    计算机网络
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Aucuba
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/sort-out/">
+                        <span class="chip bg-color">sort-out</span>
+                    </a>
+                    
                 </div>
                 
             </div>

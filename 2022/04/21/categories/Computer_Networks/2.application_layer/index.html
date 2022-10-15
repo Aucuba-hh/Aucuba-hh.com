@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="计算机网络课程实验三,NET, Aucuba">
+    <meta name="keywords" content="应用层, Aucuba">
     <meta name="referrer" content="no-referrer" />
     <meta name="description" content="早睡晚起小能手，不知名话痨艺术家">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>计算机网络课程实验三,NET | Aucuba</title>
+    <title>应用层 | Aucuba</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -180,12 +180,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">计算机网络课程实验三,NET</h1>
+                    <h1 class="description center-align post-title">应用层</h1>
                 </div>
             </div>
         </div>
@@ -323,7 +323,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-05-04
+                    2022-04-21
                 </div>
                 
 
@@ -339,57 +339,75 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="计算机网络课程实验三：NET"><a href="#计算机网络课程实验三：NET" class="headerlink" title="计算机网络课程实验三：NET"></a><strong>计算机网络课程实验三：NET</strong></h1><p>下载实验数据包：<a target="_blank" rel="noopener" href="http://gaia.cs.umass.edu/wireshark-labs/wireshark-traces.zip">http://gaia.cs.umass.edu/wireshark-labs/wireshark-traces.zip</a></p>
-<p>下载实验题目综述：<a target="_blank" rel="noopener" href="https://www-net.cs.umass.edu/wireshark-labs/Wireshark_NAT_v7.0.pdf">https://www-net.cs.umass.edu/wireshark-labs/Wireshark_NAT_v7.0.pdf</a></p>
-<h4 id="1-客户端的IP地址是什么"><a href="#1-客户端的IP地址是什么" class="headerlink" title="1.   客户端的IP地址是什么?"></a><strong>1.</strong>   <strong>客户端的IP地址是什么?</strong></h4><p><img src="/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/Users/Aucuba/Pictures/upload/_pictures/image-20220504140045000.png" alt="image-20220504140045000"></p>
-<p>从TCP连接的第一次握手的源IP地址就可以看出是192.168.1.100，从第二次握手的目的IP也可以看出。这里给出第二次握手的IP协议截图中高亮行Dst：192.168.1.100也说明了IP地址。</p>
-<p><img src="/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/Users/Aucuba/Pictures/upload/_pictures/image-20220504140057333.png" alt="image-20220504140057333"></p>
-<h4 id="2-客户端实际上与几个不同的-Google-服务器进行通信，以便实现”安全浏览”。为了只显示那些包含与谷歌主服务器IP地址为64-233-169-104有关的HTTP消息的帧，在Wireshark的Filter输入”http-amp-amp-ip-addr-x3D-x3D-64-233-169-104”。"><a href="#2-客户端实际上与几个不同的-Google-服务器进行通信，以便实现”安全浏览”。为了只显示那些包含与谷歌主服务器IP地址为64-233-169-104有关的HTTP消息的帧，在Wireshark的Filter输入”http-amp-amp-ip-addr-x3D-x3D-64-233-169-104”。" class="headerlink" title="2.   **客户端实际上与几个不同的 Google 服务器进行通信，以便实现”安全浏览”。为了只显示那些包含与谷歌主服务器IP地址为64.233.169.104有关的HTTP消息的帧，在Wireshark的Filter输入”http &amp;&amp; ip.addr &#x3D;&#x3D; 64.233.169.104”。"></a><strong>2.</strong>   **客户端实际上与几个不同的 Google 服务器进行通信，以便实现”安全浏览”。为了只显示那些包含与谷歌主服务器IP地址为64.233.169.104有关的HTTP消息的帧，在Wireshark的Filter输入”http &amp;&amp; ip.addr &#x3D;&#x3D; 64.233.169.104”。</h4><p><img src="/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/Users/Aucuba/Pictures/upload/_pictures/image-20220504140112179.png" alt="image-20220504140112179"></p>
-<h4 id="3-从客户机发送到上述谷歌主服务器的HTTP-GET，时间为7-109267，携带HTTP-GET的IP数据报的源IP地址和目的IP地址以及TCP源端口和目的端口是什么"><a href="#3-从客户机发送到上述谷歌主服务器的HTTP-GET，时间为7-109267，携带HTTP-GET的IP数据报的源IP地址和目的IP地址以及TCP源端口和目的端口是什么" class="headerlink" title="3.   从客户机发送到上述谷歌主服务器的HTTP GET，时间为7.109267，携带HTTP GET的IP数据报的源IP地址和目的IP地址以及TCP源端口和目的端口是什么?"></a><strong>3.</strong>   <strong>从客户机发送到上述谷歌主服务器的HTTP GET，时间为7.109267，携带HTTP GET的IP数据报的源IP地址和目的IP地址以及TCP源端口和目的端口是什么?</strong></h4><p>注意时间显示格式改为“自捕获开始经过的秒数”。</p>
-<p><img src="/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/Users/Aucuba/Pictures/upload/_pictures/image-20220504140127408.png" alt="image-20220504140127408"></p>
-<p>查看网络层和运输层分组信息：</p>
-<p><img src="/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/Users/Aucuba/Pictures/upload/_pictures/image-20220504140154158.png" alt="image-20220504140154158"></p>
-<p>得到源IP是192.168.1.100，目的IP是64.233.169.104；TCP源端口号4335，目的端口号80。</p>
-<h4 id="4．在什么时间接收到谷歌服务器200-OK的HTTP消息-携带此HTTP-200-OK消息的IP数据报的源IP地址和目的IP地址以及TCP源端口和目的端口是什么"><a href="#4．在什么时间接收到谷歌服务器200-OK的HTTP消息-携带此HTTP-200-OK消息的IP数据报的源IP地址和目的IP地址以及TCP源端口和目的端口是什么" class="headerlink" title="4．在什么时间接收到谷歌服务器200 OK的HTTP消息?携带此HTTP 200 OK消息的IP数据报的源IP地址和目的IP地址以及TCP源端口和目的端口是什么?"></a>4．在什么时间接收到谷歌服务器200 OK的HTTP消息?携带此HTTP 200 OK消息的IP数据报的源IP地址和目的IP地址以及TCP源端口和目的端口是什么?</h4><p><img src="/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/Users/Aucuba/Pictures/upload/_pictures/image-20220504140210815.png" alt="image-20220504140210815"></p>
-<p>得到源IP是64.233.169.104，目的IP是192.168.1.100；TCP源端口号80，目的端口号4335。</p>
-<h4 id="5-在GET命令发送到HTTP服务器之前，TCP必须首先三次握手设置连接。对于在7-109267时发的送的HTTP-GET报文，客户端到服务器的TCP-SYN是在什么时间发送的？TCP-SYN的源和目的地IP地址以及源和目的地端口是什么？ACK的源和目的地IP地址以及响应SYN发送的源和目的地端口是什么？此ACK在客户端收到的时间是哪个时间？"><a href="#5-在GET命令发送到HTTP服务器之前，TCP必须首先三次握手设置连接。对于在7-109267时发的送的HTTP-GET报文，客户端到服务器的TCP-SYN是在什么时间发送的？TCP-SYN的源和目的地IP地址以及源和目的地端口是什么？ACK的源和目的地IP地址以及响应SYN发送的源和目的地端口是什么？此ACK在客户端收到的时间是哪个时间？" class="headerlink" title="5.在GET命令发送到HTTP服务器之前，TCP必须首先三次握手设置连接。对于在7.109267时发的送的HTTP GET报文，客户端到服务器的TCP SYN是在什么时间发送的？TCP SYN的源和目的地IP地址以及源和目的地端口是什么？ACK的源和目的地IP地址以及响应SYN发送的源和目的地端口是什么？此ACK在客户端收到的时间是哪个时间？"></a>5.在GET命令发送到HTTP服务器之前，TCP必须首先三次握手设置连接。对于在7.109267时发的送的HTTP GET报文，客户端到服务器的TCP SYN是在什么时间发送的？TCP SYN的源和目的地IP地址以及源和目的地端口是什么？ACK的源和目的地IP地址以及响应SYN发送的源和目的地端口是什么？此ACK在客户端收到的时间是哪个时间？</h4><p>在筛选器输入“tcp”，找到7.109267时间对应的HTTP GET和三次握手。</p>
-<p><img src="/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/Users/Aucuba/Pictures/upload/_pictures/image-20220504140227651.png" alt="image-20220504140227651"></p>
-<p>第一个TCP就是客户端发送的SYN，</p>
-<p><img src="/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/Users/Aucuba/Pictures/upload/_pictures/image-20220504140331806.png" alt="image-20220504140331806"></p>
-<p>时间是7.075657，源IP是192.168.1.100，目的IP是64.233.169.104；TCP源端口号4335，目的端口号80。</p>
-<p>第二个TCP是客户端发送的ACK。</p>
-<p><img src="/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/Users/Aucuba/Pictures/upload/_pictures/image-20220504140242170.png" alt="image-20220504140242170"></p>
-<p>接收时间是7.108986。源IP是64.233.169.104，目的IP是192.168.1.100；TCP源端口号80，目的端口号4335。</p>
-<h4 id="6-打开NAT-ISP-side。找到跟刚才客户端7-109267同样的HTTP-GET消息（这个时间是在-NAT-home-side-跟踪文件中记录的时间）。该消息何时出现在-NAT-ISP-side跟踪文件中？承载此HTTP-GET消息的IP数据报的源和目标IP地址以及TCP源和目的端口是多少？与您对上述问题3的回答相比，哪些字段相同，哪些字段不同？"><a href="#6-打开NAT-ISP-side。找到跟刚才客户端7-109267同样的HTTP-GET消息（这个时间是在-NAT-home-side-跟踪文件中记录的时间）。该消息何时出现在-NAT-ISP-side跟踪文件中？承载此HTTP-GET消息的IP数据报的源和目标IP地址以及TCP源和目的端口是多少？与您对上述问题3的回答相比，哪些字段相同，哪些字段不同？" class="headerlink" title="6.打开NAT_ISP_side。找到跟刚才客户端7.109267同样的HTTP GET消息（这个时间是在 NAT_home_side 跟踪文件中记录的时间）。该消息何时出现在 NAT_ISP_side跟踪文件中？承载此HTTP GET消息的IP数据报的源和目标IP地址以及TCP源和目的端口是多少？与您对上述问题3的回答相比，哪些字段相同，哪些字段不同？"></a>6.打开NAT_ISP_side。找到跟刚才客户端7.109267同样的HTTP GET消息（这个时间是在 NAT_home_side 跟踪文件中记录的时间）。该消息何时出现在 NAT_ISP_side跟踪文件中？承载此HTTP GET消息的IP数据报的源和目标IP地址以及TCP源和目的端口是多少？与您对上述问题3的回答相比，哪些字段相同，哪些字段不同？</h4><p>注意到7.109267的HTTP GET的长度是689：</p>
-<p><img src="/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/Users/Aucuba/Pictures/upload/_pictures/image-20220504140345503.png" alt="image-20220504140345503"></p>
-<p>所以在NAT_ISP_side文件中寻找长度相同的报文。</p>
-<p><img src="/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/Users/Aucuba/Pictures/upload/_pictures/image-20220504140351093.png" alt="image-20220504140351093"></p>
-<p><img src="/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/Users/Aucuba/Pictures/upload/_pictures/image-20220504140357786.png" alt="image-20220504140357786"></p>
-<p>接收时间是6.069168。源IP是71.192.34.104，目的IP是64.233.169.104；TCP源端口号4335，目的端口号80。</p>
-<p>它们不同的字段是源IP地址和checksum（因为源IP地址不同），其他都相同。</p>
-<h4 id="7-HTTP-GET消息中的任何字段是否已更改？携带HTTP-GET的IP数据报中的以下哪个字段发生了变化：版本，标题长度，标志，校验和。如果这些字段中的任何一个发生了变化，请说明为什么。"><a href="#7-HTTP-GET消息中的任何字段是否已更改？携带HTTP-GET的IP数据报中的以下哪个字段发生了变化：版本，标题长度，标志，校验和。如果这些字段中的任何一个发生了变化，请说明为什么。" class="headerlink" title="7. HTTP GET消息中的任何字段是否已更改？携带HTTP GET的IP数据报中的以下哪个字段发生了变化：版本，标题长度，标志，校验和。如果这些字段中的任何一个发生了变化，请说明为什么。**"></a><strong>7.</strong> HTTP GET消息中的任何字段是否已更改？携带HTTP GET的IP数据报中的以下哪个字段发生了变化：版本，标题长度，标志，校验和。如果这些字段中的任何一个发生了变化，请说明为什么。**</h4><p>只有校验和发生了变化。因为问题六中已经说明了，只有IP数据报的源地址发生了改变，版本、长度和标志都不变，但因为地址变了所以校验和变化了。</p>
-<h4 id="8-在NAT-ISP-side跟踪文件中，从Google服务器收到的第一条HTTP-200-OK-消息在什么时间？携带此HTTP-200-OK消息的IP数据报上的源和目标IP地址以及TCP源和目标端口是什么？与第4问回答的NAT-home-side结果相比哪些字段相同，哪些字段不同？"><a href="#8-在NAT-ISP-side跟踪文件中，从Google服务器收到的第一条HTTP-200-OK-消息在什么时间？携带此HTTP-200-OK消息的IP数据报上的源和目标IP地址以及TCP源和目标端口是什么？与第4问回答的NAT-home-side结果相比哪些字段相同，哪些字段不同？" class="headerlink" title="8. 在NAT_ISP_side跟踪文件中，从Google服务器收到的第一条HTTP 200 OK 消息在什么时间？携带此HTTP 200 OK消息的IP数据报上的源和目标IP地址以及TCP源和目标端口是什么？与第4问回答的NAT_home_side结果相比哪些字段相同，哪些字段不同？"></a><strong>8.</strong> <strong>在NAT_ISP_side跟踪文件中，从Google服务器收到的第一条HTTP 200 OK 消息在什么时间？携带此HTTP 200 OK消息的IP数据报上的源和目标IP地址以及TCP源和目标端口是什么？与第4问回答的NAT_home_side结果相比哪些字段相同，哪些字段不同？</strong></h4><p><img src="/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/Users/Aucuba/Pictures/upload/_pictures/image-20220504140410135.png" alt="image-20220504140410135"></p>
-<p><img src="/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/Users/Aucuba/Pictures/upload/_pictures/image-20220504140416739.png" alt="image-20220504140416739"></p>
-<p>接收时间是6.117570。源IP是64.233.169.104，目的IP是71.192.34.104；TCP源端口号80，目的端口号4335。</p>
-<p>它们不同的字段是目的IP地址和checksum（因为目的IP地址不同），其他都相同。</p>
-<h4 id="9-在NAT-ISP-side跟踪文件中，客户端到服务器TCP-SYN段和服务器对客户端TCP-ACK段在什么时间与上述问题5的段对应？这两个段的源和目的地-IP-地址以及来源和目的地端口是什么？这些字段中哪些字段相同，哪些字段与上述问题5的回答不同？"><a href="#9-在NAT-ISP-side跟踪文件中，客户端到服务器TCP-SYN段和服务器对客户端TCP-ACK段在什么时间与上述问题5的段对应？这两个段的源和目的地-IP-地址以及来源和目的地端口是什么？这些字段中哪些字段相同，哪些字段与上述问题5的回答不同？" class="headerlink" title="9. 在NAT_ISP_side跟踪文件中，客户端到服务器TCP SYN段和服务器对客户端TCP ACK段在什么时间与上述问题5的段对应？这两个段的源和目的地 IP 地址以及来源和目的地端口是什么？这些字段中哪些字段相同，哪些字段与上述问题5的回答不同？"></a><strong>9.</strong> <strong>在NAT_ISP_side跟踪文件中，客户端到服务器TCP SYN段和服务器对客户端TCP ACK段在什么时间与上述问题5的段对应？这两个段的源和目的地 IP 地址以及来源和目的地端口是什么？这些字段中哪些字段相同，哪些字段与上述问题5的回答不同？</strong></h4><p><img src="/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/Users/Aucuba/Pictures/upload/_pictures/image-20220504140428618.png" alt="image-20220504140428618"></p>
-<p><img src="/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/Users/Aucuba/Pictures/upload/_pictures/image-20220504140433783.png" alt="image-20220504140433783"></p>
-<p>客户端到服务器的SYN接收时间是6.035475，源IP是71.192.34.104，目的IP是64.233.169.104；TCP源端口号4335，目的端口号80。</p>
-<p><img src="/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/Users/Aucuba/Pictures/upload/_pictures/image-20220504140440533.png" alt="image-20220504140440533"></p>
-<p>ACK的接收时间是6.067775。源IP是64.233.169.104，目的IP是71.192.34.104；TCP源端口号80，目的端口号4335。</p>
-<p>和问题五的回答相比，同样是SYN的源IP地址和ACK的目的IP地址变了。</p>
-<h4 id="10-做出类似的-HTTP-连接的-NAT-转换表。"><a href="#10-做出类似的-HTTP-连接的-NAT-转换表。" class="headerlink" title="10. 做出类似的 HTTP 连接的 NAT 转换表。"></a><strong>10.</strong> <strong>做出类似的 HTTP 连接的 NAT 转换表。</strong></h4><table>
-<thead>
-<tr>
-<th><strong>WAN</strong> <strong>端</strong></th>
-<th><strong>LAN</strong> <strong>端</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>71.192.34.104, 4335</td>
-<td>192.168.1.100, 4335</td>
-</tr>
-</tbody></table>
+                <h1 id="计算机网络——自顶向下"><a href="#计算机网络——自顶向下" class="headerlink" title="计算机网络——自顶向下"></a>计算机网络——自顶向下</h1><h2 id="2-应用层"><a href="#2-应用层" class="headerlink" title="2 应用层"></a>2 应用层</h2><h3 id="2-1-应用层协议原理"><a href="#2-1-应用层协议原理" class="headerlink" title="2.1 应用层协议原理"></a>2.1 应用层协议原理</h3><h4 id="2-1-1-网络应用程序体系结构"><a href="#2-1-1-网络应用程序体系结构" class="headerlink" title="2.1.1 网络应用程序体系结构"></a>2.1.1 网络应用程序体系结构</h4><p><strong>客户机&#x2F;服务器</strong>：<img src="/./2.application_layer/image-20220408115155480.png"></p>
+<p>例：web、FTP、e-main</p>
+<p><strong>对等P2P</strong>：<img src="/2022/04/21/categories/Computer_Networks/2.application_layer/Users/Aucuba/Pictures/my_typora/2.application_layer/image-20220408115220496.png"></p>
+<p>例：Gnurella、迅雷</p>
+<p><strong>混合模式</strong></p>
+<h4 id="2-1-2-进程通信"><a href="#2-1-2-进程通信" class="headerlink" title="2.1.2 进程通信"></a>2.1.2 进程通信</h4><p>同一主机中，使用IPC（操作系统定义）通信。</p>
+<p>不同主机中，进城process通过交换报文messgae进行通信。</p>
+<p><strong>客户和服务器进程</strong>：客户机发起通信，服务器等待联系。P2P体系的应用进城具有双重特性。</p>
+<p><strong>进程的接口</strong>：套接字，是应用层与运输层之间的接口。</p>
+<p><img src="/2022/04/21/categories/Computer_Networks/2.application_layer/Users/Aucuba/Pictures/my_typora/2.application_layer/image-20220408115956927.png"></p>
+<p><strong>进程寻址</strong>：主机IP地址+进程端口号。</p>
+<h4 id="2-1-3-可供应用程序使用的传输服务"><a href="#2-1-3-可供应用程序使用的传输服务" class="headerlink" title="2.1.3 可供应用程序使用的传输服务"></a>2.1.3 可供应用程序使用的传输服务</h4><p><strong>可靠数据传输</strong>：是否容忍丢失。</p>
+<p><strong>吞吐量</strong>：传送比特的速率。不同应用对带宽的限制。</p>
+<p><strong>定时</strong>：就是延时。</p>
+<p><strong>安全</strong>。</p>
+<h3 id="2-2-Web应用和HTTP协议"><a href="#2-2-Web应用和HTTP协议" class="headerlink" title="2.2 Web应用和HTTP协议"></a>2.2 Web应用和HTTP协议</h3><p>Web的应用层协议是HTTP，超文本传输协议。</p>
+<h4 id="2-2-1-HTTP概况"><a href="#2-2-1-HTTP概况" class="headerlink" title="2.2.1 HTTP概况"></a>2.2.1 HTTP概况</h4><p>HTTP由客户机程序和服务器程序实现，通过交换HTTP报文进行会话。</p>
+<p>Web页面由对象（HTML文件、JPG图片等）组成，每个对象由URL(( Uniform Resource Locator)进行寻址。</p>
+<p><img src="/2022/04/21/categories/Computer_Networks/2.application_layer/Users/Aucuba/Pictures/my_typora/2.application_layer/image-20220408120725355.png"></p>
+<p>HTTP是一个无状态协议，因为服务器并不保存关于客户的任何信息。</p>
+<h4 id="2-2-2-非持续连接和持续连接"><a href="#2-2-2-非持续连接和持续连接" class="headerlink" title="2.2.2 非持续连接和持续连接"></a>2.2.2 非持续连接和持续连接</h4><p><strong>非持续连接</strong>(Version&#x3D;1.0)：TCP每发送一个对象后就关闭。</p>
+<p>1.客户进程在80端口号（默认）发起向客户机<a target="_blank" rel="noopener" href="http://www.swust.edu.cn的tcp连接;/">www.swust.edu.cn的TCP连接；</a></p>
+<p>2.客户经过它的套接字向服务器发送请求报文；</p>
+<p>3.服务器经过它的套接字接收请求报文，检索出对象<a target="_blank" rel="noopener" href="http://www.swust.edu.cn/someDept/pic.gif%E5%B9%B6%E5%B0%81%E8%A3%85%E5%88%B0%E6%8A%A5%E6%96%87%E4%B8%AD%EF%BC%8C%E5%86%8D%E9%80%9A%E8%BF%87%E5%A5%97%E6%8E%A5%E5%AD%97%E5%90%91%E5%AE%A2%E6%88%B7%E5%8F%91%E9%80%81%E5%93%8D%E5%BA%94%E6%8A%A5%E6%96%87%EF%BC%9B">www.swust.edu.cn/someDept/pic.gif并封装到报文中，再通过套接字向客户发送响应报文；</a></p>
+<p>4.服务器进程断开TCP连接；</p>
+<p>5.客户收到响应报文，连接关闭；</p>
+<p>6.重复上述步骤引用其他对象。</p>
+<p><strong>总响应时间：</strong>2个RTT+服务器传输时间。原因：TCP三次握手的前两个部分占用1个RTT，客户机结合握手的第三个部分向TCP发送一个HTTP请求报文，然后服务器响应，这用去了另一个RTT。</p>
+<p><strong>缺点</strong>：串行访问时间长；并行访问占用资源多(分配的TCP缓冲区和TCP变量)。</p>
+<p><strong>持续连接</strong>(Version&#x3D;1.11)：TCP为相同的客户-服务器间的请求和响应持续打开。</p>
+<h4 id="2-2-3-HTTP报文格式"><a href="#2-2-3-HTTP报文格式" class="headerlink" title="2.2.3 HTTP报文格式"></a>2.2.3 HTTP报文格式</h4><p><strong>请求报文</strong>:第一行为请求行（方法method+URL+HTTP版本)，后继行为首部行，最后是实体。</p>
+<p><img src="/2022/04/21/categories/Computer_Networks/2.application_layer/Users/Aucuba/Pictures/my_typora/2.application_layer/image-20220408123221263.png"></p>
+<p><img src="/2022/04/21/categories/Computer_Networks/2.application_layer/Users/Aucuba/Pictures/my_typora/2.application_layer/image-20220408123347554.png"></p>
+<p>method方法类型有:GET（请求访问，实体为空）、POST、HEAD、PUT、DELETE。</p>
+<p><strong>响应报文</strong>：第一行为状态行（HTTP版本+状态码+短语phrase)，后继行为首部行，最后是实体。</p>
+<p><img src="/2022/04/21/categories/Computer_Networks/2.application_layer/Users/Aucuba/Pictures/my_typora/2.application_layer/image-20220408133759610.png"></p>
+<p><img src="/2022/04/21/categories/Computer_Networks/2.application_layer/Users/Aucuba/Pictures/my_typora/2.application_layer/image-20220408133811897.png"></p>
+<p>常见的状态码和短语：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">200</span> <span class="variable constant_">OK</span></span><br><span class="line"><span class="comment">//请求成功，请求的对象在这个报文后面</span></span><br><span class="line"><span class="number">301</span> <span class="title class_">Moved</span> <span class="title class_">Permanently</span></span><br><span class="line"><span class="comment">//请求的对象已转移，新的URL在响应报文的Location:首部行中指定</span></span><br><span class="line"><span class="number">400</span> <span class="title class_">Bad</span> <span class="title class_">Request</span></span><br><span class="line"><span class="comment">//请求报文不为服务器理解</span></span><br><span class="line"><span class="number">404</span> <span class="title class_">Not</span> <span class="title class_">Found</span></span><br><span class="line"><span class="comment">//请求的文档没有在该服务器上发现</span></span><br><span class="line"><span class="number">505</span> <span class="variable constant_">HTTP</span> <span class="title class_">Version</span> <span class="title class_">Not</span> <span class="title class_">Supported</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-2-4-用户与服务器的交互：Cookie"><a href="#2-2-4-用户与服务器的交互：Cookie" class="headerlink" title="2.2.4 用户与服务器的交互：Cookie"></a>2.2.4 用户与服务器的交互：Cookie</h4><p>无状态的HTTP简化了服务器的设计，但不能保存用户信息。所以HTTP使用Cookie对用户进行跟踪。</p>
+<p><strong>cookie组件</strong>包括：HTTP响应报文中的cookie首部行；请求报文中的cookie首部行；用户主机保留的cookie文件；Web站点的后端数据库。</p>
+<p>用户每请求一个Web页面，浏览器会从cookie文件中获取对这个网站的识别码，放到HTTP请求报文中的包括识别码的cookie首部行中。cookie首部用来标识一个用户。</p>
+<p><img src="/2022/04/21/categories/Computer_Networks/2.application_layer/Users/Aucuba/Pictures/my_typora/2.application_layer/image-20220408134647714.png"></p>
+<h4 id="2-2-5-Web缓存"><a href="#2-2-5-Web缓存" class="headerlink" title="2.2.5 Web缓存"></a>2.2.5 Web缓存</h4><p><strong>Web缓存器</strong>：保存最近请求的web对象。浏览器向缓存发送所有HTTP请求，若对象在缓存中：缓存返回对象；否则缓存向起始服务器请求对象，然后向客户机返回对象。</p>
+<p>好处：1）减小客户机请求的响应时间；2）减少机构内部网与因特网接入链路的通信量。</p>
+<h4 id="2-2-6-条件GET方法"><a href="#2-2-6-条件GET方法" class="headerlink" title="2.2.6 条件GET方法"></a>2.2.6 条件GET方法</h4><p>为解决缓存中对象始终最新的问题，用<strong>条件GET</strong>方法：缓存器在HTTP请求中包含一个“If-modified-since: <date>”，指定缓存版本的日期，服务器判断如果缓存的拷贝是最新，就响应不包含对象: </date></p>
+<p>“HTTP&#x2F;1.0 304 Not Modified”，否则修改对象。</p>
+<p><img src="/2022/04/21/categories/Computer_Networks/2.application_layer/Users/Aucuba/Pictures/my_typora/2.application_layer/image-20220408135709719.png"></p>
+<h3 id="2-3-文件传输协议：FTP"><a href="#2-3-文件传输协议：FTP" class="headerlink" title="2.3 文件传输协议：FTP"></a>2.3 文件传输协议：FTP</h3><p><strong>特点</strong>：使用双TCP连接，一个<strong>控制连接</strong>(端口21)，一个<strong>数据连接</strong>(端口20)。</p>
+<p><strong>控制连接</strong>用于在两台主机传输控制信息，如用户标识、口令、控制命令等，<strong>数据连接</strong>用于实际发送文件。</p>
+<p>FTP使用独立的控制连接，我们称FTP是<strong>带外控制</strong>；而HTTP是带内控制。</p>
+<h3 id="2-4-电子邮件"><a href="#2-4-电子邮件" class="headerlink" title="2.4  电子邮件"></a>2.4  电子邮件</h3><p>电子邮件系统组成：用户代理(阅读器，如Outlook,Foxmail)、邮件服务器、简单邮件<strong>传输</strong>协议: SMTP。</p>
+<p>从发送方的用户代理开始，传输到发送方的邮件服务器，再传输到接收方的邮件服务器，最后被分发到接收方的邮箱中。</p>
+<h4 id="2-4-1-SMTP"><a href="#2-4-1-SMTP" class="headerlink" title="2.4.1 SMTP"></a>2.4.1 SMTP</h4><p>报文格式：7bitASCII。</p>
+<p>端口号：25。</p>
+<p>使用TCP连接。传输阶段有握手、传输、关闭。</p>
+<h4 id="2-4-4-邮件访问协议"><a href="#2-4-4-邮件访问协议" class="headerlink" title="2.4.4 邮件访问协议"></a>2.4.4 邮件访问协议</h4><p>POP3邮局协议</p>
+<p>IMAP4因特网邮件访问协议</p>
+<p>基于Web的电子邮件：用户代理就是浏览器，使用HTTP与其他远程邮箱进行通信。但邮件服务器和其他服务器间仍使用SMTP。 </p>
+<h3 id="2-5-DNS"><a href="#2-5-DNS" class="headerlink" title="2.5 DNS"></a>2.5 DNS</h3><p>Domain Name Server域名服务器。</p>
+<p>使用UDP。</p>
+<p>例：主机名为<a target="_blank" rel="noopener" href="http://www.swust.edu.cn,ip地址/">www.swust.edu.cn，IP地址</a>(32 bit) 为220.166.52.4，DNS完成主机名到IP地址的解析。</p>
+<h4 id="2-5-1-分布式、等级制数据库"><a href="#2-5-1-分布式、等级制数据库" class="headerlink" title="2.5.1 分布式、等级制数据库"></a>2.5.1 分布式、等级制数据库</h4><h4 id><a href="#" class="headerlink" title></a><img src="/./2.application_layer/image-20220408141738936.png"></h4><h4 id="2-5-2两种查询方式"><a href="#2-5-2两种查询方式" class="headerlink" title="2.5.2两种查询方式"></a>2.5.2两种查询方式</h4><p><strong>迭代查询</strong>：我的理解是，去去就回。</p>
+<p><img src="/2022/04/21/categories/Computer_Networks/2.application_layer/Users/Aucuba/Pictures/my_typora/2.application_layer/image-20220408142004722.png"></p>
+<p><strong>递归查询</strong>：我的理解是，先去后回。</p>
+<p><img src="/2022/04/21/categories/Computer_Networks/2.application_layer/Users/Aucuba/Pictures/my_typora/2.application_layer/image-20220408142036974.png"></p>
 
             </div>
             <hr/>
@@ -415,7 +433,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://aucuba-hh.github.io/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/">http://aucuba-hh.github.io/2022/05/04/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E4%B8%89%EF%BC%9ANET/</a>
+                    <a href="http://aucuba-hh.github.io/2022/04/21/categories/Computer_Networks/2.application_layer/">http://aucuba-hh.github.io/2022/04/21/categories/Computer_Networks/2.application_layer/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -622,31 +640,31 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2022/05/11/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E5%9B%9B%EF%BC%9AEthernet%20and%20ARP/">
+                <a href="/2022/04/25/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/CNN/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="计算机网络课程实验四,Ethernet and ARP">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="卷积神经网络 CNN">
                         
-                        <span class="card-title">计算机网络课程实验四,Ethernet and ARP</span>
+                        <span class="card-title">卷积神经网络 CNN</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            计网实验，以太网和ARP协议
+                            什么是卷积神经网络？
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-11
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-25
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
-                                    计算机网络
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    机器学习
                                 </a>
                             
                             
@@ -663,31 +681,31 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/04/27/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/3.%E4%BC%A0%E8%BE%93%E5%B1%82/">
+                <a href="/2022/03/22/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%B9%B3%E5%8F%B0%E2%80%94%E2%80%94AutoDL%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="运输层">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="深度学习服务器平台简单手册——AutoDL">
                         
-                        <span class="card-title">运输层</span>
+                        <span class="card-title">深度学习服务器平台简单手册——AutoDL</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            什么是运输层？
+                            推荐一个便宜好用的深度学习服务器平台——AutoDL和上手使用手册
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-22
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
-                                    计算机网络
+                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    深度学习
                                 </a>
                             
                             
