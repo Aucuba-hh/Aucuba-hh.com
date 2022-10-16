@@ -369,38 +369,38 @@
 <p>（2）转发：将分组从路由器的输入链路转移到输出链路。</p>
 <h2 id="1-4-接入网和物理媒体"><a href="#1-4-接入网和物理媒体" class="headerlink" title="1.4 接入网和物理媒体"></a>1.4 接入网和物理媒体</h2><h3 id="1-4-1-接入网"><a href="#1-4-1-接入网" class="headerlink" title="1.4.1 接入网"></a>1.4.1 接入网</h3><h4 id="1、住宅接入：modem"><a href="#1、住宅接入：modem" class="headerlink" title="1、住宅接入：modem"></a>1、住宅接入：modem</h4><p>将上网数据调制加载到音频信号上，在电话线上传输，在局端将其中的数据解调出来。</p>
 <p>带宽很窄,不能同时上网和通话。</p>
-<h4 id="2、接入网：DSL"><a href="#2、接入网：DSL" class="headerlink" title="2、接入网：DSL"></a>2、接入网：DSL</h4><p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/"></p>
+<h4 id="2、接入网：DSL"><a href="#2、接入网：DSL" class="headerlink" title="2、接入网：DSL"></a>2、接入网：DSL</h4><p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/image-20220207133300830.png"></p>
 <p>0~4kHz仍作音频传输，高于4k的一部分作下行，一部分作上行，使用额外的带宽，仍然采用调制和解调的方式。</p>
 <h4 id="3、接入网：线缆网络"><a href="#3、接入网：线缆网络" class="headerlink" title="3、接入网：线缆网络"></a>3、接入网：线缆网络</h4><p>把有线电视信号线缆双向改造，在不同频段传输不同信道的数据。</p>
 <p>线缆和光纤网路将各个家庭用户接入到ISP路由器。与DSL不同，各用户共享上行带宽。</p>
-<h4 id="4、接入网：家庭网络"><a href="#4、接入网：家庭网络" class="headerlink" title="4、接入网：家庭网络"></a>4、接入网：家庭网络</h4><p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/"></p>
-<h4 id="5、企业接入网络"><a href="#5、企业接入网络" class="headerlink" title="5、企业接入网络"></a>5、企业接入网络</h4><p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/"></p>
+<h4 id="4、接入网：家庭网络"><a href="#4、接入网：家庭网络" class="headerlink" title="4、接入网：家庭网络"></a>4、接入网：家庭网络</h4><p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/image-20220207134156849.png"></p>
+<h4 id="5、企业接入网络"><a href="#5、企业接入网络" class="headerlink" title="5、企业接入网络"></a>5、企业接入网络</h4><p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/image-20220207134345428.png"></p>
 <p>通过交换机的集联。</p>
 <h4 id="6、无线接入网络"><a href="#6、无线接入网络" class="headerlink" title="6、无线接入网络"></a>6、无线接入网络</h4><p>各无线端系统共享无线接入网络（端系统到路由器），通过无线LAN或广域无线接入的方式。</p>
 <h3 id="1-4-2-物理媒体"><a href="#1-4-2-物理媒体" class="headerlink" title="1.4.2 物理媒体"></a>1.4.2 物理媒体</h3><p>物理链路：在每个传输-接收对，跨越一种物理媒体的介质。</p>
 <p>导引型媒体：信号沿着固体媒介被导引，如同轴电缆、光纤、双绞线。非导引型媒体是信号自由传输。</p>
 <p>无线链路：开放空间传输电磁波。无需物理线缆。</p>
 <h2 id="1-5-Internet结构和ISP"><a href="#1-5-Internet结构和ISP" class="headerlink" title="1.5 Internet结构和ISP"></a>1.5 Internet结构和ISP</h2><p>互联网结构是网络的网络，端系统通过<strong>接入ISPs</strong>接到互联网。</p>
-<p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/"></p>
+<p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/image-20220215122033621.png"></p>
 <p>然后内容提供商网络ICP可能会构建自己的网络（靠近ISP），将自己的服务、内容更加靠近用户，减少自己支出。</p>
-<p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/"></p>
+<p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/image-20220215124059819.png"></p>
 <p><strong>第一层ISP</strong>完成全球的国家&#x2F;国际覆盖，点很少，速率极高。它们之间直接或通过IXP连接，并与大量的第二层ISP和其他客户网相连。</p>
 <p><strong>第二层ISP</strong>（包括更小的区域ISP），与一个或多个第一层ISPs相连，也可能与第二层ISP相连。</p>
 <p>终端通过local ISP、第三层、第二层、第一层ISP接入互联网。</p>
 <h2 id="1-7-协议层次和服务模型"><a href="#1-7-协议层次和服务模型" class="headerlink" title="1.7  协议层次和服务模型"></a>1.7  协议层次和服务模型</h2><p>将网络的复杂功能分层，每层实现一组功能：本层协议实体交互执行本层的协议动作，通过接口访问下层的提供的服务，来实现本层的功能。</p>
 <p><strong>协议</strong>：本层协议实体交互的应该遵守的协议动作的集合。</p>
 <p><strong>数据单元DU：</strong>上层的服务数据单元SDU传给下层，加上一个头部封装成这一层的协议数据单元PDU。</p>
-<p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/"></p>
+<p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/image-20220215174311868.png"></p>
 <p><strong>服务</strong>：低层实体向上层实体提供它们之间的通信的能力。服务访问点SAP用来区分上层不同服务用户的信息。</p>
 <p>本层提供的服务不仅包括所有下层提供的服务，还包括同层之间通过接口实现的新的服务特性（可以向上层提供的服务）。</p>
 <p><strong>原语</strong>：上层使用下层服务的形式，即提供什么类型的服务（面向连接的或无连接的）。</p>
 <p><strong>Internet协议栈</strong></p>
-<p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/"></p>
+<p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/image-20220215175055180.png"></p>
 <p><strong>传输层</strong>：在网络层主机到主机传输基础之上的进程到进程的区分数据传输；可靠。</p>
 <p><strong>网络层</strong>：在链路层基础上，传输以分组为单位的端到端的数据；不可靠。</p>
 <p><strong>链路层</strong>：以帧frame为单位，把bit组合根据帧头帧尾区分出一帧一帧，在<strong>相邻</strong>网点之间传送数据。</p>
 <p><strong>各层次的协议数据单元：</strong></p>
-<p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/"></p>
+<p><img src="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/image-20220215191048948.png"></p>
 
             </div>
             <hr/>
@@ -633,7 +633,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2022/03/22/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%B9%B3%E5%8F%B0%E2%80%94%E2%80%94AutoDL%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">
+                <a href="/2022/03/22/categories/Deep_learning/AutoDL/">
                     <div class="card-image">
                         
                         
@@ -671,40 +671,41 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
+                Current&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2022/01/23/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/abstrac%20of%20machine-learning/">
+                <a href="/2022/02/15/categories/Computer_Networks/1.Computer_Network_Overview/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Deep learning学习笔记">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="计算机网络概述">
                         
-                        <span class="card-title">Deep learning学习笔记</span>
+                        <span class="card-title">计算机网络概述</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            什么是深度学习？
+                            什么是Internet？
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    深度学习
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
+                                    计算机网络
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>

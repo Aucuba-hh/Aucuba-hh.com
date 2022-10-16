@@ -345,16 +345,16 @@
 <p><strong>可靠交付</strong>：一般由确认和重传实现，通常用于高差错率的链路（如无线链路，光纤的差错低）；</p>
 <p><strong>差错检验和纠正</strong>：发送方在帧中包括差错检验比特，接收方检验后，如果出现较少差错可以进行纠正而避免重传。</p>
 <p>链路层的主体部分是在网络适配器实现的，网络适配器核心的链路层控制器实现了多种链路层服务。</p>
-<p><img src="/./5.link_layer/image-20220603165152084.png"></p>
+<p><img src="/2022/06/04/categories/Computer_Networks/5.link_layer/image-20220603165152084.png"></p>
 <pr>
 
 <h3 id="5-2-差错检测和纠正"><a href="#5-2-差错检测和纠正" class="headerlink" title="5.2 差错检测和纠正"></a>5.2 差错检测和纠正</h3><p>在发送方采用差错检测和纠正比特来增强数据。</p>
 <p>差错检测的3种技术：奇偶校验、检验和、循环冗余检测。</p>
 <h4 id="5-2-1-奇偶校验"><a href="#5-2-1-奇偶校验" class="headerlink" title="5.2.1 奇偶校验"></a>5.2.1 奇偶校验</h4><p>专门设置一个奇偶校验位，用它使这组代码中“1”的个数为奇数或偶数。 </p>
 <p>如果采用单比特奇偶校验，只能检测单个比特差错：</p>
-<p><img src="/./5.link_layer/image-20220603165750695.png"></p>
+<p><img src="/2022/06/04/categories/Computer_Networks/5.link_layer/image-20220603165750695.png"></p>
 <p>如果采用二维比特奇偶校验，可以检测和纠正单个比特差错：</p>
-<p><img src="/./5.link_layer/image-20220603165820294.png"></p>
+<p><img src="/2022/06/04/categories/Computer_Networks/5.link_layer/image-20220603165820294.png"></p>
 <p>接收方检测和纠错的能力被称为<strong>前向纠错</strong>，它可以减少重传次数和避免往返时延（发送方收到NAK后重传产生的）。</p>
 <pr>
 
@@ -362,12 +362,12 @@
 <pr>
 
 <h4 id="5-2-3-循环冗余检测"><a href="#5-2-3-循环冗余检测" class="headerlink" title="5.2.3 循环冗余检测"></a>5.2.3 循环冗余检测</h4><p>即CRC编码，多项式编码，将比特串看做系数是0和1的多项式。</p>
-<p><img src="/./5.link_layer/image-20220604134022533.png"></p>
+<p><img src="/2022/06/04/categories/Computer_Networks/5.link_layer/image-20220604134022533.png"></p>
 <p>发送方和接收方先协商一个r+1的生成多项式G，要求G的最左边是1，</p>
-<p><img src="/./5.link_layer/image-20220604134155028.png"></p>
+<p><img src="/2022/06/04/categories/Computer_Networks/5.link_layer/image-20220604134155028.png"></p>
 <p>发送方用位串D及 G(x)进行某种运算得到校验和R，并在帧的末尾加上校验和，使带校验和的帧的多项式(D+R)能被 G(x) 整除，接收方收到后，用 G(x) 除多项式，若有余数则传输有错。</p>
 <p>多项式D+R&#x3D;D*2^r XOR R&#x3D;nG，等价为R&#x3D;(D*2^R)&#x2F;G的余数。</p>
-<p><img src="/./5.link_layer/image-20220604135016515.png"></p>
+<p><img src="/2022/06/04/categories/Computer_Networks/5.link_layer/image-20220604135016515.png"></p>
 <pr>
 
 <h3 id="5-3-多路访问协议"><a href="#5-3-多路访问协议" class="headerlink" title="5.3 多路访问协议"></a>5.3 多路访问协议</h3><p><strong>点对点链路</strong>：链路一端的单个发送方和链路另一端的单个接收方组成。点对点协议和高级数据链路控制都是这样的协议；</p>
@@ -382,7 +382,7 @@
 <h4 id="5-3-1-信道划分协议"><a href="#5-3-1-信道划分协议" class="headerlink" title="5.3.1 信道划分协议"></a>5.3.1 信道划分协议</h4><p>TDMA和FDMA，时分复用访问和频分复用访问。</p>
 <p><strong>TDM</strong>将时间划分为时间帧，将时间帧划分为N个时隙，把每个时隙分配给N个结点中的一个。在循环的TDM帧中，被指派的时隙把分组传输给相应结点。</p>
 <p>缺点：出现不使用的时隙空闲。</p>
-<p><img src="/./5.link_layer/image-20220604140321968.png"></p>
+<p><img src="/2022/06/04/categories/Computer_Networks/5.link_layer/image-20220604140321968.png"></p>
 <p><strong>FDMA</strong>将信道频谱划分为频带，每个结点分配固定的频带。</p>
 <p>缺点：频带中未使用的传输时间空闲。</p>
 <pr>
@@ -396,11 +396,11 @@
 <p><strong>在同一个局域网</strong>中，发送主机的ARP适配器模块会根据输入的IP地址返回MAC地址。ARP表包含了对某些LAN节点的IP&#x2F;MAC地址映射  &lt; IP地址; MAC地址; TTL&gt;。</p>
 <p>如果B的MAC地址不在A的ARP表中，A广播ARP请求分组, 包含B的IP地址，目的MAC地址 &#x3D; FF-FF-FF-FF-FF-FF，在LAN上的所有机器接收ARP请求。B接收到ARP分组，用它的MAC地址单播回答A。</p>
 <p>发送数据报<strong>到另一个局域网</strong>，在两个局域网相连的路由器中有两个ARP表, 每张表对应一个IP网络。</p>
-<p><img src="/./5.link_layer/image-20220604142812799.png"></p>
+<p><img src="/2022/06/04/categories/Computer_Networks/5.link_layer/image-20220604142812799.png"></p>
 <pr>
 
 <h3 id="5-5-以太网"><a href="#5-5-以太网" class="headerlink" title="5.5 以太网"></a>5.5 以太网</h3><p>以太网是如今最流行的有线局域网技术。</p>
-<p><img src="/./5.link_layer/image-20220604143401641.png"></p>
+<p><img src="/2022/06/04/categories/Computer_Networks/5.link_layer/image-20220604143401641.png"></p>
 <p>Preamble前同步码前7个字节都是10101010 ，后1个字节为是10101011，用于同步接收方、发送方的时钟速率。</p>
 <p>类型指示了更高层的协议。</p>
 <p>以太网使用了<strong>CSMA&#x2F;CD协议</strong>：</p>
@@ -410,9 +410,9 @@
 <pr>
 
 <h3 id="5-6-链路层交换机"><a href="#5-6-链路层交换机" class="headerlink" title="5.6 链路层交换机"></a>5.6 链路层交换机</h3><p><strong>集线器</strong>基本上是物理层中继器 ，它没有缓存，来自一条链路的比特从其他所有链路出去。主干集线器互联LAN网段，扩展节点之间的最大距离。</p>
-<p><img src="/./5.link_layer/image-20220604144019063.png"></p>
+<p><img src="/2022/06/04/categories/Computer_Networks/5.link_layer/image-20220604144019063.png"></p>
 <p><strong>以太网交换机</strong>实际是一个基于网桥技术的多端口工作在链路层的网络设备，它为数据帧从一个端口到另一个任意端口的转发提供了低时延、低开销的通路。特点是即插即用，自学习与线速转发。</p>
-<p><img src="/./5.link_layer/image-20220604144155287.png"></p>
+<p><img src="/2022/06/04/categories/Computer_Networks/5.link_layer/image-20220604144155287.png"></p>
 <p><strong>自学习</strong>：一个交换机具有一个交换机表（转发表），表项: &lt;MAC地址, 接口, 时戳&gt;。交换机学习通过哪个接口能够到达哪台主机。</p>
 <p><strong>流量隔离</strong>：交换机将子网分割成局域网段，过滤分组，相同局域网的帧通常不在其他LAN段上转发。</p>
 <p><strong>交换机和路由器的比较</strong></p>
@@ -644,43 +644,45 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2022/06/04/categories/Computer_Networks/5.link_layer/">
+                <a href="/2022/10/16/tags/poems/Head_and_Shoulders/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="链路层">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="海飞丝">
                         
-                        <span class="card-title">链路层</span>
+                        <span class="card-title">海飞丝</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            什么是链路层？
+                            蓝色的海飞丝
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-04
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-10-16
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="post-category">
-                                    计算机网络
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Aucuba
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/poems/">
+                        <span class="chip bg-color">poems</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
